@@ -1,0 +1,81 @@
+﻿@import "tailwindcss";
+
+:root {
+  --color-background: #f4f0e8;
+  --color-surface: #faf7f1;
+  --color-foreground: #171411;
+  --color-muted: #655f58;
+  --color-line: rgba(23, 20, 17, 0.12);
+  --color-overlay: rgba(15, 14, 12, 0.44);
+  --color-accent: #ddd2c3;
+  --font-sans: "Avenir Next", "Segoe UI", "Helvetica Neue", Helvetica, sans-serif;
+  --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at top, rgba(255, 255, 255, 0.82), transparent 38%),
+    var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+.font-display {
+  font-family: var(--font-display);
+  letter-spacing: -0.025em;
+}
+
+::selection {
+  background: rgba(23, 20, 17, 0.14);
+}
+
+a,
+button {
+  transition:
+    color 220ms ease,
+    background-color 220ms ease,
+    border-color 220ms ease,
+    opacity 220ms ease,
+    transform 220ms ease;
+}
+
+.section-fade {
+  animation: section-fade 700ms ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .section-fade {
+    animation: none;
+  }
+
+  a,
+  button {
+    transition: none;
+  }
+}
+
+@keyframes section-fade {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

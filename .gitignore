@@ -1,0 +1,12 @@
+﻿node_modules/
+.next/
+*.log
+.devserver*.log
+
+# local env
+.env
+.env.*
+!.env.example
+
+# misc
+.DS_Store
