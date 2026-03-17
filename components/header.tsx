@@ -1,6 +1,7 @@
 ﻿"use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { MobileMenu } from "@/components/mobile-menu";
@@ -9,8 +10,10 @@ import { navLinks } from "@/data/site-content";
 import { cn } from "@/lib/cn";
 
 export function Header() {
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 32);
@@ -40,7 +43,7 @@ export function Header() {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300",
-        isScrolled || open
+        isScrolled || open || !isHome
           ? "border-b border-[var(--color-line)] bg-[var(--color-surface)]/95 text-[var(--color-foreground)] backdrop-blur"
           : "bg-transparent text-white",
       )}
@@ -54,15 +57,22 @@ export function Header() {
             BARRACUDA
           </Link>
           <nav className="hidden items-center gap-8 md:flex">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="text-xs uppercase tracking-[0.26em] hover:opacity-65 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4"
-              >
-                {link.label}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const active = pathname === link.href;
+
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={cn(
+                    "text-xs uppercase tracking-[0.26em] hover:opacity-65 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4",
+                    active && "opacity-55",
+                  )}
+                >
+                  {link.label}
+                </Link>
+              );
+            })}
           </nav>
           <button
             type="button"
@@ -82,5 +92,4 @@ export function Header() {
     </header>
   );
 }
-
 
