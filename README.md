@@ -1,4 +1,4 @@
-﻿# Barracuda Web
+# Barracuda Web
 
 Barracuda is currently implemented as a static-first brand website built with Next.js App Router, TypeScript, and Tailwind CSS.
 
@@ -14,11 +14,16 @@ Barracuda is currently implemented as a static-first brand website built with Ne
 ## Working Rules
 - Prefer static pages for all public routes.
 - Do not use server actions for current MVP scope.
-- Forms are UI-only request forms unless the user explicitly changes scope.
+- Forms submit through Next.js API routes when live delivery is required.
 - Keep implementations simple and low-risk.
 - User-facing copy is Korean-first.
 - Navigation may remain English.
 - Build locally. Use Vercel for deployment only.
+
+## Form Delivery
+- Runtime form handling uses `app/api/forms/*`.
+- Email delivery is sent from the server with the Resend REST API.
+- Required env vars are documented in `.env.example`.
 
 ## Deployment Flow
 ```powershell

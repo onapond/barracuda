@@ -1,10 +1,10 @@
-"use client";
+﻿"use client";
 
 import { useState } from "react";
 import { subpageContent } from "@/data/site-content";
 
 type SubmitState = "idle" | "submitting" | "success" | "error";
-const FORM_ENDPOINT = "https://formsubmit.co/ajax/4everlll@naver.com";
+const FORM_ENDPOINT = "/api/forms/space-inquiry";
 
 export function SpaceInquiryForm() {
   const { inquiryForm } = subpageContent.space;
@@ -14,7 +14,7 @@ export function SpaceInquiryForm() {
   return (
     <div className="grid gap-10 lg:grid-cols-[minmax(0,0.78fr)_minmax(0,1.22fr)] lg:items-start">
       <div>
-        <p className="text-xs uppercase tracking-[0.34em] text-[var(--color-muted)]">문의 폼</p>
+        <p className="text-xs uppercase tracking-[0.34em] text-[var(--color-muted)]">행사 문의</p>
         <h2 className="mt-4 font-display text-4xl sm:text-5xl">{inquiryForm.title}</h2>
         <p className="mt-6 text-base leading-8 text-[var(--color-muted)] sm:text-lg">{inquiryForm.description}</p>
         {submitState === "success" ? (
@@ -37,26 +37,20 @@ export function SpaceInquiryForm() {
 
           const form = event.currentTarget;
           const formData = new FormData(form);
-          formData.append("_subject", "[Barracuda] 공간 문의");
-          formData.append("_template", "table");
-          formData.append("_captcha", "false");
-          formData.append("_honey", "");
-          const replyTo = formData.get("email");
-          if (typeof replyTo === "string" && replyTo.length > 0) {
-            formData.append("_replyto", replyTo);
-          }
+          const payload = Object.fromEntries(formData.entries());
 
           const response = await fetch(FORM_ENDPOINT, {
             method: "POST",
             headers: {
-              Accept: "application/json",
+              "Content-Type": "application/json",
             },
-            body: formData,
+            body: JSON.stringify(payload),
           });
 
           if (!response.ok) {
+            const data = (await response.json().catch(() => null)) as { error?: string } | null;
             setSubmitState("error");
-            setErrorMessage("문의 전송에 실패했습니다. 잠시 후 다시 시도해 주세요.");
+            setErrorMessage(data?.error || "문의 전송에 실패했습니다. 잠시 후 다시 시도해 주세요.");
             return;
           }
 
@@ -73,7 +67,7 @@ export function SpaceInquiryForm() {
                 name={field.name}
                 type={field.type}
                 placeholder={"placeholder" in field ? field.placeholder : undefined}
-                required={field.type !== "number"}
+                required={field.name !== "eventDate" && field.name !== "expectedGuests"}
                 min={field.type === "number" ? 1 : undefined}
                 className="w-full rounded-[1.25rem] border border-[var(--color-line)] bg-[var(--color-background)] px-4 py-3 text-sm text-[var(--color-foreground)] outline-none transition focus:border-[var(--color-foreground)]"
               />
@@ -95,7 +89,7 @@ export function SpaceInquiryForm() {
           disabled={submitState === "submitting"}
           className="mt-6 inline-flex rounded-full border border-[var(--color-foreground)]/20 bg-[var(--color-foreground)] px-5 py-3 text-sm uppercase tracking-[0.24em] text-[var(--color-background)] transition hover:bg-transparent hover:text-[var(--color-foreground)] disabled:cursor-not-allowed disabled:opacity-60"
         >
-          {submitState === "submitting" ? "보내는 중..." : inquiryForm.submitLabel}
+          {submitState === "submitting" ? "보내는 중.." : inquiryForm.submitLabel}
         </button>
       </form>
     </div>
