@@ -40,7 +40,7 @@ export async function POST(request: Request) {
 
   try {
     await sendFormEmail({
-      subject: "[Barracuda] 공간 문의",
+      subject: "[Baracuda] 공간 문의",
       replyTo: payload.email,
       textLines: [
         `이름: ${payload.name}`,

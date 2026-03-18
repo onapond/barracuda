@@ -5,17 +5,17 @@ import { assetPaths } from "@/data/site-content";
 
 const heroCopy = {
   eyebrow: "로스터리 카페",
-  title: "BARRACUDA",
-  subtitle: "커피와 공간의 결이 만나는 곳",
-  description: "로스터리의 밀도와 차분한 공간의 감도를 한곳에 담았습니다.",
-  primaryCta: { href: "/visit", label: "방문 정보 보기" },
-  secondaryCta: { href: "/coffee", label: "커피 보기" },
+  title: "BARACUDA",
+  subtitle: "로스팅과 공간의 결이 만나는 곳",
+  description: "조용한 분위기 속에서 커피와 머무는 시간이 하나의 경험으로 이어집니다.",
+  primaryCta: { href: "/visit", label: "바라쿠다 방문하기" },
+  secondaryCta: { href: "/coffee", label: "커피 살펴보기" },
 };
 
 export function HeroSection() {
   return (
     <section className="relative min-h-screen overflow-hidden">
-      <Image src={assetPaths.hero} alt="Barracuda 공간을 담은 대표 이미지" fill priority className="object-cover" />
+      <Image src={assetPaths.hero} alt="Baracuda 공간을 담은 대표 이미지" fill priority className="object-cover" />
       <div className="absolute inset-0 bg-[var(--color-overlay)]" />
       <Container className="relative flex min-h-screen items-end pb-20 pt-32 sm:pb-24">
         <div className="text-white">

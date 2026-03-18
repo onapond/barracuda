@@ -54,7 +54,7 @@ export function Header() {
             href="/"
             className="font-display text-2xl tracking-[0.24em] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4"
           >
-            BARRACUDA
+            BARACUDA
           </Link>
           <nav className="hidden items-center gap-8 md:flex">
             {navLinks.map((link) => {

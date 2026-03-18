@@ -341,3 +341,194 @@ If delivery fails:
 2. check spam/junk in `4everlll@naver.com`
 3. submit again from production, not localhost
 4. if reliability becomes important, replace FormSubmit with a first-party email provider flow such as Resend
+
+---
+
+## 13. 2026-03-18 Codex Handoff Update
+
+### Production status
+
+- Production alias is live at `https://barracudaweb.vercel.app`
+- Latest successful production deployment from this session:
+  - `https://barracuda-qc1vpi9x5-onaponds-projects.vercel.app`
+- Standard local deploy flow is working again with:
+  - `vercel deploy --prod --yes`
+- The local project was re-linked to:
+  - Vercel team: `onaponds-projects`
+  - Vercel project: `barracuda_web`
+
+### What changed in this session
+
+#### Visit page
+
+- Replaced placeholder visit content on `/visit` with verified venue information:
+  - address: `서울특별시 용산구 이태원로 29, 로얄파크컨벤션 1층`
+  - phone: `02-501-4527`
+  - parking: ground and underground parking details, fees, and inquiry phone
+  - subway access: Samgakji / Namyeong walking times
+- Converted the page from placeholder paragraph blocks to cleaner grouped information sections:
+  - `Address / Contact`
+  - `Parking`
+  - `Public Transit`
+- Connected the directions CTA to a real Google Maps query URL
+
+#### Footer
+
+- Removed the footer navigation because it was visually noisy
+- Added a right-aligned `Family Sites` dropdown
+- Added centered social icon links for:
+  - Blog
+  - YouTube
+  - Instagram
+- Moved address and copyright to a dedicated bottom line under social
+
+#### Menu
+
+- Replaced the previous placeholder-ish menu layout with the user-provided menu on `/menu`
+- Added categories for:
+  - `Coffee`
+  - `Tea`
+  - `Sweet Tea`
+  - `Bottle`
+  - `Juice`
+  - `Dessert`
+- Added prices and the note:
+  - `디카페인 +700`
+- Added the operating notice:
+  - `1인 1음료 주문 부탁드립니다`
+- Fixed a TypeScript narrowing issue in `app/menu/page.tsx` that blocked production build
+
+#### Homepage / Brand section
+
+- Changed the landing-page brand image area from a three-tile composition to a single large image
+- This now matches the simpler visual direction requested from the brand tab
+
+#### Brand spelling
+
+- User-facing brand spelling was updated from `Barracuda` to `Baracuda` / `BARACUDA`
+- This was applied to visible UI strings, metadata, alt text, and mail subjects
+- Important:
+  - internal identifiers were intentionally not renamed in this session
+  - examples:
+    - Vercel project: `barracuda_web`
+    - production domain: `barracudaweb.vercel.app`
+    - package name: `barracuda-web`
+
+#### Image handling
+
+- Homepage hero was switched from the old SVG placeholder to a real image asset
+- Current homepage hero path:
+  - `public/images/hero.jpg`
+- The previous placeholder file `public/images/hero.svg` is deleted in the working tree
+- Additional uncommitted image assets now exist in `public/images/`:
+  - `ade.png`
+  - `ame.png`
+  - `latte.png`
+  - `latte.webp`
+  - `tea.png`
+- These additional drink images are not yet wired into the UI in this handoff
+
+### Files most affected in this session
+
+- `app/menu/page.tsx`
+- `app/visit/page.tsx`
+- `components/footer.tsx`
+- `components/brand-section.tsx`
+- `components/header.tsx`
+- `components/hero-section.tsx`
+- `data/site-content.ts`
+- `app/layout.tsx`
+- `app/brand/page.tsx`
+- `app/coffee/page.tsx`
+- `app/space/page.tsx`
+- `app/store/page.tsx`
+- `app/api/forms/menu-order/route.ts`
+- `app/api/forms/space-inquiry/route.ts`
+
+### Working tree note
+
+The working tree is still not clean after this session.
+
+Relevant current changes include:
+- route/page copy updates
+- footer redesign
+- menu rewrite
+- visit page rewrite
+- brand spelling updates
+- hero image replacement
+- newly added image assets in `public/images/`
+
+Do not assume these changes are committed.
+Do not revert the added local image files unless the user explicitly asks.
+
+### Recommended next work
+
+Priority order:
+1. visually QA the live production site after the brand spelling update
+2. decide whether internal identifiers should also be renamed from `barracuda` to `baracuda`
+3. integrate the newly added drink/menu image assets if the user wants richer product visuals
+4. replace remaining placeholder SVG/image assets beyond the homepage hero
+5. optionally normalize text encoding / central content management in `data/site-content.ts`
+
+---
+
+## 14. 2026-03-18 Codex Handoff Update 2
+
+### Last command executed
+
+- `vercel deploy --prod --yes --scope onaponds-projects`
+
+### Latest production deployment from this session
+
+- deployment URL: `https://barracuda-f0cmubkpr-onaponds-projects.vercel.app`
+- production alias: `https://barracudaweb.vercel.app`
+
+### What changed in this pass
+
+- Updated homepage/store imagery:
+  - beans card -> `public/images/apollo.png`
+  - goods card -> `public/images/goods.png`
+  - lifestyle card -> `public/images/Parcera.png`
+- Replaced several route hero images to reuse recent landing-page images.
+- Simplified visit page and visit-section copy.
+- Updated shared business info to:
+  - `매주 월요일 휴무 / 10:00-19:00`
+- Rebuilt `data/site-content.ts` into a clean UTF-8 file because the previous version had repeated encoding/string corruption.
+- Added brand-page story background image support using:
+  - `public/images/brend-hero.jpg.jpg`
+
+### Important unresolved issue
+
+Brand tab image changes were reported by the user as not correctly reflected after deployment.
+
+Current code reality in `app/brand/page.tsx`:
+- hero image: `/images/brend.jpg`
+- story background image: `/images/brend-hero.jpg.jpg`
+- bottom gallery is still effectively wrong for the requested state:
+  - first image is `/images/brend.jpg`
+  - second and third images still resolve through `assetPaths.brand[1]` and `assetPaths.brand[2]`
+  - those values currently come from `data/site-content.ts`, not directly from `brend-2.jpg` and `brend-3.jpg` in the route file
+
+User expectation that is NOT yet confirmed on live site:
+- bottom gallery should use:
+  - `public/images/brend-1.jpg`
+  - `public/images/brend-2.jpg`
+  - `public/images/brend-3.jpg`
+- middle brand-copy block background should visibly use the uploaded hero background image
+
+### Files to inspect first next session
+
+- `app/brand/page.tsx`
+- `data/site-content.ts`
+- `public/images/brend-1.jpg`
+- `public/images/brend-2.jpg`
+- `public/images/brend-3.jpg`
+- `public/images/brend-hero.jpg.jpg`
+
+### Recommended first action next session
+
+1. Open `app/brand/page.tsx` and explicitly hardcode the gallery array to `brend-1/2/3` only.
+2. Confirm the brand story background image is visible enough and not washed out by the overlay.
+3. Run `npm run build`.
+4. Redeploy.
+5. Visually verify `/brand` on production before reporting completion.

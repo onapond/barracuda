@@ -12,35 +12,35 @@ const coffeePage = {
   hero: {
     eyebrow: "커피",
     title: "바라쿠다 커피",
-    description: "CNC Tech 로스터리의 기반 위에서 배러쿠다의 톤으로 완성한 커피를 선보입니다.",
-    image: assetPaths.coffee,
-    imageAlt: "Barracuda 커피와 로스팅 무드를 보여주는 이미지",
+    description: "CNC Tech 로스터리의 기반 위에서 바라쿠다의 톤으로 완성한 커피를 선보입니다.",
+    image: "/images/roastery.png",
+    imageAlt: "Baracuda 로스터리 대표 이미지",
     ctaHref: "#beans-preview",
     ctaLabel: "원두 미리 보기",
   },
-  subtitle: "로스터리의 기반, 배러쿠다의 결",
+  subtitle: "의도를 담아 로스팅한 커피.",
   intro: {
-    title: "커피는 배러쿠다 인상의 중심에 있습니다.",
-    description: "한 잔의 맛이 공간의 인상까지 이어지도록 준비합니다.",
+    title: "커피는 바라쿠다의 첫 인상입니다.",
+    description: "한 잔의 맛과 마무리가 공간의 분위기까지 자연스럽게 이어지도록 준비합니다.",
   },
   roasteryIntro: {
     eyebrow: "CNC Tech 로스터리",
-    title: "신뢰할 수 있는 로스팅 기반",
-    description: "배러쿠다의 커피는 CNC Tech 로스터리와 함께 방향을 맞춰 만듭니다.",
-    points: ["로스터리 기반 운영", "스페셜티 커피 중심", "균형 있는 맛 설계"],
+    title: "CNC Tech 로스터리와 함께합니다.",
+    description: "안정적인 로스팅 기반 위에서 바라쿠다의 커피 톤을 맞춰갑니다.",
+    points: ["로스터리 기반 운영", "스페셜티 커피 중심", "일관된 맛의 균형"],
     externalHref: "https://cnctechlab.co.kr/",
     externalLabel: "CNC Tech 보기",
   },
   roastingPhilosophy: {
     eyebrow: "로스팅 방향",
-    title: "선명한 맛과 균형을 봅니다.",
-    description: "과한 인상보다 오래 남는 밸런스를 우선합니다.",
+    title: "선명함과 균형을 우선합니다.",
+    description: "과한 인상보다 오래 남는 단맛과 깨끗한 마무리를 먼저 봅니다.",
     pillars: ["선명한 향", "균형 있는 바디", "깔끔한 마무리"],
-    image: { src: assetPaths.coffee, alt: "로스팅 철학을 보여주는 커피 이미지" },
+    image: { src: "/images/roastery.png", alt: "로스팅 철학을 보여주는 로스터리 이미지" },
   },
   coffeeSelection: {
     eyebrow: "셀렉션",
-    title: "배러쿠다의 인상을 만드는 구성",
+    title: "바라쿠다의 인상을 만드는 셀렉션",
     cards: [
       { title: "싱글 오리진", name: "에티오피아 구지", origin: "에티오피아", notes: ["복숭아", "플로럴", "허니"] },
       { title: "시즈널 커피", name: "콜롬비아 시즈널 로트", origin: "콜롬비아", notes: ["붉은 사과", "카라멜", "시트러스"] },
@@ -49,36 +49,36 @@ const coffeePage = {
   },
   brewingExperience: {
     eyebrow: "브루잉",
-    title: "질감과 균형을 또렷하게 냅니다.",
-    description: "마시는 순간의 인상이 편안하고 분명하도록 준비합니다.",
-    image: { src: assetPaths.coffee, alt: "브루잉 경험을 보여주는 이미지" },
+    title: "질감과 온도를 세심하게 맞춥니다.",
+    description: "마시는 순간이 편안하고 또렷하게 남도록 준비합니다.",
+    image: { src: "/images/experience.jpg", alt: "브루잉 경험을 보여주는 이미지" },
   },
   beansPreview: {
     id: "beans-preview",
     eyebrow: "원두",
     title: "스토어로 이어질 원두를 먼저 소개합니다.",
     items: [
-      { title: "바라쿠다 하우스 블렌드", description: "배러쿠다의 기준이 되는 블렌드" },
-      { title: "시즈널 싱글 오리진", description: "시기마다 바뀌는 선택" },
-      { title: "필터 커피 셀렉션", description: "여유로운 한 잔을 위한 구성" },
+      { title: "바라쿠다 하우스 블렌드", description: "에스프레소와 밀크 음료에 자연스럽게 어울리는 기준 블렌드" },
+      { title: "시즈널 싱글 오리진", description: "시기마다 바뀌는 밝고 깨끗한 시즌 셀렉션" },
+      { title: "필터 커피 셀렉션", description: "느린 추출과 여유로운 한 잔을 위한 구성을 상상합니다." },
     ],
     ctaHref: "/store",
     ctaLabel: "원두 보기",
   },
   ctaSection: {
-    eyebrow: "다음으로",
+    eyebrow: "다음으로 이어가기",
     title: "커피에서 다른 경험으로 이어가 보세요.",
     actions: [
       { href: "/visit", label: "방문 정보" },
-      { href: "/space", label: "공간 보기" },
+      { href: "/space", label: "공간 살펴보기" },
       { href: "/menu", label: "메뉴 보기" },
     ],
   },
 };
 
 export const metadata: Metadata = {
-  title: "Coffee | Barracuda",
-  description: "Barracuda의 로스터리 기반 커피 철학과 원두, 로스팅, 브루잉 방향을 소개합니다.",
+  title: "Coffee | Baracuda",
+  description: "바라쿠다의 로스터리 기반 커피 철학과 원두, 로스팅, 브루잉 방향을 간결하게 소개합니다.",
 };
 
 export default function CoffeePage() {
@@ -95,3 +95,4 @@ export default function CoffeePage() {
     </SiteShell>
   );
 }
+

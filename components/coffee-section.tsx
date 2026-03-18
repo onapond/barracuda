@@ -3,15 +3,14 @@ import { SectionHeading } from "@/components/section-heading";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
-import { assetPaths } from "@/data/site-content";
 
 const coffeeCopy = {
   eyebrow: "커피",
   title: "로스터리 기반의 커피를 선보입니다.",
-  description: "원두 선택부터 잔의 인상까지, 배러쿠다의 방향이 담긴 커피입니다.",
-  image: { src: assetPaths.coffee, alt: "원두와 로스팅 무드를 보여주는 커피 이미지" },
+  description: "원두 선택부터 잔의 인상까지, 바라쿠다의 방향이 담긴 커피입니다.",
+  image: { src: "/images/roastery.png", alt: "바라쿠다 로스터리 무드를 보여주는 이미지" },
   features: [
-    { title: "원두 셀렉션", description: "방향이 분명한 선택" },
+    { title: "원두 셀렉션", description: "계절감에 맞춘 선택" },
     { title: "로스팅 방향", description: "균형이 선명한 맛" },
   ],
   cta: { href: "/coffee", label: "커피 보기" },

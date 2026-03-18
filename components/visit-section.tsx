@@ -5,10 +5,13 @@ import { Container } from "@/components/ui/container";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
 import { businessInfo } from "@/data/site-content";
 
+const mapEmbedUrl =
+  "https://maps.google.com/maps?q=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%EC%9D%B4%ED%83%9C%EC%9B%90%EB%A1%9C%2029%20%EB%A1%9C%EC%96%84%ED%8C%8C%ED%81%AC%EC%BB%A8%EB%B2%A4%EC%85%98%201%EC%B8%B5&z=16&output=embed";
+
 const visitCopy = {
   eyebrow: "방문",
-  title: "방문 전 필요한 정보",
-  description: "방문 전에 필요한 핵심 정보만 먼저 확인하세요.",
+  title: "오시는 길과 이용 정보",
+  description: "주소와 주차, 연락처를 먼저 확인하세요.",
   details: [
     { label: "주소", value: businessInfo.address },
     { label: "운영 시간", value: businessInfo.openingHours },
@@ -20,8 +23,6 @@ const visitCopy = {
   directionsLabel: "길찾기",
   instagramHref: businessInfo.instagramUrl,
   instagramLabel: "인스타그램",
-  mapEyebrow: "위치",
-  mapTitle: "브랜드의 온도와 공간의 결을 현장에서 직접 확인할 수 있습니다.",
   mapLinkLabel: "지도 열기",
 };
 
@@ -45,16 +46,28 @@ export function VisitSection() {
               <Button href={visitCopy.instagramHref} variant="ghost">{visitCopy.instagramLabel}</Button>
             </div>
           </div>
-          <a href={visitCopy.directionsHref} target="_blank" rel="noreferrer" className="group flex min-h-[420px] flex-col justify-between rounded-[2.25rem] border border-[var(--color-line)] bg-[linear-gradient(180deg,rgba(255,255,255,0.8),rgba(222,214,202,0.5))] p-8">
-            <div>
-              <p className="text-xs uppercase tracking-[0.34em] text-[var(--color-muted)]">{visitCopy.mapEyebrow}</p>
-              <h3 className="mt-6 max-w-[12ch] font-display text-4xl leading-[1.22] tracking-[-0.02em] [word-break:keep-all]">{visitCopy.mapTitle}</h3>
+          <div className="relative min-h-[420px] overflow-hidden rounded-[2.25rem] border border-[var(--color-line)] bg-[var(--color-surface)]">
+            <iframe
+              title="Baracuda location map"
+              src={mapEmbedUrl}
+              className="absolute inset-0 h-full w-full border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+            <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(18,18,18,0.12))]" />
+            <div className="relative flex min-h-[420px] items-end justify-end p-6 pointer-events-none">
+              <a
+                href={visitCopy.directionsHref}
+                target="_blank"
+                rel="noreferrer"
+                className="pointer-events-auto flex items-center justify-between gap-4 rounded-[1.25rem] border border-white/45 bg-white/82 px-5 py-4 backdrop-blur-sm transition-opacity hover:opacity-90"
+              >
+                <span className="text-sm uppercase tracking-[0.24em]">{visitCopy.mapLinkLabel}</span>
+                <ArrowUpRight className="transition-transform duration-300 hover:-translate-y-1 hover:translate-x-1" />
+              </a>
             </div>
-            <div className="flex items-center justify-between border-t border-[var(--color-line)] pt-6">
-              <span className="text-sm uppercase tracking-[0.24em]">{visitCopy.mapLinkLabel}</span>
-              <ArrowUpRight className="transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1" />
-            </div>
-          </a>
+          </div>
         </div>
       </Container>
     </SectionWrapper>
