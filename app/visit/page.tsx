@@ -13,7 +13,7 @@ const visitPage = {
     eyebrow: "방문",
     title: "오시는 길과 이용 정보",
     description: "주소, 주차, 대중교통 정보를 정리했습니다.",
-    image: "/images/experience.jpg",
+    image: "/images/brend-hero.jpg.jpg",
     imageAlt: "Baracuda 방문 경험을 보여주는 대표 이미지",
     ctaHref: "#visit-info",
     ctaLabel: "이용 정보 보기",

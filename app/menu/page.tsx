@@ -11,7 +11,7 @@ const menuPage = {
     eyebrow: "메뉴",
     title: "바라쿠다 메뉴",
     description: "커피, 티, 병음료와 디저트를 한눈에 볼 수 있게 정리했습니다.",
-    image: assetPaths.coffee,
+    image: "/images/menu.png",
     imageAlt: "Baracuda 메뉴와 커피 무드를 보여주는 이미지",
     ctaHref: "#menu-list",
     ctaLabel: "메뉴 보기",

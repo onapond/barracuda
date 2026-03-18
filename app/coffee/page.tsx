@@ -36,7 +36,7 @@ const coffeePage = {
     title: "선명함과 균형을 우선합니다.",
     description: "과한 인상보다 오래 남는 단맛과 깨끗한 마무리를 먼저 봅니다.",
     pillars: ["선명한 향", "균형 있는 바디", "깔끔한 마무리"],
-    image: { src: "/images/roastery.png", alt: "로스팅 철학을 보여주는 로스터리 이미지" },
+    image: { src: "/images/roasting.png", alt: "로스팅 방향을 보여주는 이미지" },
   },
   coffeeSelection: {
     eyebrow: "셀렉션",
@@ -51,7 +51,7 @@ const coffeePage = {
     eyebrow: "브루잉",
     title: "질감과 온도를 세심하게 맞춥니다.",
     description: "마시는 순간이 편안하고 또렷하게 남도록 준비합니다.",
-    image: { src: "/images/experience.jpg", alt: "브루잉 경험을 보여주는 이미지" },
+    image: { src: "/images/brew.png", alt: "브루잉 경험을 보여주는 이미지" },
   },
   beansPreview: {
     id: "beans-preview",

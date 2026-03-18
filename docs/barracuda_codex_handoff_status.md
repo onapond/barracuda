@@ -532,3 +532,98 @@ User expectation that is NOT yet confirmed on live site:
 3. Run `npm run build`.
 4. Redeploy.
 5. Visually verify `/brand` on production before reporting completion.
+
+---
+
+## 15. 2026-03-18 Codex Handoff Update 3
+
+### Latest production deployment from this pass
+
+- deployment URL: `https://barracuda-6491xvisb-onaponds-projects.vercel.app`
+- production alias: `https://barracudaweb.vercel.app`
+
+### What changed in this pass
+
+- Brand page:
+  - bottom gallery was aligned to the uploaded `brend-1/2/3` asset set
+  - the middle story area was converted into a full-section background image layout using:
+    - `public/images/brend-hero.jpg.jpg`
+  - the story panel was re-centered and enlarged
+  - the story copy was rewritten into a more slot-fit structure:
+    - title
+    - lead
+    - two short body paragraphs
+- Coffee page:
+  - `로스팅 방향` image -> `public/images/roasting.png`
+  - `브루잉` image -> `public/images/brew.png`
+- Menu page:
+  - hero image -> `public/images/menu.png`
+- Space page:
+  - `이용 장면` images were replaced with the requested image set:
+    - `event.jpg`
+    - `fation.jpg`
+    - `book.jpg`
+    - `experience.jpg`
+    - `showcase.jpg`
+    - `creator.jpg`
+  - lower gallery was replaced with:
+    - `hero.jpg`
+    - `brend-hero.jpg.jpg`
+    - `brend-4.jpg`
+    - `brend-1.jpg`
+    - `brend-2.jpg`
+    - `brend-3.jpg`
+- Visit page:
+  - hero image -> `public/images/brend-hero.jpg.jpg`
+- Navigation:
+  - `Store` was removed from shared nav visibility for now
+  - active visible tabs are:
+    - `Brand`
+    - `Coffee`
+    - `Space`
+    - `Menu`
+    - `Visit`
+
+### Current important reality
+
+- The latest visual/image pass is deployed to production.
+- However, these latest local changes are still not committed in the working tree.
+- Do not assume the deployed state and the latest git `HEAD` are the same.
+
+### Current working tree note
+
+Current modified code files include:
+
+- `app/brand/page.tsx`
+- `app/coffee/page.tsx`
+- `app/menu/page.tsx`
+- `app/space/page.tsx`
+- `app/visit/page.tsx`
+- `data/site-content.ts`
+
+Current uncommitted image additions include:
+
+- `public/images/brend-4.jpg`
+- `public/images/brew.png`
+- `public/images/creator.jpg`
+- `public/images/menu.png`
+- `public/images/roasting.png`
+- `public/images/showcase.jpg`
+
+Current uncommitted image deletions include:
+
+- `public/images/coffee-1.svg`
+- `public/images/map-preview.svg`
+- `public/images/space-1.svg`
+- `public/images/space-2.svg`
+- `public/images/space-3.svg`
+- `public/images/store-1.svg`
+- `public/images/store-2.svg`
+- `public/images/store-3.svg`
+- `public/images/tea.png`
+
+### Recommended first action next session
+
+1. Visually QA `/brand`, `/coffee`, `/menu`, `/space`, and `/visit` on production.
+2. If approved, commit and push the current image/layout pass.
+3. Decide whether the temporary hidden `Store` tab should remain route-accessible or be explicitly closed.

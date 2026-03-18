@@ -3,7 +3,6 @@
   { href: "/coffee", label: "Coffee" },
   { href: "/space", label: "Space" },
   { href: "/menu", label: "Menu" },
-  { href: "/store", label: "Store" },
   { href: "/visit", label: "Visit" },
 ] as const;
 

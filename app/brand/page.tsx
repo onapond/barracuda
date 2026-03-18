@@ -15,10 +15,14 @@ const brandPage = {
     image: "/images/brend.jpg",
     imageAlt: "Baracuda 브랜드 대표 이미지",
   },
-  story: [
-    "BARACUDA는 피스앤파크 컨벤션 1층에 자리한 프리미엄 카페입니다. 탁 트인 유리창 너머의 도심 녹지 뷰와 세련된 인테리어가 차분한 여유를 만듭니다.",
-    "스페셜 티와 커피, 감각적인 시그니처 메뉴는 물론 소중한 모임과 비즈니스 미팅에도 자연스럽게 어울립니다. 바쁜 일상 속 잠시 머무르기 좋은 공간입니다.",
-  ],
+  story: {
+    title: "도심의 뷰와\n차분한 리듬이 머무는 곳",
+    lead: "BARACUDA는 피스앤파크 컨벤션 1층에서 커피와 공간의 톤을 함께 전합니다.",
+    body: [
+      "탁 트인 창 너머의 녹지 뷰와 정제된 인테리어가 잠시 머무는 시간의 결을 만듭니다.",
+      "스페셜티 커피와 티, 작은 모임과 비즈니스 미팅까지 자연스럽게 어울리는 장면을 준비합니다.",
+    ],
+  },
   storyBackground: {
     src: "/images/brend-hero.jpg.jpg",
     alt: "브랜드 문구 배경 이미지",
@@ -53,12 +57,19 @@ export default function BrandPage() {
             className="object-cover"
           />
         </div>
-        <Container className="relative py-20 sm:py-24 lg:py-32">
-          <div className="flex min-h-[460px] items-center justify-center sm:min-h-[560px] lg:min-h-[680px]">
-            <div className="w-full max-w-4xl rounded-[1.75rem] border border-[rgba(255,255,255,0.55)] bg-[rgba(248,245,240,0.9)] px-8 py-10 shadow-[0_24px_80px_rgba(0,0,0,0.12)] backdrop-blur-[3px] sm:px-12 sm:py-12 lg:px-16 lg:py-16">
-              <div className="space-y-8">
-                {brandPage.story.map((paragraph) => (
-                  <p key={paragraph} className="text-lg leading-[1.95] tracking-[-0.01em] text-[var(--color-muted)] sm:text-xl">
+        <Container className="relative grid min-h-[520px] place-items-center py-16 sm:min-h-[620px] sm:py-20 lg:min-h-[760px] lg:py-24">
+          <div className="mx-auto w-full max-w-[68rem] rounded-[1.9rem] border border-[rgba(255,255,255,0.58)] bg-[rgba(248,245,240,0.92)] px-8 py-10 shadow-[0_28px_100px_rgba(0,0,0,0.14)] backdrop-blur-[4px] sm:px-12 sm:py-14 lg:px-20 lg:py-18">
+            <div className="mx-auto max-w-[60rem]">
+              <p className="text-xs uppercase tracking-[0.3em] text-[var(--color-muted)]">Brand Story</p>
+              <h2 className="mt-5 max-w-[12ch] whitespace-pre-line font-display text-[clamp(2.4rem,5vw,4.6rem)] leading-[1.16] tracking-[-0.035em] [word-break:keep-all]">
+                {brandPage.story.title}
+              </h2>
+              <p className="mt-6 max-w-[32ch] text-base leading-[1.8] tracking-[-0.01em] text-[var(--color-muted)] sm:text-lg lg:text-[1.25rem]">
+                {brandPage.story.lead}
+              </p>
+              <div className="mt-10 grid gap-6 border-t border-[rgba(43,34,24,0.1)] pt-8 lg:grid-cols-2 lg:gap-10 lg:pt-10">
+                {brandPage.story.body.map((paragraph) => (
+                  <p key={paragraph} className="max-w-[28ch] text-base leading-[1.9] tracking-[-0.01em] text-[var(--color-muted)] sm:text-lg">
                     {paragraph}
                   </p>
                 ))}
