@@ -1,9 +1,9 @@
 ﻿"use client";
 
 import { useState } from "react";
-import { subpageContent } from "@/data/site-content";
+import { siteConfig } from "@/data/site";
 
-const FORM_ENDPOINT = "https://formsubmit.co/4everlll@naver.com";
+const FORM_ENDPOINT = `https://formsubmit.co/${siteConfig.contact.formRecipientEmail}`;
 const SUCCESS_PARAM = "space";
 
 function getReturnUrl() {
@@ -25,7 +25,7 @@ function getIsSuccess() {
 }
 
 export function SpaceInquiryForm() {
-  const { inquiryForm } = subpageContent.space;
+  const { inquiryForm } = siteConfig.space;
   const [returnUrl] = useState(getReturnUrl);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess] = useState(getIsSuccess);
@@ -50,7 +50,7 @@ export function SpaceInquiryForm() {
           setIsSubmitting(true);
         }}
       >
-        <input type="hidden" name="_subject" value="[Baracuda] 공간 문의" />
+        <input type="hidden" name="_subject" value={inquiryForm.subject} />
         <input type="hidden" name="_captcha" value="false" />
         <input type="hidden" name="_template" value="table" />
         <input type="hidden" name="_next" value={returnUrl} />
@@ -62,7 +62,7 @@ export function SpaceInquiryForm() {
               <input
                 name={field.name}
                 type={field.type}
-                placeholder={"placeholder" in field ? field.placeholder : undefined}
+                placeholder={field.placeholder}
                 required={field.name !== "eventDate" && field.name !== "expectedGuests"}
                 min={field.type === "number" ? 1 : undefined}
                 className="w-full rounded-[1.25rem] border border-[var(--color-line)] bg-[var(--color-background)] px-4 py-3 text-sm text-[var(--color-foreground)] outline-none transition focus:border-[var(--color-foreground)]"
@@ -91,3 +91,4 @@ export function SpaceInquiryForm() {
     </div>
   );
 }
+

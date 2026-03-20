@@ -12,7 +12,8 @@ Project basics
 - Active branch at handoff time: `v2-renewal`
 - Vercel project: `onaponds-projects/barracuda_web`
 - Production URL: `https://barracudaweb.vercel.app`
-- Latest known production deployment: `https://barracuda-im3feddvu-onaponds-projects.vercel.app`
+- Latest production deployment: `https://barracuda-5ngt0fi84-onaponds-projects.vercel.app`
+- Latest deployment inspect URL: `https://vercel.com/onaponds-projects/barracuda_web/2spokVcf1dDXRFNp5NhDyVp2HMJA`
 
 ---
 
@@ -35,25 +36,26 @@ Implemented stack:
 - FormSubmit for lightweight client-side inquiry forms
 
 Current design direction:
-- the site is no longer using the older multi-section editorial homepage direction as the primary homepage shell
-- homepage and subpages were shifted toward a Hwagyeonsu-style structure requested by the user
-- white header block + centered logo + restrained navigation + single dominant hero image are now the base pattern
-- subpages were also simplified into gallery-first layouts so the site reads more through imagery than dense explanation
+- the homepage is no longer a simple hero-only shell
+- homepage follows the approved `화견수` reference direction more closely through image-heavy editorial flow
+- homepage is now space-first rather than coffee-first
+- the main homepage message is that Barracuda is a place for private scenes, gatherings, celebrations, and brand moments
+- coffee remains important, but behaves as a supporting layer that completes the space mood
 
 Major completed work in the current cycle:
-- current pre-renewal state was preserved as `v1-homepage-snapshot`
-- homepage was rebuilt into a reusable company-standard template shell
-- reusable homepage template component added: `components/company-homepage-template.tsx`
-- reusable subpage shell/header/hero/gallery components added
-- `/brand`, `/coffee`, `/space`, `/menu`, `/store`, `/visit` were converted to gallery-first page structures
-- menu page text corruption was replaced with a clean image-led layout using `public/images/ba_menu.jpg`
-- production deployment was completed successfully after the gallery-first conversion
-- local lint/build verification passed after the latest changes
+- homepage was rebuilt again after review so it no longer stops at hero + footer
+- homepage now includes a space-first intro gallery section
+- homepage now includes a signature tab section designed to accept image or video media per tab
+- homepage now includes sequential preview sections for space, brand, coffee, menu, and visit
+- homepage content and copy were rewritten to feel more premium, less direct, and more mood-led
+- shared site config was expanded so homepage structure can scale across future sites
+- local lint/build verification passed after the latest homepage changes
+- production deployment completed successfully after the homepage redesign
 
 Important current reality:
-- the site now prioritizes layout consistency and image-led presentation over long route-specific text blocks
-- the homepage and subpages are much closer to a repeatable company template than before
-- the biggest remaining work is visual QA / fine-tuning, not architecture
+- the site now presents Barracuda primarily as a private-use spatial brand, not just a cafe site
+- the homepage is now much closer to the intended Hwagyeonsu-style gallery rhythm
+- actual video files are still not present in the workspace, so the signature tabs currently use images as placeholders for future video media
 
 ---
 
@@ -69,16 +71,34 @@ These rules should be treated as current unless the user explicitly changes them
 
 ### Current design / template rules
 - The approved homepage reference direction is the `화견수`-style structure.
-- Homepage should use:
+- This should be interpreted as:
   - large white header block
   - centered logo block
   - restrained horizontal nav on desktop
   - hamburger + utility links on mobile
-  - one dominant hero image
-  - one dominant CTA
-- Subpages should follow the same family of layout behavior and feel image-first.
-- Do not drift back into long text-heavy stacked layouts unless the user asks.
-- Gallery-first sections are preferred over explanation-heavy blocks.
+  - one strong hero at the top
+  - multiple image-led homepage sections after hero
+  - one signature tab/media section in the middle of the homepage
+  - gallery rhythm matters more than long explanations
+- Do not reduce the homepage back to a single-hero landing unless the user explicitly requests it.
+- Do not make the homepage feel like a generic service-card grid.
+- Space should be the strongest homepage category.
+- Copy should feel premium, restrained, and atmospheric rather than direct sales language.
+
+### Homepage positioning rules
+- Barracuda should read as a place for:
+  - private gatherings
+  - celebrations / parties
+  - brand moments / showcases
+  - cafe + lounge use
+- Coffee supports the identity but is not the lead homepage message.
+- The homepage CTA hierarchy should favor space discovery over operational cafe browsing.
+
+### Media rules
+- Homepage should be image-heavy.
+- Signature tabs are designed to support video.
+- If real video assets are added later, swap homepage signature tab featured media from `type: "image"` to `type: "video"` in site config.
+- Do not overfill sections with long copy once video assets arrive.
 
 ### Form rules
 - `/space` and `/menu` currently submit through FormSubmit from the client.
@@ -106,11 +126,17 @@ vercel deploy --prebuilt --prod --yes --archive=tgz
 Primary homepage / shell files:
 - `app/page.tsx`
 - `components/company-homepage-template.tsx`
+- `components/company-homepage-intro.tsx`
+- `components/company-signature-tabs.tsx`
+- `components/company-homepage-preview.tsx`
+- `components/company-header.tsx`
+- `components/footer.tsx`
+
+Shared route shell files:
 - `components/company-site-header.tsx`
 - `components/company-site-shell.tsx`
 - `components/company-page-hero.tsx`
 - `components/company-gallery-section.tsx`
-- `components/footer.tsx`
 
 Current route files:
 - `app/brand/page.tsx`
@@ -121,6 +147,11 @@ Current route files:
 - `app/visit/page.tsx`
 
 Current content / config source:
+- `data/site.ts`
+- `data/sites/barracuda.ts`
+- `lib/company-site.ts`
+
+Backward-compatibility content shim:
 - `data/site-content.ts`
 
 Production / repetition docs:
@@ -136,83 +167,100 @@ Forms:
 
 ---
 
-## 4. Template System Summary
+## 4. Homepage System Summary
 
 ### Homepage
-Homepage now uses the company-standard reusable template.
+Homepage now uses the company-standard shell plus Barracuda-specific space-first content.
 Current entry:
-- `app/page.tsx` -> `CompanyHomepageTemplate`
+- `app/page.tsx`
 
-The current site-specific homepage config lives in:
-- `companyHomepageTemplate` inside `data/site-content.ts`
+Active homepage sections in order:
+1. `CompanyHomepageTemplate` hero shell
+2. `CompanyHomepageIntro`
+3. `CompanySignatureTabs`
+4. `CompanyHomepagePreview` for space experience
+5. `CompanyHomepagePreview` for brand
+6. `CompanyHomepagePreview` for coffee
+7. `CompanyHomepagePreview` for menu
+8. `CompanyHomepagePreview` for visit
+9. `Footer`
 
-This is the intended reuse pattern for future sites:
-- keep `components/company-homepage-template.tsx` stable
-- swap site-specific config in `data/site-content.ts`
-- only change the template component when the company-wide standard itself changes
+Current homepage config lives in:
+- `barracudaSiteConfig` inside `data/sites/barracuda.ts`
 
-### Subpages
-Subpages now use a parallel family of reusable pieces:
-- `CompanySiteHeader`
-- `CompanySiteShell`
-- `CompanyPageHero`
-- `CompanyGallerySection`
+### Signature tab structure
+Current homepage signature tabs are:
+- `Private Scene`
+- `Celebration`
+- `Brand Moment`
+- `Cafe & Lounge`
 
 Interpretation:
-- the site now has a repeatable visual system for both landing and subpages
-- future sites can reuse the same structure with different data and imagery
+- this is the Barracuda equivalent of the reference site's style / category showcase section
+- each tab is designed to support one featured media asset plus supporting gallery images
+- current assets are all images because no video files are yet available locally
+
+### Multi-site reuse pattern
+The intended reuse pattern for future sites is:
+- keep shared components stable
+- duplicate a site config module under `data/sites/`
+- switch the active export in `data/site.ts`
+- only modify shared components if the company-wide standard changes
 
 ---
 
 ## 5. Page Notes
 
 ### `/`
-- Hwagyeonsu-style homepage shell is active
-- large white header block with centered brand presentation
-- dominant single hero image
-- footer still exists, unlike the reference, because it remains useful for the Barracuda site
-- if the user wants a closer 1:1 reference match, footer simplification/removal is a likely next adjustment
+- now behaves as a proper Hwagyeonsu-style editorial landing rather than hero-only landing
+- strongest homepage emphasis is space / scene / gathering mood
+- copy intentionally avoids overly direct rental-sales wording
+- homepage is currently image-led with image placeholders in signature media tabs
+- if video files are delivered, homepage should be updated to use real video in signature tabs first
 
 ### `/brand`
-- converted into gallery-first brand page
+- gallery-first brand page remains active
 - large hero + brand gallery + short brand note
-- reads through imagery more than text now
 
 ### `/coffee`
-- converted into image-led coffee page
-- roastery / roasting / brewing / menu mood are now presented through gallery sections
-- less technical explanation than before
+- image-led coffee page remains active
+- coffee acts as an important supporting credibility layer
 
 ### `/space`
-- converted into gallery-heavy page
-- strongest image density among subpages
+- still the strongest operational page
+- gallery-heavy structure remains active
 - still includes the inquiry form at the bottom
 
 ### `/menu`
-- previous corrupted / unstable text-heavy menu page was replaced with a gallery-first menu presentation
-- uses `public/images/ba_menu.jpg`
-- still includes the order request form at the bottom
+- menu remains image-led and still includes the order request form
+- `public/images/ba_menu.jpg` remains an actual product asset, not a temp file
 
 ### `/store`
-- now behaves more like a visual preview page than a category explanation page
-- keeps preview-only direction and no ecommerce behavior
+- still preview-oriented rather than ecommerce-oriented
 
 ### `/visit`
-- now mixes light gallery presentation with compact info cards
-- still contains operational info blocks, but much less text-heavy than before
+- still combines image presentation with compact info cards
 
 ---
 
 ## 6. Content / Asset Status
 
-Content still provisional in some areas:
-- utility links on template header are placeholder-style (`#`) links
+Current content status:
+- homepage copy was recently shifted toward premium, mood-led space language
+- utility links on the template header are still placeholder-style (`#`) links
 - some business details may still need final confirmation
-- final approved brand photography set is still not guaranteed complete
-- final brand copy may still be tightened after visual QA
+- final approved photo set may still need expansion
 
-Current important asset note:
-- `public/images/ba_menu.jpg` is now part of the actual site and should not be treated as a temp artifact
+Current important media reality:
+- no local homepage video files are currently present in `public/`
+- homepage signature tabs were implemented to support future video, but are currently fed image assets
+- the highest-value next content upgrade is real video for the homepage signature tabs
+
+Suggested future media priorities:
+1. one strong hero video or alternate hero cut
+2. signature tab videos for private scene / celebration / brand moment / cafe & lounge
+3. more space usage photography
+4. more event / party scene imagery
 
 Current temp analysis artifacts still in working tree and not committed:
 - `tmp-ref1*`
@@ -235,17 +283,17 @@ Latest deployment flow completed successfully:
 
 Latest production result:
 - production alias points to `https://barracudaweb.vercel.app`
-- latest known deploy URL: `https://barracuda-im3feddvu-onaponds-projects.vercel.app`
+- latest known deploy URL: `https://barracuda-5ngt0fi84-onaponds-projects.vercel.app`
 
-Important deployment caution from this session:
-- one deploy failed because `vercel build` and `vercel deploy --prebuilt` were triggered too close together / in parallel
+Important deployment caution from prior sessions:
+- one deploy previously failed because `vercel build` and `vercel deploy --prebuilt` were triggered too close together / in parallel
 - successful resolution was simply to rerun `vercel deploy --prebuilt --prod --yes --archive=tgz` after the build had fully completed
 
 ---
 
 ## 8. Git / Change History Notes
 
-Important commits in the current branch history:
+Important commits in the current branch history before this latest homepage pass:
 - `f9e115c` `chore: snapshot homepage v1 before v2 renewal`
 - `1b90b58` `feat: renew homepage for v2 direction`
 - `607ca04` `feat: adopt hwagyeonsu-style homepage structure`
@@ -254,28 +302,29 @@ Important commits in the current branch history:
 - `9913e01` `feat: convert subpages to gallery-first template`
 
 Meaning:
-- `v1` snapshot exists
-- homepage was first renewed, then converted to the Hwagyeonsu pattern, then generalized into a company template
-- subpages were later aligned to the same family of layout
+- v1 snapshot exists
+- homepage moved from older editorial stack -> Hwagyeonsu shell -> generalized template -> space-first gallery landing
+- subpages remain aligned to the same family of layout behavior
 
 ---
 
 ## 9. Recommended Next Work
 
 Priority next steps:
-1. visually QA all routes on real desktop and mobile breakpoints
-2. decide whether footer should remain or be simplified further to match the reference more closely
-3. replace placeholder utility links if the user wants real auth/member links or remove them entirely
-4. verify FormSubmit activation and actual email delivery for `/space` and `/menu`
-5. decide whether the temp analysis files should be deleted from the working tree
-6. if the company truly wants 100 similar sites, consider extracting `companyHomepageTemplate` into a dedicated config module or generator workflow instead of keeping all config in one site file
+1. visually QA the new homepage on real desktop and mobile breakpoints
+2. replace homepage signature featured images with real video assets when available
+3. decide whether homepage hero itself should remain image-first or move to video-first
+4. fine-tune homepage copy density if any section still feels too explanatory
+5. verify FormSubmit activation and actual email delivery for `/space` and `/menu`
+6. replace placeholder utility links or remove them entirely
+7. decide whether temp analysis files should be deleted from the working tree
 
 ---
 
 ## 10. Handoff Summary
 
-Barracuda is now running on a Hwagyeonsu-inspired, image-led site system rather than the older multi-section editorial homepage direction.
+Barracuda is now running on a Hwagyeonsu-inspired, media-heavy, space-first landing system rather than a simple cafe hero site.
 
-The homepage has been converted into a reusable company-standard template, subpages have been converted into gallery-first layouts, deployment is live on production, and lint/build are passing.
+The homepage now uses a strong top hero, a space-first intro gallery, a signature tab/media section, and multiple gallery previews that present private scenes, celebrations, brand moments, and cafe lounge mood through imagery.
 
-The remaining work is mainly visual refinement, operational content cleanup, form delivery verification, and possibly broader production tooling for repeating the same template across many future client sites.
+The remaining work is mainly visual QA, real video asset insertion, optional copy refinement, utility-link cleanup, and form delivery verification.

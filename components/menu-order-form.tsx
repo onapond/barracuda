@@ -1,9 +1,9 @@
 ﻿"use client";
 
 import { useState } from "react";
-import { subpageContent } from "@/data/site-content";
+import { siteConfig } from "@/data/site";
 
-const FORM_ENDPOINT = "https://formsubmit.co/4everlll@naver.com";
+const FORM_ENDPOINT = `https://formsubmit.co/${siteConfig.contact.formRecipientEmail}`;
 const SUCCESS_PARAM = "menu";
 
 function getReturnUrl() {
@@ -25,7 +25,7 @@ function getIsSuccess() {
 }
 
 export function MenuOrderForm() {
-  const { orderForm } = subpageContent.menu;
+  const { orderForm } = siteConfig.menu;
   const [returnUrl] = useState(getReturnUrl);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess] = useState(getIsSuccess);
@@ -50,7 +50,7 @@ export function MenuOrderForm() {
           setIsSubmitting(true);
         }}
       >
-        <input type="hidden" name="_subject" value="[Baracuda] 주문 요청" />
+        <input type="hidden" name="_subject" value={orderForm.subject} />
         <input type="hidden" name="_captcha" value="false" />
         <input type="hidden" name="_template" value="table" />
         <input type="hidden" name="_next" value={returnUrl} />
@@ -62,7 +62,7 @@ export function MenuOrderForm() {
               <input
                 name={field.name}
                 type={field.type}
-                placeholder={"placeholder" in field ? field.placeholder : undefined}
+                placeholder={field.placeholder}
                 required={field.name !== "pickupDate" && field.name !== "pickupTime"}
                 className="w-full rounded-[1.25rem] border border-[var(--color-line)] bg-[var(--color-background)] px-4 py-3 text-sm text-[var(--color-foreground)] outline-none transition focus:border-[var(--color-foreground)]"
               />
@@ -108,3 +108,4 @@ export function MenuOrderForm() {
     </div>
   );
 }
+

@@ -18,8 +18,11 @@ Template structure
 8. Optional footer or downstream blocks after hero
 
 Current implementation
+- Active site entry: `data/site.ts`
+- Site configs: `data/sites/*.ts`
 - Template component: `components/company-homepage-template.tsx`
-- Current Barracuda config: `companyHomepageTemplate` in `data/site-content.ts`
+- Shared header: `components/company-header.tsx`
+- Current Barracuda config: `data/sites/barracuda.ts`
 - Current homepage entry: `app/page.tsx`
 
 Required content slots
@@ -32,8 +35,9 @@ Required content slots
 - primary CTA
 
 Reuse rule
-- For new client sites, keep the layout component unchanged whenever possible.
-- Replace only the `companyHomepageTemplate` data first.
+- For new client sites, keep the layout components unchanged whenever possible.
+- Duplicate a site config first, then swap data and assets.
+- Update `data/site.ts` to point at the active site.
 - Add custom downstream sections only after the base header/hero structure is approved.
 
 Mobile rules

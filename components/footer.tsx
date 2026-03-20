@@ -1,11 +1,11 @@
-﻿import Link from "next/link";
+﻿import Image from "next/image";
+import Link from "next/link";
 import { ChevronDown, Globe, Instagram, Youtube } from "lucide-react";
-import { BrandLogo } from "@/components/brand-logo";
 import { Container } from "@/components/ui/container";
-import { siteContent } from "@/data/site-content";
+import { siteConfig } from "@/data/site";
 
 export function Footer() {
-  const { footer } = siteContent;
+  const { footer } = siteConfig;
 
   const socialIcons = {
     Blog: Globe,
@@ -19,7 +19,13 @@ export function Footer() {
         <div className="grid gap-8 lg:grid-cols-[1fr_auto_1fr] lg:items-start">
           <div className="text-center lg:text-left">
             <div className="mx-auto w-[13rem] lg:mx-0">
-              <BrandLogo variant="wordmark" className="w-full" />
+              <Image
+                src={footer.logo?.src ?? siteConfig.homepage.logo.src}
+                alt={footer.logo?.alt ?? siteConfig.homepage.logo.alt}
+                width={footer.logo?.width ?? siteConfig.homepage.logo.width}
+                height={footer.logo?.height ?? siteConfig.homepage.logo.height}
+                className="h-auto w-full"
+              />
             </div>
             <p className="mt-4 text-sm text-[var(--color-muted)]">{footer.statement}</p>
             <p className="mt-2 text-sm text-[var(--color-muted)]">{footer.subline}</p>
@@ -29,7 +35,7 @@ export function Footer() {
             <p className="text-xs uppercase tracking-[0.24em] text-[var(--color-muted)]">Connect</p>
             <div className="mt-4 flex items-center gap-3">
               {footer.socialLinks.map((link) => {
-                const Icon = socialIcons[link.label as keyof typeof socialIcons];
+                const Icon = socialIcons[link.label];
 
                 return (
                   <Link
@@ -78,3 +84,4 @@ export function Footer() {
     </footer>
   );
 }
+
