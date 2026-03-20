@@ -1,10 +1,10 @@
 ﻿import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
-import { siteContent } from "@/data/site-content";
+import { companyHomepageTemplate } from "@/data/site-content";
 
 export function HomeReferenceHero() {
-  const { hero } = siteContent.homeLanding;
+  const { hero } = companyHomepageTemplate;
 
   return (
     <section className="relative overflow-hidden bg-white">

@@ -1,13 +1,11 @@
-﻿import { Footer } from "@/components/footer";
-import { HomeReferenceHeader } from "@/components/home-reference-header";
-import { HomeReferenceHero } from "@/components/home-reference-hero";
+﻿import { CompanyHomepageTemplate } from "@/components/company-homepage-template";
+import { Footer } from "@/components/footer";
+import { companyHomepageTemplate } from "@/data/site-content";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white text-[var(--color-foreground)]">
-      <HomeReferenceHeader />
-      <HomeReferenceHero />
+    <CompanyHomepageTemplate data={companyHomepageTemplate}>
       <Footer />
-    </main>
+    </CompanyHomepageTemplate>
   );
 }

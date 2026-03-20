@@ -1,16 +1,16 @@
 ﻿"use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { BrandLogo } from "@/components/brand-logo";
 import { Container } from "@/components/ui/container";
-import { homeUtilityLinks, navLinks, siteContent } from "@/data/site-content";
+import { companyHomepageTemplate } from "@/data/site-content";
 import { cn } from "@/lib/cn";
 
 export function HomeReferenceHeader() {
   const [open, setOpen] = useState(false);
-  const { homeLanding } = siteContent;
 
   return (
     <header className="relative border-b border-[var(--color-line)] bg-white text-[var(--color-foreground)]">
@@ -27,7 +27,7 @@ export function HomeReferenceHeader() {
             {open ? <X size={24} /> : <Menu size={24} />}
           </button>
           <div className="flex items-center gap-4 pt-2 text-sm text-[var(--color-muted)]">
-            {homeUtilityLinks.map((link) => (
+            {companyHomepageTemplate.utilityLinks.map((link) => (
               <Link key={link.label} href={link.href} className="hover:text-[var(--color-foreground)]">
                 {link.label}
               </Link>
@@ -36,7 +36,7 @@ export function HomeReferenceHeader() {
         </div>
 
         <div className="hidden justify-end gap-5 text-sm text-[var(--color-muted)] md:flex">
-          {homeUtilityLinks.map((link) => (
+          {companyHomepageTemplate.utilityLinks.map((link) => (
             <Link key={link.label} href={link.href} className="hover:text-[var(--color-foreground)]">
               {link.label}
             </Link>
@@ -46,13 +46,13 @@ export function HomeReferenceHeader() {
         <div className="mx-auto mt-8 flex max-w-[20rem] flex-col items-center sm:mt-10 sm:max-w-[24rem] lg:mt-2 lg:max-w-[30rem]">
           <BrandLogo variant="wordmark" priority className="w-full" />
           <p className="mt-4 text-[0.78rem] tracking-[0.62em] text-[var(--color-muted)] sm:text-[0.85rem]">
-            {homeLanding.logoCaption}
+            {companyHomepageTemplate.logo.caption}
           </p>
         </div>
 
         <nav className="mt-10 hidden items-center justify-center gap-10 text-[1rem] text-[var(--color-muted)] md:flex lg:mt-12">
-          {navLinks.map((link) => (
-            <Link key={link.label} href={link.pageHref} className="hover:text-[var(--color-foreground)]">
+          {companyHomepageTemplate.navLinks.map((link) => (
+            <Link key={link.label} href={link.href} className="hover:text-[var(--color-foreground)]">
               {link.label}
             </Link>
           ))}
@@ -66,8 +66,8 @@ export function HomeReferenceHeader() {
           )}
         >
           <nav className="flex flex-col gap-4 pb-2 text-base text-[var(--color-muted)]">
-            {navLinks.map((link) => (
-              <Link key={link.label} href={link.pageHref} onClick={() => setOpen(false)} className="hover:text-[var(--color-foreground)]">
+            {companyHomepageTemplate.navLinks.map((link) => (
+              <Link key={link.label} href={link.href} onClick={() => setOpen(false)} className="hover:text-[var(--color-foreground)]">
                 {link.label}
               </Link>
             ))}
