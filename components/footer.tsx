@@ -1,5 +1,6 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { ChevronDown, Globe, Instagram, Youtube } from "lucide-react";
+import { BrandLogo } from "@/components/brand-logo";
 import { Container } from "@/components/ui/container";
 import { siteContent } from "@/data/site-content";
 
@@ -17,8 +18,10 @@ export function Footer() {
       <Container className="flex flex-col gap-8">
         <div className="grid gap-8 lg:grid-cols-[1fr_auto_1fr] lg:items-start">
           <div className="text-center lg:text-left">
-            <p className="font-display text-2xl tracking-[0.24em]">BARACUDA</p>
-            <p className="mt-3 text-sm text-[var(--color-muted)]">{footer.statement}</p>
+            <div className="mx-auto w-[13rem] lg:mx-0">
+              <BrandLogo variant="wordmark" className="w-full" />
+            </div>
+            <p className="mt-4 text-sm text-[var(--color-muted)]">{footer.statement}</p>
             <p className="mt-2 text-sm text-[var(--color-muted)]">{footer.subline}</p>
           </div>
 
@@ -75,3 +78,4 @@ export function Footer() {
     </footer>
   );
 }
+

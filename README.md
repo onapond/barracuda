@@ -14,16 +14,17 @@ Barracuda is currently implemented as a static-first brand website built with Ne
 ## Working Rules
 - Prefer static pages for all public routes.
 - Do not use server actions for current MVP scope.
-- Forms submit through Next.js API routes when live delivery is required.
+- Public forms currently submit directly to FormSubmit from the browser.
 - Keep implementations simple and low-risk.
 - User-facing copy is Korean-first.
 - Navigation may remain English.
 - Build locally. Use Vercel for deployment only.
 
 ## Form Delivery
-- Runtime form handling uses `app/api/forms/*`.
-- Email delivery is sent from the server with the Resend REST API.
-- Required env vars are documented in `.env.example`.
+- `/space` and `/menu` currently post directly to FormSubmit.
+- Current recipient is `4everlll@naver.com`.
+- If FormSubmit has not been activated before, the first live submission may trigger an activation email.
+- The current setup is intentionally simple and should be replaced later if higher reliability is needed.
 
 ## Deployment Flow
 ```powershell

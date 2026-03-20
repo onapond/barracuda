@@ -1,5 +1,5 @@
 ﻿# Barracuda Codex Handoff Status
-Version: 2026-03-17
+Version: 2026-03-19
 
 Purpose
 This document summarizes the current implementation state of the Barracuda website so the next operator can continue work without re-discovering the project rules.
@@ -9,7 +9,7 @@ Project basics
 - GitHub: `https://github.com/onapond/barracuda.git`
 - Vercel project: `onaponds-projects/barracuda_web`
 - Production URL: `https://barracudaweb.vercel.app`
-- Latest known production deploy: `https://barracuda-f3djzknaa-onaponds-projects.vercel.app`
+- Latest known production deploy: `https://barracuda-6g4smlpkt-onaponds-projects.vercel.app`
 
 ---
 
@@ -37,6 +37,10 @@ Major completed work:
 - homepage and subpages rewritten toward shorter Korean-first brand copy
 - shared typography system tightened in `components/page-hero.tsx` and `components/section-heading.tsx`
 - headline width, body width, and Korean line-break handling improved across priority routes
+- homepage header now uses a cropped symbol logo derived from the uploaded `logo1.png`
+- homepage hero and footer now use a cropped gold wordmark logo derived from the uploaded `logo1.png`
+- gold logo assets were regenerated to `#D2AB50`
+- `/space` lower gallery now uses `public/images/1.jpg` through `public/images/6.jpg`
 - breakpoint screenshot QA run at `360 / 768 / 1024 / 1440`
 - `/space` and `/menu` forms send through FormSubmit to `4everlll@naver.com`
 - local lint/build verification passed repeatedly
@@ -109,6 +113,7 @@ Core app files:
 - `app/visit/page.tsx`
 
 Shared components:
+- `components/brand-logo.tsx`
 - `components/header.tsx`
 - `components/footer.tsx`
 - `components/page-hero.tsx`
@@ -139,6 +144,7 @@ Content / planning docs:
 ### `/`
 - homepage now reads more like a brand index and less like an essay page
 - hero copy was shortened and CTA labels were simplified
+- standalone `BARACUDA` text branding in the header/hero/footer was replaced by split logo assets
 - homepage still carries the strongest visual presence
 - if more polish is needed, homepage hero height and image composition are the next likely refinement points
 
@@ -158,6 +164,7 @@ Content / planning docs:
 - no server actions
 - inquiry form posts via FormSubmit and should email `4everlll@naver.com`
 - copy was shortened, but the page still has more content density than homepage/store/visit because it needs venue use-case coverage
+- lower gallery now maps directly to `public/images/1.jpg` through `public/images/6.jpg`
 
 ### `/menu`
 - static editorial menu page
@@ -216,7 +223,7 @@ Most recent deployment status:
 - prebuilt output generated successfully
 - production deployment completed successfully
 - production alias points to `https://barracudaweb.vercel.app`
-- latest known production deployment URL: `https://barracuda-f3djzknaa-onaponds-projects.vercel.app`
+- latest known production deployment URL: `https://barracuda-6g4smlpkt-onaponds-projects.vercel.app`
 
 Current QA conclusion:
 - no major layout breakage was found in the public routes
@@ -246,6 +253,7 @@ Priority open issues now:
 2. real operating information is still placeholder in `/visit` and shared business info
 3. `data/site-content.ts` still needs cleanup if the team wants clean centralized content management
 4. homepage hero could still receive one more visual polish pass if the user wants a stronger first impression
+5. logo scale on header/hero/footer should still be visually QA'd on mobile and desktop
 
 What is currently true:
 - the text-heavy feel was reduced significantly

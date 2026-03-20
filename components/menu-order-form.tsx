@@ -1,15 +1,23 @@
 ﻿"use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { subpageContent } from "@/data/site-content";
 
-type SubmitState = "idle" | "submitting" | "success" | "error";
-const FORM_ENDPOINT = "/api/forms/menu-order";
+const FORM_ENDPOINT = "https://formsubmit.co/4everlll@naver.com";
+const SUCCESS_PARAM = "menu";
 
 export function MenuOrderForm() {
   const { orderForm } = subpageContent.menu;
-  const [submitState, setSubmitState] = useState<SubmitState>("idle");
-  const [errorMessage, setErrorMessage] = useState("");
+  const [returnUrl, setReturnUrl] = useState("");
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  useEffect(() => {
+    const currentUrl = new URL(window.location.href);
+    currentUrl.searchParams.set("submitted", SUCCESS_PARAM);
+    setReturnUrl(currentUrl.toString());
+    setIsSuccess(new URLSearchParams(window.location.search).get("submitted") === SUCCESS_PARAM);
+  }, []);
 
   return (
     <div className="grid gap-10 lg:grid-cols-[minmax(0,0.78fr)_minmax(0,1.22fr)] lg:items-start">
@@ -17,47 +25,24 @@ export function MenuOrderForm() {
         <p className="text-xs uppercase tracking-[0.34em] text-[var(--color-muted)]">주문 요청</p>
         <h2 className="mt-4 font-display text-4xl sm:text-5xl">{orderForm.title}</h2>
         <p className="mt-6 text-base leading-8 text-[var(--color-muted)] sm:text-lg">{orderForm.description}</p>
-        {submitState === "success" ? (
+        {isSuccess ? (
           <p className="mt-6 rounded-[1.5rem] border border-[var(--color-line)] bg-[var(--color-surface)] px-5 py-4 text-sm leading-7 text-[var(--color-foreground)]">
             {orderForm.successMessage}
           </p>
         ) : null}
-        {submitState === "error" ? (
-          <p className="mt-6 rounded-[1.5rem] border border-red-300 bg-red-50 px-5 py-4 text-sm leading-7 text-red-700">
-            {errorMessage || "주문 요청 전송에 실패했습니다. 잠시 후 다시 시도해 주세요."}
-          </p>
-        ) : null}
       </div>
       <form
+        action={FORM_ENDPOINT}
+        method="POST"
         className="rounded-[2rem] border border-[var(--color-line)] bg-[var(--color-surface)] p-6 sm:p-8"
-        onSubmit={async (event) => {
-          event.preventDefault();
-          setSubmitState("submitting");
-          setErrorMessage("");
-
-          const form = event.currentTarget;
-          const formData = new FormData(form);
-          const payload = Object.fromEntries(formData.entries());
-
-          const response = await fetch(FORM_ENDPOINT, {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify(payload),
-          });
-
-          if (!response.ok) {
-            const data = (await response.json().catch(() => null)) as { error?: string } | null;
-            setSubmitState("error");
-            setErrorMessage(data?.error || "주문 요청 전송에 실패했습니다. 잠시 후 다시 시도해 주세요.");
-            return;
-          }
-
-          form.reset();
-          setSubmitState("success");
+        onSubmit={() => {
+          setIsSubmitting(true);
         }}
       >
+        <input type="hidden" name="_subject" value="[Baracuda] 주문 요청" />
+        <input type="hidden" name="_captcha" value="false" />
+        <input type="hidden" name="_template" value="table" />
+        <input type="hidden" name="_next" value={returnUrl} />
         <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
         <div className="grid gap-5 sm:grid-cols-2">
           {orderForm.fields.map((field) => (
@@ -103,10 +88,10 @@ export function MenuOrderForm() {
         </label>
         <button
           type="submit"
-          disabled={submitState === "submitting"}
+          disabled={isSubmitting || !returnUrl}
           className="mt-6 inline-flex rounded-full border border-[var(--color-foreground)]/20 bg-[var(--color-foreground)] px-5 py-3 text-sm uppercase tracking-[0.24em] text-[var(--color-background)] transition hover:bg-transparent hover:text-[var(--color-foreground)] disabled:cursor-not-allowed disabled:opacity-60"
         >
-          {submitState === "submitting" ? "보내는 중.." : orderForm.submitLabel}
+          {isSubmitting ? "보내는 중.." : orderForm.submitLabel}
         </button>
       </form>
     </div>

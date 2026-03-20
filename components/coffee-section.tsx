@@ -6,12 +6,12 @@ import { SectionWrapper } from "@/components/ui/section-wrapper";
 
 const coffeeCopy = {
   eyebrow: "커피",
-  title: "로스터리 기반의 커피를 선보입니다.",
-  description: "원두 선택부터 잔의 인상까지, 바라쿠다의 방향이 담긴 커피입니다.",
+  title: "로스터리 기반의 커피를 전합니다",
+  description: "원두 선택부터 한 잔의 마무리까지 바라쿠다의 리듬으로 다듬었습니다.",
   image: { src: "/images/roastery.png", alt: "바라쿠다 로스터리 무드를 보여주는 이미지" },
   features: [
-    { title: "원두 셀렉션", description: "계절감에 맞춘 선택" },
-    { title: "로스팅 방향", description: "균형이 선명한 맛" },
+    { title: "원두 셀렉션", description: "계절에 맞춰 선명하게 고른 구성" },
+    { title: "로스팅 방향", description: "과하지 않고 오래 남는 균형" },
   ],
   cta: { href: "/coffee", label: "커피 보기" },
 };
@@ -25,19 +25,28 @@ export function CoffeeSection() {
             <Image src={coffeeCopy.image.src} alt={coffeeCopy.image.alt} fill className="object-cover transition-transform duration-500 hover:scale-105" />
           </div>
           <div>
-            <SectionHeading eyebrow={coffeeCopy.eyebrow} title={coffeeCopy.title} description={coffeeCopy.description} titleWidth="compact" descriptionWidth="compact" />
+            <SectionHeading
+              eyebrow={coffeeCopy.eyebrow}
+              title={coffeeCopy.title}
+              description={coffeeCopy.description}
+              titleWidth="compact"
+              descriptionWidth="compact"
+            />
             <div className="mt-10 grid gap-4 sm:grid-cols-2">
               {coffeeCopy.features.map((feature) => (
                 <article key={feature.title} className="rounded-[1.75rem] border border-[var(--color-line)] p-6">
-                  <h3 className="font-display text-2xl leading-tight">{feature.title}</h3>
-                  <p className="mt-3 max-w-[24ch] text-sm leading-7 text-[var(--color-muted)]">{feature.description}</p>
+                  <h3 className="type-card-title type-wrap-balance">{feature.title}</h3>
+                  <p className="type-body-sm mt-3 max-w-[24ch] text-[var(--color-muted)]">{feature.description}</p>
                 </article>
               ))}
             </div>
-            <Button href={coffeeCopy.cta.href} className="mt-8">{coffeeCopy.cta.label}</Button>
+            <Button href={coffeeCopy.cta.href} className="mt-8">
+              {coffeeCopy.cta.label}
+            </Button>
           </div>
         </div>
       </Container>
     </SectionWrapper>
   );
 }
+

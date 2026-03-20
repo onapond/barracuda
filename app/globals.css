@@ -10,6 +10,7 @@
   --color-accent: #ddd2c3;
   --font-sans: "Avenir Next", "Segoe UI", "Helvetica Neue", Helvetica, sans-serif;
   --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  --font-heading: "Avenir Next", "Segoe UI", "Helvetica Neue", Helvetica, sans-serif;
 }
 
 html {
@@ -33,6 +34,72 @@ h3,
 .font-display {
   font-family: var(--font-display);
   letter-spacing: -0.025em;
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+}
+
+.type-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.type-hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 6vw, 4.75rem);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: -0.03em;
+}
+
+.type-section-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.875rem, 3vw, 2.625rem);
+  font-weight: 500;
+  line-height: 1.24;
+  letter-spacing: -0.02em;
+}
+
+.type-card-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 2.2vw, 2rem);
+  font-weight: 500;
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+}
+
+.type-body-lg {
+  font-size: clamp(1rem, 1.4vw, 1.25rem);
+  line-height: 1.75;
+  letter-spacing: -0.01em;
+}
+
+.type-body-md {
+  font-size: 1rem;
+  line-height: 1.75;
+  letter-spacing: -0.01em;
+}
+
+.type-body-sm {
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.type-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.type-wrap-balance {
+  overflow-wrap: normal;
+  word-break: keep-all;
+  text-wrap: balance;
 }
 
 ::selection {
@@ -79,3 +146,4 @@ button {
     transform: translateY(0);
   }
 }
+

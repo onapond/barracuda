@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { BrandLogo } from "@/components/brand-logo";
 import { MobileMenu } from "@/components/mobile-menu";
 import { Container } from "@/components/ui/container";
 import { navLinks } from "@/data/site-content";
@@ -52,9 +53,11 @@ export function Header() {
         <div className="flex h-20 items-center justify-between">
           <Link
             href="/"
-            className="font-display text-2xl tracking-[0.24em] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4"
+            className="flex items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4"
+            aria-label="Baracuda 홈"
           >
-            BARACUDA
+            <span className="sr-only">BARACUDA</span>
+            <BrandLogo variant="symbol" priority className="w-[1.9rem] sm:w-[2.1rem]" />
           </Link>
           <nav className="hidden items-center gap-8 md:flex">
             {navLinks.map((link) => {

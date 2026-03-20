@@ -10,8 +10,8 @@ const mapEmbedUrl =
 
 const visitCopy = {
   eyebrow: "방문",
-  title: "오시는 길과 이용 정보",
-  description: "주소와 주차, 연락처를 먼저 확인하세요.",
+  title: "오시는 길과 이용 정보를 빠르게 확인하세요",
+  description: "주소, 주차, 연락처를 한 번에 정리했습니다.",
   details: [
     { label: "주소", value: businessInfo.address },
     { label: "운영 시간", value: businessInfo.openingHours },
@@ -32,18 +32,26 @@ export function VisitSection() {
       <Container>
         <div className="grid gap-10 lg:grid-cols-[minmax(0,0.95fr)_minmax(0,1.05fr)]">
           <div>
-            <SectionHeading eyebrow={visitCopy.eyebrow} title={visitCopy.title} description={visitCopy.description} titleWidth="compact" descriptionWidth="compact" />
+            <SectionHeading
+              eyebrow={visitCopy.eyebrow}
+              title={visitCopy.title}
+              description={visitCopy.description}
+              titleWidth="compact"
+              descriptionWidth="compact"
+            />
             <div className="mt-10 space-y-5">
               {visitCopy.details.map((item) => (
                 <div key={item.label} className="flex flex-col gap-2 border-b border-[var(--color-line)] pb-5 sm:flex-row sm:items-start sm:justify-between">
-                  <span className="text-xs uppercase tracking-[0.24em] text-[var(--color-muted)]">{item.label}</span>
-                  <span className="text-sm leading-7 sm:max-w-[22rem] sm:text-right">{item.value}</span>
+                  <span className="type-label text-[var(--color-muted)]">{item.label}</span>
+                  <span className="type-body-sm sm:max-w-[22rem] sm:text-right">{item.value}</span>
                 </div>
               ))}
             </div>
             <div className="mt-8 flex flex-wrap gap-4">
               <Button href={visitCopy.directionsHref}>{visitCopy.directionsLabel}</Button>
-              <Button href={visitCopy.instagramHref} variant="ghost">{visitCopy.instagramLabel}</Button>
+              <Button href={visitCopy.instagramHref} variant="ghost">
+                {visitCopy.instagramLabel}
+              </Button>
             </div>
           </div>
           <div className="relative min-h-[420px] overflow-hidden rounded-[2.25rem] border border-[var(--color-line)] bg-[var(--color-surface)]">
@@ -56,14 +64,14 @@ export function VisitSection() {
               allowFullScreen
             />
             <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.04),rgba(18,18,18,0.12))]" />
-            <div className="relative flex min-h-[420px] items-end justify-end p-6 pointer-events-none">
+            <div className="pointer-events-none relative flex min-h-[420px] items-end justify-end p-6">
               <a
                 href={visitCopy.directionsHref}
                 target="_blank"
                 rel="noreferrer"
                 className="pointer-events-auto flex items-center justify-between gap-4 rounded-[1.25rem] border border-white/45 bg-white/82 px-5 py-4 backdrop-blur-sm transition-opacity hover:opacity-90"
               >
-                <span className="text-sm uppercase tracking-[0.24em]">{visitCopy.mapLinkLabel}</span>
+                <span className="type-label">{visitCopy.mapLinkLabel}</span>
                 <ArrowUpRight className="transition-transform duration-300 hover:-translate-y-1 hover:translate-x-1" />
               </a>
             </div>
@@ -73,3 +81,4 @@ export function VisitSection() {
     </SectionWrapper>
   );
 }
+

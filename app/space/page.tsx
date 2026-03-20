@@ -31,12 +31,12 @@ const spacePage = {
     { title: "크리에이티브 밋업", description: "자연스럽게 연결되는 협업과 네트워킹", image: "/images/creator.jpg", imageAlt: "크리에이티브 밋업을 상상할 수 있는 공간 이미지" },
   ],
   gallery: [
-    { src: "/images/hero.jpg", alt: "Baracuda interior gallery image one" },
-    { src: "/images/brend-hero.jpg.jpg", alt: "Baracuda interior gallery image two" },
-    { src: "/images/brend-4.jpg", alt: "Baracuda interior gallery image three" },
-    { src: "/images/brend-1.jpg", alt: "Baracuda interior gallery image four" },
-    { src: "/images/brend-2.jpg", alt: "Baracuda interior gallery image five" },
-    { src: "/images/brend-3.jpg", alt: "Baracuda interior gallery image six" },
+    { src: "/images/1.jpg", alt: "Baracuda interior gallery image one" },
+    { src: "/images/2.jpg", alt: "Baracuda interior gallery image two" },
+    { src: "/images/3.jpg", alt: "Baracuda interior gallery image three" },
+    { src: "/images/4.jpg", alt: "Baracuda interior gallery image four" },
+    { src: "/images/5.jpg", alt: "Baracuda interior gallery image five" },
+    { src: "/images/6.jpg", alt: "Baracuda interior gallery image six" },
   ],
   rentalInfo: [
     { label: "수용 인원", value: "소규모 프라이빗 행사 중심" },
@@ -63,4 +63,5 @@ export default function SpacePage() {
     </SiteShell>
   );
 }
+
 

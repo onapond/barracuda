@@ -7,7 +7,7 @@ type DescriptionWidth = "compact" | "default";
 type SectionHeadingProps = {
   eyebrow: string;
   title: ReactNode;
-  description: ReactNode;
+  description?: ReactNode;
   align?: "left" | "center";
   className?: string;
   titleClassName?: string;
@@ -40,10 +40,10 @@ export function SectionHeading({
 }: SectionHeadingProps) {
   return (
     <div className={cn(align === "center" && "mx-auto max-w-3xl text-center", className)}>
-      <p className="mb-4 text-sm font-medium uppercase tracking-[0.12em] text-[var(--color-muted)]">{eyebrow}</p>
+      <p className="type-eyebrow mb-4 text-[var(--color-muted)]">{eyebrow}</p>
       <h2
         className={cn(
-          "whitespace-pre-line text-balance font-display text-[clamp(1.875rem,3vw,2.625rem)] font-medium leading-[1.28] tracking-[-0.02em] [overflow-wrap:normal] [word-break:keep-all]",
+          "type-section-title type-wrap-balance whitespace-pre-line",
           titleWidthClasses[titleWidth],
           align === "center" && "mx-auto",
           titleClassName,
@@ -51,16 +51,20 @@ export function SectionHeading({
       >
         {title}
       </h2>
-      <p
-        className={cn(
-          "mt-5 text-base leading-[1.75] tracking-[-0.01em] text-[var(--color-muted)] [overflow-wrap:normal] [word-break:keep-all] sm:text-lg",
-          descriptionWidthClasses[descriptionWidth],
-          align === "center" && "mx-auto",
-          descriptionClassName,
-        )}
-      >
-        {description}
-      </p>
+      {description ? (
+        <p
+          className={cn(
+            "type-body-lg type-wrap-balance mt-5",
+            descriptionWidthClasses[descriptionWidth],
+            align === "center" && "mx-auto",
+            "text-[var(--color-muted)]",
+            descriptionClassName,
+          )}
+        >
+          {description}
+        </p>
+      ) : null}
     </div>
   );
 }
+

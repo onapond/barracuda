@@ -1,5 +1,6 @@
 ﻿import type { Metadata } from "next";
 import { PageHero } from "@/components/page-hero";
+import { SectionHeading } from "@/components/section-heading";
 import { SiteShell } from "@/components/site-shell";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
@@ -12,7 +13,7 @@ const visitPage = {
   hero: {
     eyebrow: "방문",
     title: "오시는 길과 이용 정보",
-    description: "주소, 주차, 대중교통 정보를 정리했습니다.",
+    description: "주소, 주차, 대중교통 정보를 빠르게 정리했습니다.",
     image: "/images/brend-hero.jpg.jpg",
     imageAlt: "Baracuda 방문 경험을 보여주는 대표 이미지",
     ctaHref: "#visit-info",
@@ -20,8 +21,8 @@ const visitPage = {
   },
   infoSection: {
     eyebrow: "안내",
-    title: "먼저 보면 되는 정보",
-    description: "방문 전에 필요한 내용만 모았습니다.",
+    title: "먼저 확인하면 좋은 정보",
+    description: "방문 전에 자주 찾는 내용만 모았습니다.",
   },
   infoCards: [
     {
@@ -40,9 +41,14 @@ const visitPage = {
     },
     {
       title: "대중교통",
-      items: [{ label: "도보 이동", value: "삼각지역과 남영역에서 도보 이동 가능" }],
+      items: [{ label: "도보 이동", value: "삼각지역과 남영역에서 도보 이동 가능합니다." }],
     },
   ],
+  parkingHeading: {
+    eyebrow: "주차",
+    title: "주차 안내",
+    description: "운영 시간과 요금을 구역별로 나눠 정리했습니다.",
+  },
   parkingSections: [
     {
       title: "주차 구역",
@@ -61,6 +67,10 @@ const visitPage = {
       ],
     },
   ],
+  transitHeading: {
+    eyebrow: "대중교통",
+    title: "도보 이동 안내",
+  },
   transitLines: [
     { line: "6호선", station: "삼각지역 12번 출구", detail: "도보 3분" },
     { line: "4호선", station: "삼각지역 1번 출구", detail: "도보 5분" },
@@ -92,15 +102,13 @@ export default function VisitPage() {
       <SectionWrapper id="visit-info">
         <Container className="grid gap-8 lg:grid-cols-[minmax(0,0.82fr)_minmax(0,1.18fr)] lg:items-start">
           <div>
-            <p className="text-xs uppercase tracking-[0.3em] text-[var(--color-muted)]">
-              {visitPage.infoSection.eyebrow}
-            </p>
-            <h2 className="mt-4 max-w-[12ch] font-display text-4xl leading-[1.22] tracking-[-0.02em] [word-break:keep-all] sm:text-5xl">
-              {visitPage.infoSection.title}
-            </h2>
-            <p className="mt-6 max-w-[34ch] text-base leading-[1.75] text-[var(--color-muted)] sm:text-lg">
-              {visitPage.infoSection.description}
-            </p>
+            <SectionHeading
+              eyebrow={visitPage.infoSection.eyebrow}
+              title={visitPage.infoSection.title}
+              description={visitPage.infoSection.description}
+              titleWidth="compact"
+              descriptionWidth="compact"
+            />
             <div className="mt-8 flex flex-wrap gap-3">
               <Button href={mapLink}>길찾기</Button>
               <Button href="tel:02-501-4527" variant="ghost">
@@ -115,19 +123,15 @@ export default function VisitPage() {
                 key={card.title}
                 className="rounded-[2rem] border border-[var(--color-line)] bg-[var(--color-surface)] p-6 sm:p-7"
               >
-                <p className="text-xs uppercase tracking-[0.28em] text-[var(--color-muted)]">
-                  {card.title}
-                </p>
+                <p className="type-label text-[var(--color-muted)]">{card.title}</p>
                 <div className="mt-6 space-y-5">
                   {card.items.map((item) => (
                     <div
                       key={item.label}
                       className="border-b border-[var(--color-line)] pb-4 last:border-b-0 last:pb-0"
                     >
-                      <p className="text-xs uppercase tracking-[0.24em] text-[var(--color-muted)]">
-                        {item.label}
-                      </p>
-                      <p className="mt-2 text-sm leading-7">{item.value}</p>
+                      <p className="type-label text-[var(--color-muted)]">{item.label}</p>
+                      <p className="type-body-sm mt-2">{item.value}</p>
                     </div>
                   ))}
                 </div>
@@ -140,18 +144,14 @@ export default function VisitPage() {
       <SectionWrapper className="bg-[var(--color-surface)]">
         <Container className="grid gap-6 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)]">
           <article className="rounded-[2rem] border border-[var(--color-line)] bg-[var(--color-background)] p-6 sm:p-8">
-            <div className="flex items-start justify-between gap-4 border-b border-[var(--color-line)] pb-6">
-              <div>
-                <p className="text-xs uppercase tracking-[0.3em] text-[var(--color-muted)]">
-                  주차
-                </p>
-                <h2 className="mt-4 font-display text-4xl leading-[1.22] tracking-[-0.02em] sm:text-5xl">
-                  주차 안내
-                </h2>
-              </div>
-              <p className="max-w-[22ch] text-right text-sm leading-7 text-[var(--color-muted)]">
-                차량 이용 시 필요한 운영 시간과 요금을 구역별로 정리했습니다.
-              </p>
+            <div className="border-b border-[var(--color-line)] pb-6">
+              <SectionHeading
+                eyebrow={visitPage.parkingHeading.eyebrow}
+                title={visitPage.parkingHeading.title}
+                description={visitPage.parkingHeading.description}
+                titleWidth="compact"
+                descriptionWidth="compact"
+              />
             </div>
 
             <div className="mt-8 grid gap-5 md:grid-cols-2">
@@ -160,12 +160,12 @@ export default function VisitPage() {
                   key={section.title}
                   className="rounded-[1.5rem] border border-[var(--color-line)] p-5"
                 >
-                  <h3 className="font-display text-2xl leading-tight">{section.title}</h3>
+                  <h3 className="type-card-title type-wrap-balance">{section.title}</h3>
                   <div className="mt-5 space-y-3">
                     {section.items.map((item) => (
                       <div
                         key={item}
-                        className="rounded-[1.25rem] bg-[var(--color-surface)] px-4 py-3 text-sm leading-7"
+                        className="type-body-sm rounded-[1.25rem] bg-[var(--color-surface)] px-4 py-3"
                       >
                         {item}
                       </div>
@@ -177,12 +177,7 @@ export default function VisitPage() {
           </article>
 
           <article className="rounded-[2rem] border border-[var(--color-line)] bg-[var(--color-background)] p-6 sm:p-8">
-            <p className="text-xs uppercase tracking-[0.3em] text-[var(--color-muted)]">
-              대중교통
-            </p>
-            <h2 className="mt-4 font-display text-4xl leading-[1.22] tracking-[-0.02em] sm:text-5xl">
-              도보 이동 안내
-            </h2>
+            <SectionHeading eyebrow={visitPage.transitHeading.eyebrow} title={visitPage.transitHeading.title} titleWidth="compact" />
             <div className="mt-8 space-y-4">
               {visitPage.transitLines.map((item) => (
                 <div
@@ -190,12 +185,10 @@ export default function VisitPage() {
                   className="rounded-[1.5rem] border border-[var(--color-line)] bg-[var(--color-surface)] px-5 py-5"
                 >
                   <div className="flex flex-wrap items-center justify-between gap-3">
-                    <p className="text-xs uppercase tracking-[0.24em] text-[var(--color-muted)]">
-                      {item.line}
-                    </p>
-                    <p className="text-sm text-[var(--color-muted)]">{item.detail}</p>
+                    <p className="type-label text-[var(--color-muted)]">{item.line}</p>
+                    <p className="type-body-sm text-[var(--color-muted)]">{item.detail}</p>
                   </div>
-                  <p className="mt-3 text-base leading-7">{item.station}</p>
+                  <p className="type-body-md mt-3">{item.station}</p>
                 </div>
               ))}
             </div>
@@ -206,18 +199,14 @@ export default function VisitPage() {
       <SectionWrapper>
         <Container>
           <div className="rounded-[2rem] border border-[var(--color-line)] bg-[var(--color-surface)] p-8 sm:p-10">
-            <p className="text-xs uppercase tracking-[0.3em] text-[var(--color-muted)]">
-              {visitPage.ctaSection.eyebrow}
-            </p>
             <div className="mt-4 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-              <div>
-                <h2 className="max-w-[12ch] font-display text-4xl leading-[1.22] tracking-[-0.02em] sm:text-5xl">
-                  {visitPage.ctaSection.title}
-                </h2>
-                <p className="mt-5 max-w-[34ch] text-base leading-[1.75] text-[var(--color-muted)]">
-                  {visitPage.ctaSection.description}
-                </p>
-              </div>
+              <SectionHeading
+                eyebrow={visitPage.ctaSection.eyebrow}
+                title={visitPage.ctaSection.title}
+                description={visitPage.ctaSection.description}
+                titleWidth="compact"
+                descriptionWidth="compact"
+              />
               <div className="flex flex-wrap gap-3">
                 {visitPage.ctaSection.actions.map((action, index) => (
                   <Button
@@ -236,3 +225,4 @@ export default function VisitPage() {
     </SiteShell>
   );
 }
+
