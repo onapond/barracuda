@@ -1,23 +1,34 @@
 ﻿"use client";
 
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { subpageContent } from "@/data/site-content";
 
 const FORM_ENDPOINT = "https://formsubmit.co/4everlll@naver.com";
 const SUCCESS_PARAM = "menu";
 
+function getReturnUrl() {
+  if (typeof window === "undefined") {
+    return "";
+  }
+
+  const currentUrl = new URL(window.location.href);
+  currentUrl.searchParams.set("submitted", SUCCESS_PARAM);
+  return currentUrl.toString();
+}
+
+function getIsSuccess() {
+  if (typeof window === "undefined") {
+    return false;
+  }
+
+  return new URLSearchParams(window.location.search).get("submitted") === SUCCESS_PARAM;
+}
+
 export function MenuOrderForm() {
   const { orderForm } = subpageContent.menu;
-  const [returnUrl, setReturnUrl] = useState("");
+  const [returnUrl] = useState(getReturnUrl);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSuccess, setIsSuccess] = useState(false);
-
-  useEffect(() => {
-    const currentUrl = new URL(window.location.href);
-    currentUrl.searchParams.set("submitted", SUCCESS_PARAM);
-    setReturnUrl(currentUrl.toString());
-    setIsSuccess(new URLSearchParams(window.location.search).get("submitted") === SUCCESS_PARAM);
-  }, []);
+  const [isSuccess] = useState(getIsSuccess);
 
   return (
     <div className="grid gap-10 lg:grid-cols-[minmax(0,0.78fr)_minmax(0,1.22fr)] lg:items-start">

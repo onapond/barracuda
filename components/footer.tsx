@@ -26,7 +26,7 @@ export function Footer() {
           </div>
 
           <div className="flex flex-col items-center justify-center">
-            <p className="text-xs uppercase tracking-[0.24em] text-[var(--color-muted)]">Social</p>
+            <p className="text-xs uppercase tracking-[0.24em] text-[var(--color-muted)]">Connect</p>
             <div className="mt-4 flex items-center gap-3">
               {footer.socialLinks.map((link) => {
                 const Icon = socialIcons[link.label as keyof typeof socialIcons];
@@ -78,4 +78,3 @@ export function Footer() {
     </footer>
   );
 }
-

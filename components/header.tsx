@@ -4,7 +4,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
-import { BrandLogo } from "@/components/brand-logo";
 import { MobileMenu } from "@/components/mobile-menu";
 import { Container } from "@/components/ui/container";
 import { navLinks } from "@/data/site-content";
@@ -53,20 +52,20 @@ export function Header() {
         <div className="flex h-20 items-center justify-between">
           <Link
             href="/"
-            className="flex items-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4"
+            className="font-heading text-sm tracking-[0.38em] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4"
             aria-label="Baracuda 홈"
           >
-            <span className="sr-only">BARACUDA</span>
-            <BrandLogo variant="symbol" priority className="w-[1.9rem] sm:w-[2.1rem]" />
+            BARACUDA
           </Link>
           <nav className="hidden items-center gap-8 md:flex">
             {navLinks.map((link) => {
-              const active = pathname === link.href;
+              const href = isHome ? link.homeHref : link.pageHref;
+              const active = !isHome && pathname === link.pageHref;
 
               return (
                 <Link
-                  key={link.href}
-                  href={link.href}
+                  key={link.label}
+                  href={href}
                   className={cn(
                     "text-xs uppercase tracking-[0.26em] hover:opacity-65 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4",
                     active && "opacity-55",
@@ -89,10 +88,16 @@ export function Header() {
           </button>
         </div>
         <div id="mobile-menu">
-          <MobileMenu open={open} links={[...navLinks]} onNavigate={() => setOpen(false)} />
+          <MobileMenu
+            open={open}
+            links={navLinks.map((link) => ({
+              href: isHome ? link.homeHref : link.pageHref,
+              label: link.label,
+            }))}
+            onNavigate={() => setOpen(false)}
+          />
         </div>
       </Container>
     </header>
   );
 }
-

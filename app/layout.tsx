@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "Baracuda Roastery & Cafe",
   description:
-    "Baracuda is a specialty coffee roastery and cafe space built around coffee, atmosphere, and brand experience.",
+    "Baracuda is a brand-first roastery and cafe space shaped by coffee, atmosphere, and quiet cultural experience.",
 };
 
 export default function RootLayout({
