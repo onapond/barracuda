@@ -1,4 +1,4 @@
-﻿import type { CompanySiteConfig } from "@/lib/company-site";
+import type { CompanySiteConfig } from "@/lib/company-site";
 
 const navLinks = [
   { href: "/brand", label: "Brand" },
@@ -27,7 +27,7 @@ const homepage = {
     image: "/images/hero.jpg",
     imageAlt: "Baracuda 공간을 담은 대표 이미지",
     title: "머무는 방식까지\n취향이 되는 공간",
-    description: "조용한 커피의 결 위에, 모임과 파티, 브랜드의 순간이 자연스럽게 스며드는 바라쿠다.",
+    description: "커피와 공간이 하나의 인상으로 남는 바라쿠다.",
     primaryCta: {
       href: "/space",
       label: "공간 살펴보기",
@@ -42,7 +42,7 @@ export const barracudaSiteConfig: CompanySiteConfig = {
     eyebrow: "Space",
     title: "우리만의 장면이\n자연스럽게 완성되는 곳",
     description:
-      "일상의 방문부터 사적인 모임, 작은 파티와 브랜드의 자리까지. 바라쿠다는 쓰임에 따라 다른 분위기로 열리는 공간입니다.",
+      "일상과 모임, 브랜드 장면까지 자연스럽게 열리는 공간입니다.",
     cta: {
       href: "/space",
       label: "공간 보기",
@@ -74,7 +74,7 @@ export const barracudaSiteConfig: CompanySiteConfig = {
       key: "private-scene",
       label: "Private Scene",
       title: "사적인 시간의 결",
-      description: "작은 모임일수록 더 또렷하게 남는 분위기와 여유가 바라쿠다의 장면을 만듭니다.",
+      description: "작은 모임일수록 분위기가 더 선명해집니다.",
       cta: { href: "/space", label: "공간 문의" },
       featuredMedia: {
         src: "/images/book.jpg",
@@ -100,7 +100,7 @@ export const barracudaSiteConfig: CompanySiteConfig = {
       key: "celebration",
       label: "Celebration",
       title: "기억에 남는 순간의 분위기",
-      description: "파티와 기념의 자리도 과하지 않은 무드 안에서 조용하고 또렷한 인상으로 남습니다.",
+      description: "기념과 파티도 차분한 무드 안에서 남습니다.",
       cta: { href: "/space", label: "공간 살펴보기" },
       featuredMedia: {
         src: "/images/showcase.jpg",
@@ -126,7 +126,7 @@ export const barracudaSiteConfig: CompanySiteConfig = {
       key: "brand-moment",
       label: "Brand Moment",
       title: "브랜드가 머무는 방식",
-      description: "소개와 쇼케이스, 브랜드의 순간이 공간의 결 안에서 정제된 인상으로 이어집니다.",
+      description: "브랜드의 순간이 정제된 인상으로 이어집니다.",
       cta: { href: "/brand", label: "브랜드 보기" },
       featuredMedia: {
         src: "/images/creator.jpg",
@@ -152,7 +152,7 @@ export const barracudaSiteConfig: CompanySiteConfig = {
       key: "cafe-lounge",
       label: "Cafe & Lounge",
       title: "일상과 특별함 사이",
-      description: "평소에는 편안한 카페로, 필요할 때는 원하는 분위기의 라운지로 자연스럽게 전환됩니다.",
+      description: "카페와 라운지의 분위기가 자연스럽게 이어집니다.",
       cta: { href: "/coffee", label: "커피 보기" },
       featuredMedia: {
         src: "/images/brend.jpg",
@@ -179,7 +179,7 @@ export const barracudaSiteConfig: CompanySiteConfig = {
     spaceExperience: {
       eyebrow: "Scene",
       title: "파티와 모임,\n그리고 각자의 방식",
-      description: "누구와 어떤 시간을 보내는지에 따라 공간의 인상도 자연스럽게 달라집니다.",
+      description: "시간과 목적에 따라 다른 장면이 펼쳐집니다.",
       cta: { href: "/space", label: "문의하기" },
       surface: "tint",
       images: [
@@ -213,7 +213,7 @@ export const barracudaSiteConfig: CompanySiteConfig = {
     brand: {
       eyebrow: "Brand",
       title: "공간에 스며든\n브랜드의 태도",
-      description: "바라쿠다가 지향하는 차분한 감도는 장면과 디테일 속에서 더 선명하게 드러납니다.",
+      description: "차분한 감도는 장면과 디테일에서 드러납니다.",
       cta: { href: "/brand", label: "브랜드 보기" },
       images: [
         {
@@ -240,7 +240,7 @@ export const barracudaSiteConfig: CompanySiteConfig = {
     coffee: {
       eyebrow: "Coffee",
       title: "공간의 분위기를\n완성하는 커피",
-      description: "로스터리 기반의 커피는 바라쿠다의 장면을 더 깊고 안정된 인상으로 마무리합니다.",
+      description: "로스터리 기반의 커피가 공간의 인상을 완성합니다.",
       cta: { href: "/coffee", label: "커피 보기" },
       surface: "tint",
       images: [
@@ -268,7 +268,7 @@ export const barracudaSiteConfig: CompanySiteConfig = {
     menu: {
       eyebrow: "Menu",
       title: "머무는 시간을 위한\n셀렉션",
-      description: "음료와 메뉴 역시 공간의 흐름 안에서 자연스럽게 이어지도록 구성했습니다.",
+      description: "메뉴도 공간의 흐름 안에서 이어지도록 구성했습니다.",
       cta: { href: "/menu", label: "메뉴 보기" },
       images: [
         {
@@ -295,7 +295,7 @@ export const barracudaSiteConfig: CompanySiteConfig = {
     visit: {
       eyebrow: "Visit",
       title: "방문을 위한\n기본 정보",
-      description: "주소와 운영 시간, 필요한 안내를 간결하게 정리했습니다.",
+      description: "방문에 필요한 정보만 간결하게 정리했습니다.",
       cta: { href: "/visit", label: "길찾기" },
       surface: "tint",
       images: [
@@ -410,6 +410,21 @@ export const barracudaSiteConfig: CompanySiteConfig = {
         ],
       },
     ],
+    menuShowcase: {
+      eyebrow: "Full Menu",
+      title: "MENU MOOD 아래에서\n전체 메뉴를 확인하세요",
+      description: "대표 이미지와 함께 실제 메뉴판을 길게 배치해, 커피 페이지 안에서 메뉴까지 자연스럽게 이어서 볼 수 있게 정리했습니다.",
+      featureImage: {
+        src: "/images/ba_menu.jpg",
+        alt: "바라쿠다 메뉴 보드 이미지",
+        title: "Menu Board",
+        description: "커피의 무드 아래에서 메뉴 선택까지 같은 흐름으로 이어지도록 구성한 보드 이미지",
+      },
+      fullMenuImage: {
+        src: "/images/menu.png",
+        alt: "바라쿠다 전체 메뉴 이미지",
+      },
+    },
     actionLinks: [
       { href: "/menu", label: "메뉴 보기" },
       { href: "/store", label: "스토어 보기", variant: "ghost" },

@@ -1,4 +1,4 @@
-﻿import type { CompanyHomepageTemplateData } from "@/components/company-homepage-template";
+import type { CompanyHomepageTemplateData } from "@/components/company-homepage-template";
 
 export type SiteMetadata = {
   title: string;
@@ -42,6 +42,17 @@ export type CompanyActionLink = {
   href: string;
   label: string;
   variant?: "primary" | "secondary" | "ghost";
+};
+
+export type CompanyMenuShowcaseData = {
+  eyebrow: string;
+  title: string;
+  description?: string;
+  featureImage: CompanyGalleryItem;
+  fullMenuImage: {
+    src: string;
+    alt: string;
+  };
 };
 
 export type CompanyInfoSectionData = {
@@ -152,6 +163,7 @@ export type CompanySiteConfig = {
     noteSection?: CompanyNoteSectionData;
   };
   coffee: CompanyStandardPageData & {
+    menuShowcase?: CompanyMenuShowcaseData;
     actionLinks?: readonly CompanyActionLink[];
   };
   space: CompanyStandardPageData & {

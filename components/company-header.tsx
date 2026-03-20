@@ -47,14 +47,18 @@ export function CompanyHeader({ data, mobileMenuId }: CompanyHeaderProps) {
           ))}
         </div>
 
-        <div className="mx-auto mt-8 flex max-w-[19rem] flex-col items-center sm:mt-10 sm:max-w-[23rem] lg:mt-3 lg:max-w-[31rem]">
+        <Link
+          href="/"
+          aria-label="바라쿠다 홈으로 이동"
+          className="mx-auto mt-8 flex max-w-[19rem] flex-col items-center rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-foreground)] sm:mt-10 sm:max-w-[23rem] lg:mt-3 lg:max-w-[31rem]"
+        >
           <Image src={data.logo.src} alt={data.logo.alt} width={data.logo.width} height={data.logo.height} priority className="h-auto w-full" />
           {data.logo.caption ? (
             <p className="mt-4 text-[0.78rem] tracking-[0.62em] text-[var(--color-muted)] sm:text-[0.85rem]">
               {data.logo.caption}
             </p>
           ) : null}
-        </div>
+        </Link>
 
         <nav className="mt-10 hidden items-center justify-center gap-10 text-[0.98rem] text-[var(--color-muted)] md:flex lg:mt-12 lg:gap-12">
           {data.navLinks.map((link) => (
@@ -83,4 +87,5 @@ export function CompanyHeader({ data, mobileMenuId }: CompanyHeaderProps) {
     </header>
   );
 }
+
 
