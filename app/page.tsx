@@ -1,22 +1,12 @@
-﻿import { BrandSection } from "@/components/brand-section";
-import { CoffeeSection } from "@/components/coffee-section";
-import { Footer } from "@/components/footer";
-import { Header } from "@/components/header";
-import { HeroSection } from "@/components/hero-section";
-import { SpaceSection } from "@/components/space-section";
-import { StoreSection } from "@/components/store-section";
-import { VisitSection } from "@/components/visit-section";
+﻿import { Footer } from "@/components/footer";
+import { HomeReferenceHeader } from "@/components/home-reference-header";
+import { HomeReferenceHero } from "@/components/home-reference-hero";
 
 export default function Home() {
   return (
-    <main className="bg-[var(--color-background)] text-[var(--color-foreground)]">
-      <Header />
-      <HeroSection />
-      <BrandSection />
-      <CoffeeSection />
-      <SpaceSection />
-      <StoreSection />
-      <VisitSection />
+    <main className="min-h-screen bg-white text-[var(--color-foreground)]">
+      <HomeReferenceHeader />
+      <HomeReferenceHero />
       <Footer />
     </main>
   );

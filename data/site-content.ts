@@ -1,9 +1,14 @@
 ﻿export const navLinks = [
-  { homeHref: "/#brand", pageHref: "/brand", label: "Brand" },
-  { homeHref: "/#coffee", pageHref: "/coffee", label: "Coffee" },
-  { homeHref: "/#space", pageHref: "/space", label: "Space" },
-  { homeHref: "/#store", pageHref: "/store", label: "Store" },
-  { homeHref: "/#visit", pageHref: "/visit", label: "Visit" },
+  { homeHref: "/brand", pageHref: "/brand", label: "Brand" },
+  { homeHref: "/coffee", pageHref: "/coffee", label: "Coffee" },
+  { homeHref: "/space", pageHref: "/space", label: "Space" },
+  { homeHref: "/store", pageHref: "/store", label: "Store" },
+  { homeHref: "/visit", pageHref: "/visit", label: "Visit" },
+] as const;
+
+export const homeUtilityLinks = [
+  { href: "#", label: "로그인" },
+  { href: "#", label: "회원가입" },
 ] as const;
 
 export const businessInfo = {
@@ -28,6 +33,19 @@ export const assetPaths = {
 } as const;
 
 export const siteContent = {
+  homeLanding: {
+    logoCaption: "B A R A C U D A",
+    hero: {
+      image: assetPaths.hero,
+      imageAlt: "Baracuda 공간을 담은 대표 이미지",
+      title: "글로벌 로스터리 카페\n바라쿠다",
+      description: "바라쿠다의 공간감으로 완성한 로스터리 카페. 커피와 머무는 장면이 하나의 인상으로 남도록 구성했습니다.",
+      primaryCta: {
+        href: "/visit",
+        label: "방문 정보",
+      },
+    },
+  },
   hero: {
     image: assetPaths.hero,
     imageAlt: "Baracuda 공간을 담은 대표 이미지",
@@ -36,11 +54,11 @@ export const siteContent = {
     subtitle: "로스터리와 공간의 감도가 한 장면으로 머무는 곳",
     description: "조용한 결의 커피와 공간 경험을 하나의 흐름으로 제안합니다.",
     primaryCta: {
-      href: "/#visit",
+      href: "/visit",
       label: "Visit Barracuda",
     },
     secondaryCta: {
-      href: "/#coffee",
+      href: "/coffee",
       label: "Explore Coffee",
     },
   },
