@@ -337,7 +337,7 @@ export const barracudaSiteConfig: CompanySiteConfig = {
       title: "특별한 카페, 우리들만의 프라이빗 공간",
       description: "커피 한 잔도, 우리끼리만의 시간도 자연스럽게 이어지는 장소입니다. 평범한 카페보다 조용하고, 더 사적입니다.",
       image: "/images/brend.jpg",
-      imageAlt: "Baracuda 브랜드 대표 이미지",
+      imageAlt: "바라쿠다 브랜드 대표 공간 이미지",
     },
     gallerySections: [
       {
@@ -346,9 +346,9 @@ export const barracudaSiteConfig: CompanySiteConfig = {
         description: "테이블 간격과 공간의 여백이 우리끼리 머무는 시간을 더 편하게 만듭니다.",
         columns: 3,
         images: [
-          { src: "/images/brend-1.jpg", alt: "바라쿠다 브랜드 이미지 1", title: "Signature Mood", description: "브랜드의 첫인상을 만드는 장면" },
-          { src: "/images/brend-2.jpg", alt: "바라쿠다 브랜드 이미지 2", title: "Calm Interior", description: "차분하게 머물게 하는 실내의 결" },
-          { src: "/images/brend-3.jpg", alt: "바라쿠다 브랜드 이미지 3", title: "Natural Flow", description: "커피와 대화가 자연스럽게 이어지는 흐름" },
+          { src: "/images/brend-1.jpg", alt: "바라쿠다 브랜드의 첫인상이 담긴 실내 장면", title: "Signature Mood", description: "브랜드의 첫인상을 만드는 장면" },
+          { src: "/images/brend-2.jpg", alt: "차분하게 머물게 하는 바라쿠다 실내 인테리어", title: "Calm Interior", description: "차분하게 머물게 하는 실내의 결" },
+          { src: "/images/brend-3.jpg", alt: "커피와 대화가 자연스럽게 이어지는 바라쿠다 공간", title: "Natural Flow", description: "커피와 대화가 자연스럽게 이어지는 흐름" },
         ],
       },
       {
@@ -358,8 +358,8 @@ export const barracudaSiteConfig: CompanySiteConfig = {
         columns: 2,
         surface: "tint",
         images: [
-          { src: "/images/brend-hero.jpg.jpg", alt: "바라쿠다 브랜드 배경 이미지", title: "Brand Story", description: "도심 한가운데서도 차분한 흐름을 지키는 공간" },
-          { src: "/images/brend-4.jpg", alt: "바라쿠다 브랜드 이미지 4", title: "Detail", description: "작은 디테일에서 또렷해지는 브랜드의 무드" },
+          { src: "/images/brend-hero.jpg.jpg", alt: "도심 속 차분한 흐름이 담긴 바라쿠다 브랜드 전경", title: "Brand Story", description: "도심 한가운데서도 차분한 흐름을 지키는 공간" },
+          { src: "/images/brend-4.jpg", alt: "브랜드 무드가 드러나는 바라쿠다 공간 디테일", title: "Detail", description: "작은 디테일에서 또렷해지는 브랜드의 무드" },
         ],
       },
     ],
@@ -377,7 +377,7 @@ export const barracudaSiteConfig: CompanySiteConfig = {
       title: "머무는 시간에 맞춘 커피",
       description: "로스터리 베이스로 직접 준비하는 커피입니다. 천천히 머무는 시간에 맞춰 차분하게 냅니다.",
       image: "/images/roastery.png",
-      imageAlt: "Baracuda 로스터리 대표 이미지",
+      imageAlt: "바라쿠다 로스터리 대표 이미지",
       ctaHref: "/menu",
       ctaLabel: "메뉴 보기",
     },
@@ -400,9 +400,9 @@ export const barracudaSiteConfig: CompanySiteConfig = {
         columns: 3,
         surface: "tint",
         images: [
-          { src: "/images/ame.png", alt: "아메리카노 이미지", title: "Americano", description: "기본이 가장 또렷하게 드러나는 한 잔" },
-          { src: "/images/latte.webp", alt: "라떼 이미지", title: "Latte", description: "부드러운 질감과 균형이 중심이 되는 메뉴" },
-          { src: "/images/ade.png", alt: "에이드 이미지", title: "Seasonal Drink", description: "커피 외 음료도 같은 톤으로 이어집니다" },
+          { src: "/images/ame.png", alt: "바라쿠다 아메리카노 — 기본이 가장 또렷하게 드러나는 한 잔", title: "Americano", description: "기본이 가장 또렷하게 드러나는 한 잔" },
+          { src: "/images/latte.webp", alt: "바라쿠다 라떼 — 부드러운 질감과 균형이 중심이 되는 메뉴", title: "Latte", description: "부드러운 질감과 균형이 중심이 되는 메뉴" },
+          { src: "/images/ade.png", alt: "바라쿠다 시즌 음료 — 공간의 톤과 이어지는 음료 셀렉션", title: "Seasonal Drink", description: "커피 외 음료도 같은 톤으로 이어집니다" },
         ],
       },
     ],
