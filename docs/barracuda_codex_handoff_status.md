@@ -1,5 +1,5 @@
 # Barracuda Codex Handoff Status
-Version: 2026-03-24 (세션 2)
+Version: 2026-03-25 (세션 3)
 Status: Active
 
 Purpose
@@ -17,7 +17,7 @@ Project basics
 - Active branch: `v2-renewal`
 - Vercel project: `onaponds-projects/barracuda_web`
 - Production URL: `https://barracudaweb.vercel.app`
-- Latest production deployment: `https://barracuda-690lg6m9m-onaponds-projects.vercel.app`
+- Latest production deployment: `https://barracuda-lk06qw4j1-onaponds-projects.vercel.app`
 
 ---
 
@@ -47,7 +47,37 @@ Current design direction:
 
 ---
 
-## 2. 이번 세션 완료 내용 (2026-03-24 세션 2)
+## 2. 이번 세션 완료 내용 (2026-03-25 세션 3)
+
+### 이미지 alt 텍스트 정리 (Brand, Coffee)
+
+**Brand:**
+- hero `imageAlt`: `Baracuda 브랜드 대표 이미지` → `바라쿠다 브랜드 대표 공간 이미지`
+- Gallery 1 (brend-1~3.jpg): 번호 기반 generic alt → title/description 기반 묘사형 alt
+  - `바라쿠다 브랜드 이미지 1` → `바라쿠다 브랜드의 첫인상이 담긴 실내 장면`
+  - `바라쿠다 브랜드 이미지 2` → `차분하게 머물게 하는 바라쿠다 실내 인테리어`
+  - `바라쿠다 브랜드 이미지 3` → `커피와 대화가 자연스럽게 이어지는 바라쿠다 공간`
+- Gallery 2 (brend-hero, brend-4): 모호한 alt → 장면 묘사형
+  - `바라쿠다 브랜드 배경 이미지` → `도심 속 차분한 흐름이 담긴 바라쿠다 브랜드 전경`
+  - `바라쿠다 브랜드 이미지 4` → `브랜드 무드가 드러나는 바라쿠다 공간 디테일`
+
+**Coffee:**
+- hero `imageAlt`: `Baracuda 로스터리 대표 이미지` → `바라쿠다 로스터리 대표 이미지`
+- 메뉴 이미지 3종: 브랜드명 없음 → 브랜드명 + 메뉴 특성 반영
+  - `아메리카노 이미지` → `바라쿠다 아메리카노 — 기본이 가장 또렷하게 드러나는 한 잔`
+  - `라떼 이미지` → `바라쿠다 라떼 — 부드러운 질감과 균형이 중심이 되는 메뉴`
+  - `에이드 이미지` → `바라쿠다 시즌 음료 — 공간의 톤과 이어지는 음료 셀렉션`
+
+### 배포
+- 빌드: `npm run lint` + `npm run build` 통과
+- 배포: `vercel deploy --prod`
+- 배포 URL: `https://barracuda-lk06qw4j1-onaponds-projects.vercel.app`
+- 프로덕션: `https://barracudaweb.vercel.app` 반영 완료
+- 커밋: `8c4d533`
+
+---
+
+## 3. 이전 세션 요약 (2026-03-24 세션 2)
 
 ### 카피 전체 재작성 완료
 
@@ -65,33 +95,16 @@ Current design direction:
 - Use Cases title → `어떤 모임이든 우리끼리의 장소로`
 - 폼: `행사 문의` → `공간 대관 문의`
 
-**Menu:**
-- 히어로 title: 플레이스홀더 → `메뉴도 바라쿠다답게`
-- 폼 copy 정리, 방문/단체 주문 구분 명확화
-
-**Store:**
-- `스토어 프리뷰` 내부 언어 제거
-- 메타 설명 전부 제품 설명으로 교체
-
-**Visit:**
-- 메타 설명 제거, 갤러리 타이틀 정리
+**Menu / Store / Visit:**
+- 각 라우트 카피 방어적 표현 제거 및 정리 완료
 
 ### 공간/장소 기준 확정
 - 브랜드 태그라인 + 대관 맥락 → **공간**
 - 사람이 모이는 목적지 본문 묘사 → **장소**
 
-### 배포
-- 빌드: `npm run lint` + `npm run build` 통과
-- 배포: `vercel deploy --prod` (원격 빌드)
-- 배포 URL: `https://barracuda-690lg6m9m-onaponds-projects.vercel.app`
-- 프로덕션: `https://barracudaweb.vercel.app` 반영 완료
-
-### 배포 규칙 업데이트
-- prebuilt 방식 → `vercel deploy --prod` 방식으로 전환 (Next.js 16 RSC 호환 이슈)
-
 ---
 
-## 3. Active Rules
+## 4. Active Rules
 
 ### 카피 규칙
 - `특별한`은 Brand 페이지 히어로에만 사용. 다른 페이지 반복 금지.
@@ -111,7 +124,7 @@ Current design direction:
 
 ---
 
-## 4. Important Files
+## 5. Important Files
 
 Primary homepage / shell files:
 - `app/page.tsx`
@@ -130,25 +143,24 @@ Deployment:
 
 ---
 
-## 5. Content / Asset Status
+## 6. Content / Asset Status
 
-- 전체 7개 라우트 카피 1차 정리 완료 및 배포됨
-- 이미지 alt/title/description 필드 정리는 아직 미완 (Brand, Coffee)
+- 전체 7개 라우트 카피 1차 정리 완료 및 배포됨 ✅
+- 이미지 alt/title/description 필드 정리 완료 (Brand, Coffee) ✅
 - 홈 비주얼 전체 sign-off 아직 미진행
 
 ---
 
-## 6. Verification Status
+## 7. Verification Status
 
 Latest confirmed checks:
 - `npm run lint` — pass
 - `npm run build` — pass
-- `vercel deploy --prod` — pass (barracuda-690lg6m9m)
+- `vercel deploy --prod` — pass (barracuda-lk06qw4j1)
 
 ---
 
-## 7. Recommended Next Work
+## 8. Recommended Next Work
 
-1. 이미지 alt/description 필드 정리 (Brand, Coffee 중심)
-2. 홈 비주얼 전체 사용자 sign-off
-3. 필요 시 카피 추가 사이클 (특정 라우트 요청 시)
+1. 홈 비주얼 전체 사용자 sign-off
+2. 필요 시 카피 추가 사이클 (특정 라우트 요청 시)
