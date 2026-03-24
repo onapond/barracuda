@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -15,6 +15,7 @@ type CompanyHeaderProps = {
 
 export function CompanyHeader({ data, mobileMenuId }: CompanyHeaderProps) {
   const [open, setOpen] = useState(false);
+  const hasUtilityLinks = data.utilityLinks.length > 0;
 
   return (
     <header className="relative border-b border-[var(--color-line)] bg-white">
@@ -30,22 +31,28 @@ export function CompanyHeader({ data, mobileMenuId }: CompanyHeaderProps) {
           >
             {open ? <X size={24} /> : <Menu size={24} />}
           </button>
-          <div className="flex items-center gap-4 pt-2 text-sm text-[var(--color-muted)]">
+          {hasUtilityLinks ? (
+            <div className="flex items-center gap-4 pt-2 text-sm text-[var(--color-muted)]">
+              {data.utilityLinks.map((link) => (
+                <Link key={link.label} href={link.href} className="hover:text-[var(--color-foreground)]">
+                  {link.label}
+                </Link>
+              ))}
+            </div>
+          ) : (
+            <div aria-hidden="true" className="h-11" />
+          )}
+        </div>
+
+        {hasUtilityLinks ? (
+          <div className="hidden justify-end gap-5 text-sm text-[var(--color-muted)] md:flex">
             {data.utilityLinks.map((link) => (
               <Link key={link.label} href={link.href} className="hover:text-[var(--color-foreground)]">
                 {link.label}
               </Link>
             ))}
           </div>
-        </div>
-
-        <div className="hidden justify-end gap-5 text-sm text-[var(--color-muted)] md:flex">
-          {data.utilityLinks.map((link) => (
-            <Link key={link.label} href={link.href} className="hover:text-[var(--color-foreground)]">
-              {link.label}
-            </Link>
-          ))}
-        </div>
+        ) : null}
 
         <Link
           href="/"

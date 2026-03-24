@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -39,11 +39,11 @@ export function CompanyHomepageTemplate({ data, children }: CompanyHomepageTempl
           <Image src={data.hero.image} alt={data.hero.imageAlt} fill priority className="object-cover" />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,10,10,0.08),rgba(10,10,10,0.38))]" />
           <Container className="relative flex h-full items-end justify-center pb-10 text-center sm:pb-16 lg:pb-24">
-            <div className="max-w-[58rem] text-white">
-              <h1 className="font-heading text-[2.7rem] font-semibold leading-[0.98] tracking-[-0.05em] whitespace-pre-line sm:text-[4.5rem] lg:text-[6.6rem]">
+            <div className="mx-auto flex max-w-[19rem] flex-col items-center text-white sm:max-w-[26rem] lg:max-w-[34rem]">
+              <h1 className="type-wrap-balance max-w-[13rem] pb-[0.14em] font-heading text-[2rem] font-semibold leading-[1.12] tracking-[-0.04em] text-center whitespace-pre-line sm:max-w-[20rem] sm:text-[3.5rem] lg:max-w-[28rem] lg:text-[4.8rem]">
                 {data.hero.title}
               </h1>
-              <p className="mx-auto mt-4 max-w-[32rem] text-sm leading-7 text-white/90 sm:text-base sm:leading-8 lg:text-[1.05rem] lg:leading-8">
+              <p className="type-wrap-balance mt-4 max-w-[15rem] text-sm leading-6 text-white/90 text-center sm:max-w-[18rem] sm:text-[0.98rem] sm:leading-7 lg:max-w-[21rem] lg:text-[1rem] lg:leading-7">
                 {data.hero.description}
               </p>
               <Link
@@ -61,3 +61,4 @@ export function CompanyHomepageTemplate({ data, children }: CompanyHomepageTempl
     </main>
   );
 }
+

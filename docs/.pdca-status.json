@@ -1,0 +1,209 @@
+{
+  "version": "2.0",
+  "lastUpdated": "2026-03-24T07:47:27.569Z",
+  "activeFeatures": [
+    "sites"
+  ],
+  "primaryFeature": "sites",
+  "features": {
+    "sites": {
+      "phase": "do",
+      "phaseNumber": 3,
+      "matchRate": null,
+      "iterationCount": 0,
+      "requirements": [],
+      "documents": {},
+      "timestamps": {
+        "started": "2026-03-24T07:39:09.170Z",
+        "lastUpdated": "2026-03-24T07:47:27.569Z"
+      },
+      "lastFile": "C:\\dev\\barracuda_web\\data\\sites\\barracuda.ts"
+    }
+  },
+  "pipeline": {
+    "currentPhase": 1,
+    "level": "Dynamic",
+    "phaseHistory": []
+  },
+  "session": {
+    "startedAt": "2026-03-24T07:23:02.565Z",
+    "onboardingCompleted": false,
+    "lastActivity": "2026-03-24T07:47:27.569Z"
+  },
+  "history": [
+    {
+      "timestamp": "2026-03-24T07:39:09.170Z",
+      "feature": "sites",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-24T07:39:28.766Z",
+      "feature": "sites",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-24T07:39:29.171Z",
+      "feature": "sites",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-24T07:39:32.841Z",
+      "feature": "sites",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-24T07:39:35.622Z",
+      "feature": "sites",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-24T07:39:36.775Z",
+      "feature": "sites",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-24T07:39:41.928Z",
+      "feature": "sites",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-24T07:39:43.804Z",
+      "feature": "sites",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-24T07:39:49.746Z",
+      "feature": "sites",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-24T07:39:53.357Z",
+      "feature": "sites",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-24T07:39:55.398Z",
+      "feature": "sites",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-24T07:39:56.840Z",
+      "feature": "sites",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-24T07:40:01.569Z",
+      "feature": "sites",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-24T07:40:04.096Z",
+      "feature": "sites",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-24T07:40:05.957Z",
+      "feature": "sites",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-24T07:40:11.041Z",
+      "feature": "sites",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-24T07:40:12.671Z",
+      "feature": "sites",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-24T07:40:15.609Z",
+      "feature": "sites",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-24T07:40:19.900Z",
+      "feature": "sites",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-24T07:40:22.485Z",
+      "feature": "sites",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-24T07:45:13.718Z",
+      "feature": "sites",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-24T07:45:16.851Z",
+      "feature": "sites",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-24T07:45:20.410Z",
+      "feature": "sites",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-24T07:45:25.079Z",
+      "feature": "sites",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-24T07:45:29.998Z",
+      "feature": "sites",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-24T07:47:18.311Z",
+      "feature": "sites",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-24T07:47:21.498Z",
+      "feature": "sites",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-24T07:47:24.701Z",
+      "feature": "sites",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-24T07:47:27.569Z",
+      "feature": "sites",
+      "phase": "do",
+      "action": "updated"
+    }
+  ]
+}

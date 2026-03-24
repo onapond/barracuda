@@ -1,4 +1,4 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
@@ -17,10 +17,10 @@ export function CompanyHomepagePreview({ data }: CompanyHomepagePreviewProps) {
       <Container>
         <div className="border-b border-[var(--color-line)] pb-7">
           <p className="text-xs uppercase tracking-[0.34em] text-[var(--color-muted)]">{data.eyebrow}</p>
-          <h2 className="mt-4 max-w-[11ch] font-heading text-[2.4rem] font-semibold leading-[1.02] tracking-[-0.05em] whitespace-pre-line sm:text-[3.5rem] lg:text-[4rem]">
+          <h2 className="type-wrap-balance mt-4 max-w-[14rem] pb-[0.14em] font-heading text-[1.85rem] font-semibold leading-[1.14] tracking-[-0.04em] whitespace-pre-line sm:max-w-[17rem] sm:text-[2.6rem] lg:max-w-[19rem] lg:text-[3rem]">
             {data.title}
           </h2>
-          <p className="mt-4 max-w-[34rem] text-sm leading-7 text-[var(--color-muted)] sm:text-base sm:leading-8">{data.description}</p>
+          <p className="type-wrap-balance mt-4 max-w-[15rem] text-sm leading-6 text-[var(--color-muted)] sm:max-w-[18rem] sm:text-[0.96rem] sm:leading-7 lg:max-w-[19rem]">{data.description}</p>
           <Button href={data.cta.href} className="mt-7">
             {data.cta.label}
           </Button>
@@ -51,3 +51,4 @@ export function CompanyHomepagePreview({ data }: CompanyHomepagePreviewProps) {
     </SectionWrapper>
   );
 }
+

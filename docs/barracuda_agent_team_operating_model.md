@@ -23,9 +23,10 @@ Non-negotiable project rules
 - Keep Korean-first user-facing copy.
 - Do not add operational systems while solving copy problems.
 - Do not solve weak copy by adding more sections.
-- Copy changes should start from `data/site-content.ts`.
+- Copy changes should start from `data/sites/*.ts` (Barracuda: `data/sites/barracuda.ts`).
 - Typography decisions must be validated at `360 / 768 / 1024 / 1440`.
 - No team can approve its own output without a downstream review.
+- Typography / line-break work cannot begin until Korean Copy Editor approves copy at the sentence level.
 
 ---
 
@@ -160,6 +161,40 @@ Success criteria
 - copy is shorter and clearer than the previous version
 - each line supports page intent
 - copy can render on narrow screens without awkward density
+
+---
+
+### Korean Copy Editor
+Role
+- Approve or reject copy at the sentence level for Korean-originalness.
+
+Mission
+- Prevent translated-English Korean and preserve native Korean rhythm, clarity, and intent.
+
+Team owns
+- sentence-level accept / reject
+- prohibited translated-English patterns list (reject triggers)
+- rewrite-from-scratch enforcement (no edit-in-place of English-first copy)
+- final "approved exact strings" copy sheet for integration
+
+Team does not own
+- route structure and section removal decisions
+- brand voice policy definition (but can veto copy that violates it)
+- typography rules
+- code implementation
+
+Required outputs
+- route copy approval sheet (approved lines only)
+- reject list with reasons (per line)
+- "copy lock" note: integration may not soften / rewrite approved lines
+
+Authority
+- can block Typography System Team and Responsive QA work until copy approval is complete
+
+Success criteria
+- copy reads as native Korean, not translated English
+- copy is decisive and unforced when read aloud
+- each line carries one claim and avoids abstract filler
 
 ---
 
@@ -431,9 +466,10 @@ Orchestrator should run the next cycle in this order:
 1. Information Architecture Team defines route jobs for `/`, `/coffee`, `/store`, `/visit`.
 2. Brand Voice Team updates Barracuda voice rules and prohibited phrase list for those routes.
 3. UX Copy Team writes short Korean-first copy for those routes.
-4. Typography System Team defines shared reading constraints for those routes.
-5. Content Integration Team implements the approved copy and type rules in `data/site-content.ts` and shared components.
-6. Responsive QA Team and Frontend QA Team validate the result independently.
+4. Korean Copy Editor approves or rejects the copy at the sentence level.
+5. Typography System Team defines shared reading constraints for those routes.
+6. Content Integration Team implements the approved copy and type rules in `data/sites/*.ts` and shared components.
+7. Responsive QA Team and Frontend QA Team validate the result independently.
 
 Expected outcome
 - less overlap between teams
@@ -524,11 +560,29 @@ Primary artifacts
 - fallback title variants
 
 Source of truth to update
-- `data/site-content.ts`
+- `data/sites/*.ts` (Barracuda: `data/sites/barracuda.ts`)
 
 Handoff to
-- Typography System Team
-- Content Integration Team
+- Korean Copy Editor
+
+---
+
+### Korean Copy Editor
+Primary responsibility
+- approve copy at the sentence level for Korean-originalness and brand fit
+
+Assigned scope first
+- homepage hero + section headings + short descriptions
+
+Primary artifacts
+- approved copy sheet (exact strings)
+- reject list (line + reason + rewrite direction)
+- copy lock note for integration
+
+Handoff to
+- Orchestrator
+- Typography System Team (only after approval)
+- Content Integration Team (only after approval)
 
 ---
 

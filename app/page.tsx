@@ -1,4 +1,4 @@
-﻿import { CompanyHomepageTemplate } from "@/components/company-homepage-template";
+import { CompanyHomepageTemplate } from "@/components/company-homepage-template";
 import { CompanyHomepageIntro } from "@/components/company-homepage-intro";
 import { CompanyHomepagePreview } from "@/components/company-homepage-preview";
 import { CompanySignatureTabs } from "@/components/company-signature-tabs";
@@ -10,9 +10,9 @@ export default function Home() {
     <CompanyHomepageTemplate data={siteConfig.homepage}>
       <CompanyHomepageIntro data={siteConfig.homepageIntro} />
       <CompanySignatureTabs
-        eyebrow="Signature"
-        title="바라쿠다에서 머무는\n여러 방식"
-        description="한 공간 안에서도 시간과 목적에 따라 전혀 다른 장면이 펼쳐집니다. 지금은 이미지 기반으로 구성했고, 영상 파일이 준비되면 같은 탭에서 바로 교체할 수 있습니다."
+        eyebrow="SIGNATURE"
+        title={"머무는 방식마다\n다르게 남는 장면"}
+        description="모임도, 기념도, 브랜드도, 일상도. 네 장면이 한 공간에 있습니다."
         tabs={siteConfig.homepageSignatureTabs}
       />
       <CompanyHomepagePreview data={siteConfig.homepagePreviews.spaceExperience} />
@@ -24,3 +24,4 @@ export default function Home() {
     </CompanyHomepageTemplate>
   );
 }
+

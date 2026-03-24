@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Image from "next/image";
 import { useState } from "react";
@@ -27,13 +27,13 @@ export function CompanySignatureTabs({ eyebrow, title, description, tabs }: Comp
       <Container>
         <div className="border-b border-[var(--color-line)] pb-7">
           <p className="text-xs uppercase tracking-[0.34em] text-[var(--color-muted)]">{eyebrow}</p>
-          <h2 className="mt-4 max-w-[11ch] font-heading text-[2.4rem] font-semibold leading-[1.02] tracking-[-0.05em] whitespace-pre-line sm:text-[3.6rem] lg:text-[4rem]">
+          <h2 className="type-wrap-balance mt-4 max-w-[14rem] pb-[0.14em] font-heading text-[1.85rem] font-semibold leading-[1.14] tracking-[-0.04em] whitespace-pre-line sm:max-w-[17rem] sm:text-[2.7rem] lg:max-w-[19rem] lg:text-[3.1rem]">
             {title}
           </h2>
-          <p className="mt-4 max-w-[34rem] text-sm leading-7 text-[var(--color-muted)] sm:text-base sm:leading-8">{description}</p>
+          <p className="type-wrap-balance mt-4 max-w-[15rem] text-sm leading-6 text-[var(--color-muted)] sm:max-w-[18rem] sm:text-[0.96rem] sm:leading-7 lg:max-w-[19rem]">{description}</p>
         </div>
 
-        <div className="mt-8 grid gap-3 md:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-8 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
           {tabs.map((tab) => {
             const active = tab.key === activeTab.key;
             return (
@@ -41,10 +41,12 @@ export function CompanySignatureTabs({ eyebrow, title, description, tabs }: Comp
                 key={tab.key}
                 type="button"
                 onClick={() => setActiveKey(tab.key)}
-                className={`rounded-[1.6rem] border px-5 py-4 text-left transition ${active ? "border-[var(--color-foreground)] bg-white text-[var(--color-foreground)]" : "border-[var(--color-line)] bg-transparent text-[var(--color-muted)] hover:bg-white/70"}`}
+                className={`rounded-[1.4rem] border px-4 py-3.5 text-left transition ${active ? "border-[var(--color-foreground)] bg-white text-[var(--color-foreground)]" : "border-[var(--color-line)] bg-transparent text-[var(--color-muted)] hover:bg-white/70"}`}
               >
-                <span className="text-xs uppercase tracking-[0.24em]">{tab.label}</span>
-                <p className="mt-3 font-heading text-[1.35rem] font-semibold leading-[1.05] tracking-[-0.03em]">{tab.title}</p>
+                <span className="text-[0.7rem] uppercase tracking-[0.18em] sm:text-xs sm:tracking-[0.24em]">{tab.label}</span>
+                <p className="type-wrap-balance mt-2 max-w-[9rem] whitespace-pre-line pb-[0.14em] font-heading text-[1rem] font-semibold leading-[1.14] tracking-[-0.03em] sm:mt-3 sm:max-w-[10rem] sm:text-[1.2rem]">
+                  {tab.title}
+                </p>
               </button>
             );
           })}
@@ -68,10 +70,10 @@ export function CompanySignatureTabs({ eyebrow, title, description, tabs }: Comp
               )}
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,10,10,0.03),rgba(10,10,10,0.24))]" />
               <div className="absolute inset-x-0 bottom-0 p-6 text-white sm:p-8 lg:p-10">
-                <h3 className="max-w-[10ch] font-heading text-[2.2rem] font-semibold leading-[1.02] tracking-[-0.04em] sm:text-[3.2rem] lg:text-[3.9rem]">
+                <h3 className="type-wrap-balance max-w-[11rem] whitespace-pre-line pb-[0.14em] font-heading text-[1.75rem] font-semibold leading-[1.14] tracking-[-0.04em] sm:max-w-[13rem] sm:text-[2.5rem] lg:max-w-[15rem] lg:text-[3rem]">
                   {activeTab.title}
                 </h3>
-                <p className="mt-3 max-w-[24rem] text-sm leading-7 text-white/86 sm:text-base sm:leading-8">
+                <p className="type-wrap-balance mt-3 max-w-[14rem] text-sm leading-6 text-white/86 sm:max-w-[16rem] sm:text-[0.96rem] sm:leading-7 lg:max-w-[17rem]">
                   {activeTab.description}
                 </p>
                 <Button href={activeTab.cta.href} className="mt-6">
@@ -95,3 +97,6 @@ export function CompanySignatureTabs({ eyebrow, title, description, tabs }: Comp
     </SectionWrapper>
   );
 }
+
+
+
