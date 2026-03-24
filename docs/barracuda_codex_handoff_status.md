@@ -1,5 +1,5 @@
 # Barracuda Codex Handoff Status
-Version: 2026-03-24
+Version: 2026-03-24 (세션 2)
 Status: Active
 
 Purpose
@@ -8,17 +8,16 @@ Use it before making further homepage, subpage, or deployment changes.
 
 Operating rule reference
 - Default agent workflow is governed by `AGENTS.md` at the repo root.
-- Barracuda work should run through the Orchestrator-first structure unless the user explicitly overrides it.
-- The main agent reviews Orchestrator outputs, aligns judgment with the user, and then returns refined instructions to the Orchestrator.
+- **카피 영역은 메인 Claude가 직접 담당한다. 에이전트 팀 KCE 게이트를 거치지 않는다.**
+- 에이전트 팀은 QA·구현 등 카피 외 역할에 활용한다.
 
 Project basics
 - Workspace: `C:\dev\barracuda_web`
 - GitHub: `https://github.com/onapond/barracuda.git`
-- Active branch at handoff time: `v2-renewal`
+- Active branch: `v2-renewal`
 - Vercel project: `onaponds-projects/barracuda_web`
 - Production URL: `https://barracudaweb.vercel.app`
-- Latest production deployment: `https://barracuda-5ngt0fi84-onaponds-projects.vercel.app`
-- Latest deployment inspect URL: `https://vercel.com/onaponds-projects/barracuda_web/2spokVcf1dDXRFNp5NhDyVp2HMJA`
+- Latest production deployment: `https://barracuda-690lg6m9m-onaponds-projects.vercel.app`
 
 ---
 
@@ -42,45 +41,77 @@ Implemented stack:
 
 Current design direction:
 - homepage is image-heavy and space-first
-- Barracuda should read as a private-feeling place as well as a cafe
-- copy quality is being refined in explicit route batches rather than broad silent rewrites
-
-Important current reality:
-- homepage approved copy remains active
-- `/brand` and `/coffee` now use revised Batch 1 copy aligned to `특별한 카페` / `우리들만의 프라이빗 공간`
-- homepage signature tab line-break rendering is now consistent across all signature heading surfaces
+- 브랜드 핵심 키워드: `우리들만의 특별한 프라이빗 카페, 공간`
+- 비즈니스 구조: 카페 + 공간 대여(대관) 병행
+- 카피는 방어적 톤 없이 단호하고 구체적으로
 
 ---
 
-## 2. Active Rules
+## 2. 이번 세션 완료 내용 (2026-03-24 세션 2)
 
-These rules should be treated as current unless the user explicitly changes them.
+### 카피 전체 재작성 완료
+
+**Brand:**
+- 히어로 desc: 방어적 `~도 좋고 ~에도 좋습니다` → 선언형
+- Gallery 1 title: `보통 카페와는 다른` → `우리끼리 있는 것처럼 조용한 카페`
+- Brand Note: `지향합니다` → `그게 바라쿠다입니다`
+
+**Coffee:**
+- 히어로 title: `특별하게 만드는 커피` → `머무는 시간에 맞춘 커피`
+- Gallery 2: 방어적 프레이밍 완전 제거 → `공간이 조용하면 커피도 조용합니다`
+
+**Space:**
+- 히어로: 대관 사업 전면 노출 (`대관 가능합니다`)
+- Use Cases title → `어떤 모임이든 우리끼리의 장소로`
+- 폼: `행사 문의` → `공간 대관 문의`
+
+**Menu:**
+- 히어로 title: 플레이스홀더 → `메뉴도 바라쿠다답게`
+- 폼 copy 정리, 방문/단체 주문 구분 명확화
+
+**Store:**
+- `스토어 프리뷰` 내부 언어 제거
+- 메타 설명 전부 제품 설명으로 교체
+
+**Visit:**
+- 메타 설명 제거, 갤러리 타이틀 정리
+
+### 공간/장소 기준 확정
+- 브랜드 태그라인 + 대관 맥락 → **공간**
+- 사람이 모이는 목적지 본문 묘사 → **장소**
+
+### 배포
+- 빌드: `npm run lint` + `npm run build` 통과
+- 배포: `vercel deploy --prod` (원격 빌드)
+- 배포 URL: `https://barracuda-690lg6m9m-onaponds-projects.vercel.app`
+- 프로덕션: `https://barracudaweb.vercel.app` 반영 완료
+
+### 배포 규칙 업데이트
+- prebuilt 방식 → `vercel deploy --prod` 방식으로 전환 (Next.js 16 RSC 호환 이슈)
+
+---
+
+## 3. Active Rules
+
+### 카피 규칙
+- `특별한`은 Brand 페이지 히어로에만 사용. 다른 페이지 반복 금지.
+- 방어적 프레이밍 금지: `~로 보이고 싶지 않습니다`, `~해야 합니다`
+- 메타 설명 금지: 페이지 설계 의도를 사용자에게 설명하는 문장
+- 내부 언어 금지: `프리뷰 중심의`, `지금은 결제보다` 류
 
 ### Workflow rules
-- Run substantive Barracuda work through the Orchestrator-first structure.
+- 카피 작업 → 메인 Claude 직접 담당
+- 구현/QA → 에이전트 팀 활용 가능
 - Keep approval boundaries explicit.
-- No missing gate can be treated as implicitly passed.
 
 ### Rendering / scope rules
 - Prefer static pages for all public routes.
-- Do not introduce server actions into public pages unless the user explicitly requests it.
-- Do not turn public inquiry flows into operational systems unless explicitly requested.
+- Do not introduce server actions into public pages unless explicitly requested.
 - Keep implementations simple and low-risk.
-
-### Copy / approval rules
-- Homepage approved copy remains locked unless a specific line returns to KCE.
-- Batch 1 approved route copy for `/brand` and `/coffee` remains locked within the approved integration map.
-- Batch 2 is not yet open.
-- Image `alt`, `title`, and image-level `description` fields for `/brand` and `/coffee` are still outside approved Batch 1 mapping.
-
-### Signature-tab rule
-- Approved homepage signature tab copy still contains manual `\n`.
-- Rendering now supports those breaks consistently.
-- Removing those manual breaks is a separate copy-return decision, not a rendering tweak.
 
 ---
 
-## 3. Important Files
+## 4. Important Files
 
 Primary homepage / shell files:
 - `app/page.tsx`
@@ -92,66 +123,32 @@ Primary homepage / shell files:
 - `components/footer.tsx`
 
 Primary route content source:
-- `data/sites/barracuda.ts`
+- `data/sites/barracuda.ts` ← 모든 카피의 단일 소스
 
-Primary cycle docs from current session:
-- `docs/cycles/2026-03-24_batch1_copy_approved_brand_coffee.md`
-- `docs/cycles/2026-03-24_batch1_frontend_qa_brand_coffee.md`
-- `docs/cycles/2026-03-24_batch1_orchestrator_post_integration_brand_coffee.md`
-- `docs/cycles/2026-03-24_signature_tabs_responsive_qa.md`
-- `docs/cycles/2026-03-24_signature_tabs_orchestrator_post_qa.md`
-
-Main session handoff:
-- `docs/barracuda_handoff_2026-03-24_batch1_and_signature_tabs.md`
+Deployment:
+- `docs/deployment_rules.md` ← 표준: `lint → build → vercel deploy --prod`
 
 ---
 
-## 4. Content / Asset Status
+## 5. Content / Asset Status
 
-Current content status:
-- homepage copy approval remains valid for homepage scope
-- revised Batch 1 copy for `/brand` and `/coffee` is integrated and technically approved
-- Batch 1 concept axis is now `특별한 카페` / `우리들만의 프라이빗 공간`
-- `/brand` and `/coffee` image-related text fields remain unresolved outside the approved mapping
-- Batch 2 routes `/space` and `/menu` are not yet opened for copy work
-- Batch 3 routes `/store` and `/visit` are not yet opened for copy work
-
-Current homepage visual / typography status:
-- homepage signature tab `\n` rendering issue is resolved
-- homepage signature tab responsive QA passes at `360 / 768 / 1024 / 1440`
-- broader homepage visual sign-off is still open
+- 전체 7개 라우트 카피 1차 정리 완료 및 배포됨
+- 이미지 alt/title/description 필드 정리는 아직 미완 (Brand, Coffee)
+- 홈 비주얼 전체 sign-off 아직 미진행
 
 ---
 
-## 5. Verification Status
+## 6. Verification Status
 
-Latest confirmed checks passed:
-- `npm run lint`
-- `npm run build`
-- `npm run qa:homepage`
-
-Interpretation:
-- Batch 1 integrated fields for `/brand` and `/coffee` are technically approved
-- homepage signature tab rendering fix is technically and responsively approved
-- this does not authorize Batch 2 or release approval by itself
+Latest confirmed checks:
+- `npm run lint` — pass
+- `npm run build` — pass
+- `vercel deploy --prod` — pass (barracuda-690lg6m9m)
 
 ---
 
-## 6. Recommended Next Work
+## 7. Recommended Next Work
 
-Priority next steps:
-1. open Batch 2 route copy cycle for `/space` and `/menu`
-2. optionally open a small follow-up cycle for `/brand` and `/coffee` image text alignment if full consistency is needed
-3. keep homepage work limited to clearly scoped issues rather than broad silent polish
-4. complete broader homepage visual sign-off only when the user wants it explicitly
-
----
-
-## 7. Handoff Summary
-
-Barracuda now has:
-- approved homepage copy for homepage scope
-- approved and integrated Batch 1 route copy for `/brand` and `/coffee`
-- resolved homepage signature tab line-break rendering behavior
-
-The next meaningful work is Batch 2, not reopening already approved Batch 1 work by default.
+1. 이미지 alt/description 필드 정리 (Brand, Coffee 중심)
+2. 홈 비주얼 전체 사용자 sign-off
+3. 필요 시 카피 추가 사이클 (특정 라우트 요청 시)
