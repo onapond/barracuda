@@ -24,10 +24,8 @@
 아래 순서를 기본 규칙으로 따른다.
 
 1. 로컬 코드/콘텐츠 수정
-2. 로컬 검증 실행
-3. 로컬 빌드 실행
-4. 로컬 prebuilt 산출물 생성
-5. Vercel에는 prebuilt 결과만 배포
+2. 로컬 검증 실행 (`npm run lint`, `npm run build`)
+3. Vercel 원격 배포 실행
 
 ---
 
@@ -36,15 +34,16 @@
 ```powershell
 npm run lint
 npm run build
-vercel build
-vercel deploy --prebuilt --prod
+vercel deploy --prod
 ```
 
 설명:
 - `npm run lint`: 정적 검사
 - `npm run build`: Next.js 로컬 빌드 검증
-- `vercel build`: 로컬에서 Vercel 배포 산출물 생성
-- `vercel deploy --prebuilt --prod`: 이미 빌드된 결과만 프로덕션에 배포
+- `vercel deploy --prod`: Vercel 원격 빌드 후 프로덕션 배포
+
+> **변경 이력 (2026-03-24)**: prebuilt 방식(`vercel build` + `vercel deploy --prebuilt --prod`)은
+> Next.js 16 RSC 출력 포맷과 호환되지 않아 반복 실패. 원격 빌드 방식으로 전환.
 
 ---
 
@@ -52,7 +51,7 @@ vercel deploy --prebuilt --prod
 
 아래 방식은 기본적으로 사용하지 않는다.
 
-- `vercel deploy --prod`
+- `vercel deploy --prebuilt --prod` (Next.js 16과 호환 불가)
 - 로컬 빌드 없이 바로 배포
 - 원격 빌드 결과만 보고 완료 처리
 - 빌드 실패 상태에서 배포 강행
@@ -70,8 +69,7 @@ vercel deploy --prebuilt --prod
 
 - 로컬 `npm run lint` 통과
 - 로컬 `npm run build` 통과
-- 로컬 `vercel build` 통과
-- `vercel deploy --prebuilt --prod` 완료
+- `vercel deploy --prod` 완료
 - 배포 URL 확인 완료
 
 ---
