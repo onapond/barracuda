@@ -316,7 +316,7 @@ export const barracudaSiteConfig: CompanySiteConfig = {
     gallerySections: [
       {
         eyebrow: "Brand Gallery",
-        title: "우리끼리 있는 것처럼\n조용한 카페",
+        title: "우리끼리\n있는 것처럼 조용한 카페",
         description: "테이블 간격과 공간의 여백이 우리끼리 머무는 시간을 더 편하게 만듭니다.",
         columns: 3,
         images: [
@@ -358,7 +358,7 @@ export const barracudaSiteConfig: CompanySiteConfig = {
     gallerySections: [
       {
         eyebrow: "Coffee Process",
-        title: "조용히 머무는 시간에\n어울리는 커피",
+        title: "조용히 머무는\n시간에 어울리는 커피",
         description: "바라쿠다 커피는 빨리 마시고 잊히는 쪽보다, 천천히 머물게 하는 쪽에 가깝습니다.",
         columns: 3,
         images: [
@@ -416,7 +416,7 @@ export const barracudaSiteConfig: CompanySiteConfig = {
     gallerySections: [
       {
         eyebrow: "Main Space",
-        title: "여백과 조명이\n분위기를 만드는 장소",
+        title: "여백과 조명이\n분위기를 만드는 곳",
         description: "테이블 간격과 조명이 프라이빗한 분위기를 만듭니다. 카페인데 우리끼리 있는 것 같은 장소입니다.",
         columns: 3,
         images: [

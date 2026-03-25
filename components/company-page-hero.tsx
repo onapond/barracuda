@@ -19,7 +19,7 @@ export function CompanyPageHero({ image, imageAlt, title, description, ctaHref, 
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,10,10,0.12),rgba(10,10,10,0.36))]" />
         <Container className="relative flex h-full items-end justify-center pb-10 text-center sm:pb-14 lg:pb-18">
           <div className="max-w-[46rem] text-white">
-            <h1 className="font-heading text-[2.2rem] font-semibold leading-[1.03] tracking-[-0.04em] whitespace-pre-line sm:text-[3.4rem] lg:text-[4.75rem]">
+            <h1 className="font-heading text-[2.2rem] font-semibold leading-[1.03] tracking-[-0.04em] whitespace-pre-line sm:whitespace-normal max-w-[13rem] sm:max-w-none sm:text-[3.4rem] lg:text-[4.75rem]">
               {title}
             </h1>
             <p className="mx-auto mt-5 max-w-[36rem] text-[0.9375rem] leading-[1.7] text-white/92 sm:text-base sm:leading-8 lg:text-[1.08rem] lg:leading-9">

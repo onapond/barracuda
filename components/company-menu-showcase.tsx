@@ -30,7 +30,7 @@ export function CompanyMenuShowcase({
       <Container>
         <div className="border-b border-[var(--color-line)] pb-8">
           <p className="text-xs uppercase tracking-[0.34em] text-[var(--color-muted)]">{eyebrow}</p>
-          <h2 className="mt-4 max-w-[13ch] font-heading text-[2.1rem] font-semibold leading-[1.08] tracking-[-0.04em] whitespace-pre-line sm:text-[3rem]">
+          <h2 className="mt-4 max-w-[13ch] font-heading text-[2.1rem] font-semibold leading-[1.08] tracking-[-0.04em] whitespace-pre-line sm:whitespace-normal sm:text-[3rem]">
             {title}
           </h2>
           {description ? (

@@ -11,8 +11,8 @@ export default function Home() {
       <CompanyHomepageIntro data={siteConfig.homepageIntro} />
       <CompanySignatureTabs
         eyebrow="SIGNATURE"
-        title={"머무는 방식마다\n다르게 남는 장면"}
-        description="모임도, 기념도, 브랜드도, 일상도. 네 장면이 한 공간에 있습니다."
+        title={"머무는 방식마다\n다른 장면이 됩니다"}
+        description="카페로, 모임으로, 기념으로, 브랜드로. 바라쿠다는 목적에 맞게 자리를 바꿉니다."
         tabs={siteConfig.homepageSignatureTabs}
       />
       <CompanyHomepagePreview data={siteConfig.homepagePreviews.spaceExperience} />
