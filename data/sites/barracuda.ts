@@ -438,7 +438,7 @@ export const barracudaSiteConfig: CompanySiteConfig = {
     hero: {
       title: "우리끼리만 쓰는\n프라이빗 공간",
       description: "카페로 와도 되고, 우리끼리 빌려서 써도 됩니다. 소규모 모임부터 브랜드 행사까지 대관 가능합니다.",
-      image: "/images/cafe.jpg",
+      image: "/images/space/hero.jpg",
       imageAlt: "Baracuda 공간 대표 이미지",
       ctaHref: "#space-inquiry",
       ctaLabel: "공간 문의",
@@ -450,9 +450,9 @@ export const barracudaSiteConfig: CompanySiteConfig = {
         description: "테이블 간격과 조명이 프라이빗한 분위기를 만듭니다. 카페인데 우리끼리 있는 것 같은 장소입니다.",
         columns: 3,
         images: [
-          { src: "/images/cafe.jpg", alt: "바라쿠다 카페 공간 이미지", title: "Cafe", description: "일상의 방문이 자연스럽게 이어지는 메인 공간" },
-          { src: "/images/event.jpg", alt: "바라쿠다 이벤트 이미지", title: "Event", description: "작은 행사와 기념이 어울리는 장면" },
-          { src: "/images/experience.jpg", alt: "바라쿠다 경험 이미지", title: "Experience", description: "브랜드 경험과 프로그램이 가능한 분위기" },
+          { src: "/images/space/main/cafe.png", alt: "바라쿠다 카페 공간 이미지", title: "Cafe", description: "일상의 방문이 자연스럽게 이어지는 메인 공간" },
+          { src: "/images/space/main/event.jpg", alt: "바라쿠다 이벤트 이미지", title: "Event", description: "작은 행사와 기념이 어울리는 장면" },
+          { src: "/images/space/main/experience.jpg", alt: "바라쿠다 경험 이미지", title: "Experience", description: "브랜드 경험과 프로그램이 가능한 분위기" },
         ],
       },
       {
@@ -462,9 +462,9 @@ export const barracudaSiteConfig: CompanySiteConfig = {
         columns: 3,
         surface: "tint",
         images: [
-          { src: "/images/book.jpg", alt: "북클럽 이미지", title: "Book Club", description: "대화와 집중이 함께하는 시간" },
-          { src: "/images/fation.jpg", alt: "브랜드 모임 이미지", title: "Brand Meeting", description: "정제된 무드로 이어지는 소개와 모임" },
-          { src: "/images/showcase.jpg", alt: "쇼케이스 이미지", title: "Showcase", description: "브랜드나 제품을 조용히 보여주는 자리" },
+          { src: "/images/space/use-cases/book-club.jpg", alt: "북클럽 이미지", title: "Book Club", description: "대화와 집중이 함께하는 시간" },
+          { src: "/images/space/use-cases/brand-meeting.jpg", alt: "브랜드 모임 이미지", title: "Brand Meeting", description: "정제된 무드로 이어지는 소개와 모임" },
+          { src: "/images/space/use-cases/showcase.jpg", alt: "쇼케이스 이미지", title: "Showcase", description: "브랜드나 제품을 조용히 보여주는 자리" },
         ],
       },
       {
@@ -472,12 +472,12 @@ export const barracudaSiteConfig: CompanySiteConfig = {
         title: "바라쿠다 공간 갤러리",
         columns: 3,
         images: [
-          { src: "/images/1.jpg", alt: "바라쿠다 내부 갤러리 1" },
-          { src: "/images/2.jpg", alt: "바라쿠다 내부 갤러리 2" },
-          { src: "/images/3.jpg", alt: "바라쿠다 내부 갤러리 3" },
-          { src: "/images/4.jpg", alt: "바라쿠다 내부 갤러리 4" },
-          { src: "/images/5.jpg", alt: "바라쿠다 내부 갤러리 5" },
-          { src: "/images/6.jpg", alt: "바라쿠다 내부 갤러리 6" },
+          { src: "/images/space/gallery/01.jpg", alt: "바라쿠다 내부 갤러리 1" },
+          { src: "/images/space/gallery/02.png", alt: "바라쿠다 내부 갤러리 2" },
+          { src: "/images/space/gallery/03.jpg", alt: "바라쿠다 내부 갤러리 3" },
+          { src: "/images/space/gallery/04.png", alt: "바라쿠다 내부 갤러리 4" },
+          { src: "/images/space/gallery/05.jpg", alt: "바라쿠다 내부 갤러리 5" },
+          { src: "/images/space/gallery/06.png", alt: "바라쿠다 내부 갤러리 6" },
         ],
       },
     ],
