@@ -17,7 +17,7 @@ export function CompanyHomepageIntro({ data }: CompanyHomepageIntroProps) {
           <h2 className="type-wrap-balance mt-4 max-w-[14rem] pb-[0.14em] font-heading text-[1.85rem] font-semibold leading-[1.14] tracking-[-0.04em] whitespace-pre-line sm:max-w-[17rem] sm:text-[2.7rem] lg:max-w-[19rem] lg:text-[3.1rem]">
             {data.title}
           </h2>
-          <p className="type-wrap-balance mt-4 max-w-[15rem] text-sm leading-6 text-[var(--color-muted)] sm:max-w-[18rem] sm:text-[0.96rem] sm:leading-7 lg:max-w-[19rem]">
+          <p className="type-wrap-balance mt-4 max-w-[15rem] text-[0.9375rem] leading-[1.7] text-[var(--color-muted)] sm:max-w-[18rem] sm:text-[0.96rem] sm:leading-7 lg:max-w-[19rem]">
             {data.description}
           </p>
           <Button href={data.cta.href} className="mt-7">

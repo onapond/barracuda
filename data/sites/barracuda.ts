@@ -23,11 +23,11 @@ const homepage = {
   hero: {
     image: "/images/hero.jpg",
     imageAlt: "바라쿠다 메인 공간 전경",
-    title: "머무는 장면이 남는 곳",
-    description: "조용히 모이고, 가볍게 기념하는 자리.",
+    title: "커피와 공간의 결이 만나는 곳",
+    description: "로스터리의 밀도와 차분한 공간의 감도를 한곳에 담았습니다.",
     primaryCta: {
-      href: "/space",
-      label: "공간 보기",
+      href: "/visit",
+      label: "방문 정보 보기",
     },
   },
 } as const;
@@ -36,32 +36,32 @@ export const barracudaSiteConfig: CompanySiteConfig = {
   siteKey: "barracuda",
   homepage,
   homepageIntro: {
-    eyebrow: "SPACE",
-    title: "일상도 모임도\n한 톤으로",
-    description: "일상은 가볍게. 모임은 조용하게.",
+    eyebrow: "BARRACUDA",
+    title: "커피와 공간을\n한 결로 엮습니다",
+    description: "맛과 분위기를 따로 나누지 않습니다.",
     cta: {
-      href: "/space",
-      label: "공간 보기",
+      href: "/brand",
+      label: "브랜드 보기",
     },
     primaryImage: {
       src: "/images/cafe.jpg",
       alt: "바라쿠다 내부 공간 사진",
-      title: "Private Flow",
-      description: "조용한 체류와 여유로운 대화가 한 공간 안에서 자연스럽게 이어지는 장면",
+      title: "Roastery & Space",
+      description: "커피의 결이 공간으로 이어지는 곳",
       heightClassName: "min-h-[26rem] sm:min-h-[34rem]",
     },
     secondaryImages: [
       {
         src: "/images/event.jpg",
         alt: "바라쿠다 이벤트 세팅 이미지",
-        title: "Celebration",
-        description: "가볍게 시작해도 오래 기억에 남는 순간을 위한 세팅",
+        title: "커피",
+        description: "방향이 분명한 원두 선택",
       },
       {
         src: "/images/experience.jpg",
         alt: "바라쿠다 경험 장면 이미지",
-        title: "Our Scene",
-        description: "각자의 방식으로 머무는 시간이 공간의 인상을 완성합니다.",
+        title: "공간",
+        description: "머무는 시간이 인상을 만듭니다",
       },
     ],
   },
@@ -69,9 +69,9 @@ export const barracudaSiteConfig: CompanySiteConfig = {
     {
       key: "private-scene",
       label: "Private Scene",
-      title: "작은 모임이\n가장 선명해지는 자리",
-      description: "작은 모임일수록 공간의 분위기는 더 또렷해집니다.",
-      cta: { href: "/space", label: "공간 문의" },
+      title: "작은 모임의 결",
+      description: "규모가 작을수록 공간의 결은 더 선명합니다.",
+      cta: { href: "/space", label: "공간 보기" },
       featuredMedia: {
         src: "/images/book.jpg",
         alt: "작은 모임이 열리는 테이블 장면",
@@ -82,7 +82,7 @@ export const barracudaSiteConfig: CompanySiteConfig = {
           src: "/images/1.jpg",
           alt: "바라쿠다 프라이빗 공간 이미지 1",
           title: "Quiet Gathering",
-          description: "규모가 작을수록 공간의 결과 여백은 더 섬세하게 드러납니다.",
+          description: "소수가 모일수록 공간의 여백과 결이 더 선명하게 드러납니다.",
         },
         {
           src: "/images/2.jpg",
@@ -119,36 +119,10 @@ export const barracudaSiteConfig: CompanySiteConfig = {
       ],
     },
     {
-      key: "brand-moment",
-      label: "Brand Moment",
-      title: "태도는\n디테일에 남습니다",
-      description: "쇼케이스, 촬영, 미팅을 조용히 할 수 있습니다.",
-      cta: { href: "/brand", label: "브랜드 보기" },
-      featuredMedia: {
-        src: "/images/creator.jpg",
-        alt: "브랜드 촬영/쇼케이스가 가능한 공간",
-        type: "image",
-      },
-      gallery: [
-        {
-          src: "/images/brend-2.jpg",
-          alt: "브랜드 장면 이미지 1",
-          title: "Presentation",
-          description: "브랜드의 태도와 디테일을 차분하게 전하는 장면",
-        },
-        {
-          src: "/images/brend-4.jpg",
-          alt: "브랜드 장면 이미지 2",
-          title: "Showcase",
-          description: "무엇을 보여주느냐보다 어떻게 남느냐가 더 중요해지는 순간",
-        },
-      ],
-    },
-    {
       key: "cafe-lounge",
       label: "Cafe & Lounge",
-      title: "편하게 들렀다가\n조용히 머무는 곳",
-      description: "바라쿠다의 기본은 ‘머무는 시간’입니다. 커피는 그 시간에 맞춰 차분하게 나옵니다.",
+      title: "로스터리 커피와\n함께 머무는 카페",
+      description: "로스터리 기반의 커피가 공간의 인상과 함께 나옵니다.",
       cta: { href: "/coffee", label: "커피 보기" },
       featuredMedia: {
         src: "/images/brend.jpg",
@@ -160,23 +134,23 @@ export const barracudaSiteConfig: CompanySiteConfig = {
           src: "/images/experience.jpg",
           alt: "카페 라운지 이미지 1",
           title: "Calm Rhythm",
-          description: "편안한 방문이 곧 바라쿠다의 첫 인상으로 이어지는 리듬",
+          description: "커피 한 잔이 공간의 분위기와 같은 온도로 이어지는 리듬",
         },
         {
           src: "/images/cafe.jpg",
           alt: "카페 라운지 이미지 2",
           title: "Lounge Mood",
-          description: "일상의 시간과 특별한 순간을 모두 받아들이는 공간의 여백",
+          description: "일상의 방문도 바라쿠다만의 결로 기억됩니다",
         },
       ],
     },
   ],
   homepagePreviews: {
     spaceExperience: {
-      eyebrow: "SCENE",
-      title: "모임도 행사도\n같은 분위기 안에서",
-      description: "프라이빗 모임부터 브랜드 장면까지, 목적에 맞게 자리가 바뀝니다.",
-      cta: { href: "/space", label: "공간 문의" },
+      eyebrow: "SPACE",
+      title: "머무는 시간이\n인상을 만듭니다",
+      description: "카페로 머물거나, 모임으로 채우거나. 공간은 목적에 맞게 자리를 바꿉니다.",
+      cta: { href: "/space", label: "공간 보기" },
       surface: "tint",
       images: [
         {
@@ -208,8 +182,8 @@ export const barracudaSiteConfig: CompanySiteConfig = {
     },
     brand: {
       eyebrow: "BRAND",
-      title: "브랜드의 태도는\n장면에서 보입니다",
-      description: "브랜드 페이지는 도심 풍경과 실내의 결을 사진으로 먼저 보여줍니다.",
+      title: "공간과 커피,\n하나의 결로",
+      description: "바라쿠다는 맛과 분위기를 따로 나누지 않습니다.",
       cta: { href: "/brand", label: "브랜드 보기" },
       images: [
         {
@@ -235,8 +209,8 @@ export const barracudaSiteConfig: CompanySiteConfig = {
     },
     coffee: {
       eyebrow: "COFFEE",
-      title: "원두에서 한 잔까지\n같은 결로",
-      description: "로스터리 커피는 과하지 않게 볶고, 과하지 않게 냅니다.",
+      title: "로스터리 기반의\n커피를 선보입니다",
+      description: "원두 선택부터 잔의 인상까지, 바라쿠다의 방향이 담긴 커피입니다.",
       cta: { href: "/coffee", label: "커피 보기" },
       surface: "tint",
       images: [
@@ -290,9 +264,9 @@ export const barracudaSiteConfig: CompanySiteConfig = {
     },
     visit: {
       eyebrow: "VISIT",
-      title: "오기 전, 필요한 정보만",
-      description: "주소와 시간, 연락처만 간결하게 확인하면 됩니다.",
-      cta: { href: "/visit", label: "길찾기" },
+      title: "바라쿠다를 직접\n경험해 보세요",
+      description: "방문 전 필요한 정보만 간결하게 정리했습니다.",
+      cta: { href: "/visit", label: "방문 정보 보기" },
       surface: "tint",
       images: [
         {
@@ -313,7 +287,7 @@ export const barracudaSiteConfig: CompanySiteConfig = {
   },
   footer: {
     logo: homepage.logo,
-    statement: "모임과 일상이 한 톤으로 머무는 공간, 바라쿠다",
+    statement: "커피와 공간의 결이 만나는 곳, 바라쿠다",
     subline: "바라쿠다 로스터리 & 카페",
     address: "서울특별시 용산구 이태원로 29, 로얄파크컨벤션 1층",
     familySites: [

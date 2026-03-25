@@ -8,9 +8,9 @@
   --color-line: rgba(23, 20, 17, 0.12);
   --color-overlay: rgba(15, 14, 12, 0.44);
   --color-accent: #ddd2c3;
-  --font-sans: "Avenir Next", "Segoe UI", "Helvetica Neue", Helvetica, sans-serif;
-  --font-display: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
-  --font-heading: "Avenir Next", "Segoe UI", "Helvetica Neue", Helvetica, sans-serif;
+  --font-sans: var(--font-noto), sans-serif;
+  --font-display: var(--font-noto), sans-serif;
+  --font-heading: var(--font-noto), sans-serif;
 }
 
 html {
@@ -26,14 +26,6 @@ body {
   line-height: 1.5;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-}
-
-h1,
-h2,
-h3,
-.font-display {
-  font-family: var(--font-display);
-  letter-spacing: -0.025em;
 }
 
 .font-heading {

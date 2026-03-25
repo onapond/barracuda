@@ -30,7 +30,7 @@ export function CompanySignatureTabs({ eyebrow, title, description, tabs }: Comp
           <h2 className="type-wrap-balance mt-4 max-w-[14rem] pb-[0.14em] font-heading text-[1.85rem] font-semibold leading-[1.14] tracking-[-0.04em] whitespace-pre-line sm:max-w-[17rem] sm:text-[2.7rem] lg:max-w-[19rem] lg:text-[3.1rem]">
             {title}
           </h2>
-          <p className="type-wrap-balance mt-4 max-w-[15rem] text-sm leading-6 text-[var(--color-muted)] sm:max-w-[18rem] sm:text-[0.96rem] sm:leading-7 lg:max-w-[19rem]">{description}</p>
+          <p className="type-wrap-balance mt-4 max-w-[15rem] text-[0.9375rem] leading-[1.7] text-[var(--color-muted)] sm:max-w-[18rem] sm:text-[0.96rem] sm:leading-7 lg:max-w-[19rem]">{description}</p>
         </div>
 
         <div className="mt-8 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
@@ -73,7 +73,7 @@ export function CompanySignatureTabs({ eyebrow, title, description, tabs }: Comp
                 <h3 className="type-wrap-balance max-w-[11rem] whitespace-pre-line pb-[0.14em] font-heading text-[1.75rem] font-semibold leading-[1.14] tracking-[-0.04em] sm:max-w-[13rem] sm:text-[2.5rem] lg:max-w-[15rem] lg:text-[3rem]">
                   {activeTab.title}
                 </h3>
-                <p className="type-wrap-balance mt-3 max-w-[14rem] text-sm leading-6 text-white/86 sm:max-w-[16rem] sm:text-[0.96rem] sm:leading-7 lg:max-w-[17rem]">
+                <p className="type-wrap-balance mt-3 max-w-[14rem] text-[0.9375rem] leading-[1.7] text-white/86 sm:max-w-[16rem] sm:text-[0.96rem] sm:leading-7 lg:max-w-[17rem]">
                   {activeTab.description}
                 </p>
                 <Button href={activeTab.cta.href} className="mt-6">

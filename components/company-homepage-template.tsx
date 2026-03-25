@@ -43,7 +43,7 @@ export function CompanyHomepageTemplate({ data, children }: CompanyHomepageTempl
               <h1 className="type-wrap-balance max-w-[13rem] pb-[0.14em] font-heading text-[2rem] font-semibold leading-[1.12] tracking-[-0.04em] text-center whitespace-pre-line sm:max-w-[20rem] sm:text-[3.5rem] lg:max-w-[28rem] lg:text-[4.8rem]">
                 {data.hero.title}
               </h1>
-              <p className="type-wrap-balance mt-4 max-w-[15rem] text-sm leading-6 text-white/90 text-center sm:max-w-[18rem] sm:text-[0.98rem] sm:leading-7 lg:max-w-[21rem] lg:text-[1rem] lg:leading-7">
+              <p className="type-wrap-balance mt-4 max-w-[15rem] text-[0.9375rem] leading-[1.7] text-white/90 text-center sm:max-w-[18rem] sm:text-[0.98rem] sm:leading-7 lg:max-w-[21rem] lg:text-[1rem] lg:leading-7">
                 {data.hero.description}
               </p>
               <Link
