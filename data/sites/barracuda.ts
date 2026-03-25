@@ -612,7 +612,7 @@ export const barracudaSiteConfig: CompanySiteConfig = {
     hero: {
       title: "BARACUDA\n오시는 길",
       description: "주소, 운영 시간, 주차 정보를 확인하세요.",
-      image: "/images/brend-hero.jpg.jpg",
+      image: "/images/visit/hero.jpg",
       imageAlt: "Baracuda 방문 대표 이미지",
       ctaHref:
         "https://www.google.com/maps/search/?api=1&query=%EC%84%9C%EC%9A%B8%ED%8A%B9%EB%B3%84%EC%8B%9C%20%EC%9A%A9%EC%82%B0%EA%B5%AC%20%EC%9D%B4%ED%83%9C%EC%9B%90%EB%A1%9C%2029%20%EB%A1%9C%EC%96%84%ED%8C%8C%ED%81%AC%EC%BB%A8%EB%B2%A4%EC%85%98%201%EC%B8%B5",
@@ -625,9 +625,9 @@ export const barracudaSiteConfig: CompanySiteConfig = {
         description: "처음 방문하더라도 편하게 찾아올 수 있습니다. 이태원 로얄파크컨벤션 1층에 있습니다.",
         columns: 3,
         images: [
-          { src: "/images/brend-1.jpg", alt: "방문 이미지 1", title: "Arrival", description: "첫 방문의 분위기를 미리 느끼게 하는 장면" },
-          { src: "/images/cafe.jpg", alt: "방문 이미지 2", title: "Interior", description: "문을 열고 들어섰을 때 가장 먼저 만나는 실내 분위기" },
-          { src: "/images/2.jpg", alt: "방문 이미지 3", title: "View", description: "방문 경험과 자연스럽게 이어지는 시선" },
+          { src: "/images/visit/mood/arrival.jpg", alt: "방문 이미지 1", title: "Arrival", description: "첫 방문의 분위기를 미리 느끼게 하는 장면" },
+          { src: "/images/visit/mood/interior.jpg", alt: "방문 이미지 2", title: "Interior", description: "문을 열고 들어섰을 때 가장 먼저 만나는 실내 분위기" },
+          { src: "/images/visit/mood/view.png", alt: "방문 이미지 3", title: "View", description: "방문 경험과 자연스럽게 이어지는 시선" },
         ],
       },
     ],
