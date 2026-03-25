@@ -180,27 +180,21 @@ export const barracudaSiteConfig: CompanySiteConfig = {
       surface: "tint",
       images: [
         {
-          src: "/images/showcase.jpg",
+          src: "/images/landing/previews/space-featured.jpg",
           alt: "바라쿠다 공간 경험 대표 이미지",
           title: "Event Scene",
           description: "브랜드 쇼케이스와 프라이빗한 장면이 하나의 무드 안에서 이어지는 공간",
           heightClassName: "min-h-[24rem] sm:min-h-[34rem]",
         },
         {
-          src: "/images/4.jpg",
+          src: "/images/landing/previews/space-sub-1.jpg",
           alt: "바라쿠다 공간 경험 이미지 1",
           title: "Private Table",
           description: "조용한 대화와 긴 여운이 자연스럽게 머무는 자리",
         },
         {
-          src: "/images/5.jpg",
+          src: "/images/landing/previews/space-sub-2.jpg",
           alt: "바라쿠다 공간 경험 이미지 2",
-          title: "Party Mood",
-          description: "가볍게 기념해도 오래 기억되는 장면의 온도",
-        },
-        {
-          src: "/images/6.jpg",
-          alt: "바라쿠다 공간 경험 이미지 3",
           title: "Open Layout",
           description: "쓰임에 따라 다르게 열리는 공간의 여백과 흐름",
         },
@@ -213,20 +207,20 @@ export const barracudaSiteConfig: CompanySiteConfig = {
       cta: { href: "/brand", label: "브랜드 보기" },
       images: [
         {
-          src: "/images/brend-hero.jpg.jpg",
+          src: "/images/landing/previews/brand-featured.png",
           alt: "브랜드 프리뷰 대표 이미지",
           title: "Spatial Identity",
           description: "설명보다 먼저 기억되는 공간의 인상과 디테일",
           heightClassName: "min-h-[22rem] sm:min-h-[30rem]",
         },
         {
-          src: "/images/brend-1.jpg",
+          src: "/images/landing/previews/brand-sub-1.jpg",
           alt: "브랜드 프리뷰 이미지 1",
           title: "First Impression",
           description: "브랜드의 첫 장면을 만드는 차분한 결",
         },
         {
-          src: "/images/brend-3.jpg",
+          src: "/images/landing/previews/brand-sub-2.png",
           alt: "브랜드 프리뷰 이미지 2",
           title: "Quiet Tone",
           description: "오래 머무는 시선 안에서 또렷해지는 태도",
@@ -241,20 +235,20 @@ export const barracudaSiteConfig: CompanySiteConfig = {
       surface: "tint",
       images: [
         {
-          src: "/images/roastery.png",
+          src: "/images/landing/previews/coffee-featured.png",
           alt: "커피 프리뷰 대표 이미지",
           title: "Roastery Base",
           description: "공간의 결을 흐트러뜨리지 않는 균형감 있는 커피의 출발점",
           heightClassName: "min-h-[22rem] sm:min-h-[30rem]",
         },
         {
-          src: "/images/roasting.png",
+          src: "/images/landing/previews/coffee-sub-1.png",
           alt: "커피 프리뷰 이미지 1",
           title: "Roasting",
           description: "과하지 않고 오래 남는 균형의 감도",
         },
         {
-          src: "/images/brew.png",
+          src: "/images/landing/previews/coffee-sub-2.png",
           alt: "커피 프리뷰 이미지 2",
           title: "Brewing",
           description: "한 잔의 리듬까지 세심하게 이어지는 마무리",
@@ -268,20 +262,20 @@ export const barracudaSiteConfig: CompanySiteConfig = {
       cta: { href: "/menu", label: "메뉴 보기" },
       images: [
         {
-          src: "/images/ba_menu.jpg",
+          src: "/images/landing/previews/menu-featured.png",
           alt: "메뉴 프리뷰 대표 이미지",
           title: "Menu Board",
           description: "이름보다 인상으로 먼저 읽히는 메뉴의 구성",
           heightClassName: "min-h-[22rem] sm:min-h-[30rem]",
         },
         {
-          src: "/images/latte.png",
+          src: "/images/landing/previews/menu-sub-1.png",
           alt: "메뉴 프리뷰 이미지 1",
           title: "Milk Texture",
           description: "부드러운 결이 오래 남는 시그니처 메뉴 장면",
         },
         {
-          src: "/images/ade.png",
+          src: "/images/landing/previews/menu-sub-2.png",
           alt: "메뉴 프리뷰 이미지 2",
           title: "Seasonal Mood",
           description: "공간의 인상과 자연스럽게 어울리는 음료 셀렉션",
@@ -296,29 +290,17 @@ export const barracudaSiteConfig: CompanySiteConfig = {
       surface: "tint",
       images: [
         {
-          src: "/images/brend-1.jpg",
+          src: "/images/landing/previews/visit-featured.jpg",
           alt: "방문 프리뷰 대표 이미지",
           title: "Arrival",
           description: "첫 방문의 분위기를 미리 느낄 수 있는 장면",
           heightClassName: "min-h-[20rem] sm:min-h-[28rem]",
         },
         {
-          src: "/images/2.jpg",
+          src: "/images/landing/previews/visit-sub.png",
           alt: "방문 프리뷰 이미지 1",
           title: "View",
           description: "방문 경험과 연결되는 시선의 흐름",
-        },
-        {
-          src: "/images/brend-2.png",
-          alt: "방문 프리뷰 이미지 2",
-          title: "Interior",
-          description: "들어서는 순간 느껴지는 공간의 결",
-        },
-        {
-          src: "/images/brend-3.png",
-          alt: "방문 프리뷰 이미지 3",
-          title: "Mood",
-          description: "머무는 동안 자연스럽게 남는 분위기",
         },
       ],
     },
