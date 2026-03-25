@@ -570,7 +570,7 @@ export const barracudaSiteConfig: CompanySiteConfig = {
     hero: {
       title: "바라쿠다\n스토어",
       description: "원두, 굿즈, 라이프스타일 제품을 소개합니다. 바라쿠다의 무드를 일상에서도 이어갈 수 있습니다.",
-      image: "/images/apollo.png",
+      image: "/images/store/hero.png",
       imageAlt: "Baracuda 스토어 대표 이미지",
       ctaHref: "/coffee",
       ctaLabel: "커피 보기",
@@ -582,9 +582,9 @@ export const barracudaSiteConfig: CompanySiteConfig = {
         description: "원두 셀렉션부터 브랜드 굿즈까지, 바라쿠다 무드를 담은 제품들입니다.",
         columns: 3,
         images: [
-          { src: "/images/apollo.png", alt: "원두 이미지", title: "Coffee Beans", description: "스토어의 중심이 되는 원두 셀렉션" },
-          { src: "/images/goods.png", alt: "굿즈 이미지", title: "Goods", description: "브랜드의 무드를 이어가는 오브젝트" },
-          { src: "/images/Parcera.png", alt: "라이프스타일 이미지", title: "Lifestyle", description: "일상 속으로 확장되는 제품 방향" },
+          { src: "/images/store/collections/beans.png", alt: "원두 이미지", title: "Coffee Beans", description: "스토어의 중심이 되는 원두 셀렉션" },
+          { src: "/images/store/collections/goods.png", alt: "굿즈 이미지", title: "Goods", description: "브랜드의 무드를 이어가는 오브젝트" },
+          { src: "/images/store/collections/lifestyle.png", alt: "라이프스타일 이미지", title: "Lifestyle", description: "일상 속으로 확장되는 제품 방향" },
         ],
       },
       {
@@ -594,8 +594,8 @@ export const barracudaSiteConfig: CompanySiteConfig = {
         columns: 2,
         surface: "tint",
         images: [
-          { src: "/images/latte.png", alt: "라떼 이미지", title: "Drink Objects", description: "음료와 제품 이미지의 연결감" },
-          { src: "/images/ame.png", alt: "아메리카노 이미지", title: "Brand Daily", description: "데일리 무드로 이어지는 상품 감도" },
+          { src: "/images/store/mood/drink-1.png", alt: "음료와 제품 연출 이미지", title: "Drink Objects", description: "음료와 제품 이미지의 연결감" },
+          { src: "/images/store/mood/drink-2.png", alt: "데일리 무드 이미지", title: "Brand Daily", description: "데일리 무드로 이어지는 상품 감도" },
         ],
       },
     ],
