@@ -144,6 +144,32 @@ export const barracudaSiteConfig: CompanySiteConfig = {
         },
       ],
     },
+    {
+      key: "brand-goods",
+      label: "Brand & Goods",
+      title: "바라쿠다의 결을\n담은 제품들",
+      description: "공간에서 시작한 감도를 일상으로 이어가는 라이프스타일 굿즈.",
+      cta: { href: "/store", label: "스토어 보기" },
+      featuredMedia: {
+        src: "/images/brend-1.png",
+        alt: "바라쿠다 라이프스타일 굿즈 대표 이미지",
+        type: "image",
+      },
+      gallery: [
+        {
+          src: "/images/brend-2.png",
+          alt: "바라쿠다 굿즈 이미지 1",
+          title: "Collection",
+          description: "브랜드의 무드를 손에 담는 오브제",
+        },
+        {
+          src: "/images/brend-3.png",
+          alt: "바라쿠다 굿즈 이미지 2",
+          title: "Daily Object",
+          description: "일상 안에 자연스럽게 놓이는 바라쿠다의 결",
+        },
+      ],
+    },
   ],
   homepagePreviews: {
     spaceExperience: {
