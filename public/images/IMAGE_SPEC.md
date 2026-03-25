@@ -123,9 +123,9 @@ coffee/hero.png — 1920×700px  ← 현재 적용 중
 ### Coffee Process (3-col 갤러리)
 > 경로 미정비 — 추후 `coffee/process/` 폴더로 이전 권장
 ```
-roastery.png  — 600×500px  (임시 경로: /images/roastery.png)
-roasting.png  — 600×500px  (임시 경로: /images/roasting.png)
-brew.png      — 600×500px  (임시 경로: /images/brew.png)
+roastery.png  — 600×500px  ← 현재 적용 중 (coffee/process/roastery.png)
+roasting.png  — 600×500px  ← 현재 적용 중 (coffee/process/roasting.png)
+brewing.png   — 600×500px  ← 현재 적용 중 (coffee/process/brewing.png)
 ```
 
 ### Menu Mood — 개별 메뉴 이미지 (`coffee/menu/`)
@@ -205,8 +205,8 @@ gallery: /images/apollo.png, goods.png, Parcera.png 등 (임시)
 | ✅ 완료 | 랜딩 전체 (히어로/인트로/탭/프리뷰) | 적용됨 |
 | ✅ 완료 | 브랜드 페이지 전체 | 적용됨 |
 | ✅ 완료 | 커피 히어로 | 적용됨 |
-| 🔴 필요 | 커피 메뉴 19개 개별 이미지 | 임시 사용 중 |
-| 🔴 필요 | 커피 프로세스 3장 (roastery/roasting/brew) | 임시 사용 중 |
+| ✅ 완료 | 커피 메뉴 19개 개별 이미지 | 적용됨 |
+| ✅ 완료 | 커피 프로세스 3장 (roastery/roasting/brewing) | 적용됨 |
 | 🟡 권장 | 공간 페이지 이미지 | 임시 사용 중 |
 | 🟡 권장 | 스토어 페이지 이미지 | 임시 사용 중 |
 | 🟡 권장 | 방문 페이지 이미지 | 임시 사용 중 |
