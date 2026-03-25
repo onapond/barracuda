@@ -259,7 +259,7 @@ export const barracudaSiteConfig: CompanySiteConfig = {
       eyebrow: "MENU",
       title: "메뉴도\n흐름이 있습니다",
       description: "메뉴판은 길게, 문장은 짧게. 고르기만 편하면 됩니다.",
-      cta: { href: "/menu", label: "메뉴 보기" },
+      cta: { href: "/coffee", label: "커피 보기" },
       images: [
         {
           src: "/images/landing/previews/menu-featured.png",
@@ -384,8 +384,6 @@ export const barracudaSiteConfig: CompanySiteConfig = {
       description: "로스터리 베이스로 직접 준비하는 커피입니다. 천천히 머무는 시간에 맞춰 차분하게 냅니다.",
       image: "/images/coffee/hero.png",
       imageAlt: "바라쿠다 로스터리 대표 이미지",
-      ctaHref: "/menu",
-      ctaLabel: "메뉴 보기",
     },
     gallerySections: [
       {
@@ -429,7 +427,6 @@ export const barracudaSiteConfig: CompanySiteConfig = {
       },
     ],
     actionLinks: [
-      { href: "/menu", label: "메뉴 보기" },
       { href: "/store", label: "스토어 보기", variant: "ghost" },
     ],
   },
