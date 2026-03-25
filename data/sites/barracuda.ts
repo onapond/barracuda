@@ -282,6 +282,18 @@ export const barracudaSiteConfig: CompanySiteConfig = {
           title: "View",
           description: "방문 경험과 연결되는 시선의 흐름",
         },
+        {
+          src: "/images/brend-2.png",
+          alt: "방문 프리뷰 이미지 2",
+          title: "Interior",
+          description: "들어서는 순간 느껴지는 공간의 결",
+        },
+        {
+          src: "/images/brend-3.png",
+          alt: "방문 프리뷰 이미지 3",
+          title: "Mood",
+          description: "머무는 동안 자연스럽게 남는 분위기",
+        },
       ],
     },
   },
