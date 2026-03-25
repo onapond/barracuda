@@ -400,38 +400,35 @@ export const barracudaSiteConfig: CompanySiteConfig = {
         description: "바라쿠다 커피는 빨리 마시고 잊히는 쪽보다, 천천히 머물게 하는 쪽에 가깝습니다.",
         columns: 3,
         images: [
-          { src: "/images/roastery.png", alt: "바라쿠다 로스터리 이미지", title: "Roastery", description: "기준이 되는 로스터리 기반" },
+          { src: "/images/roastery.png", alt: "바라쿠다 로스터리 이미지", title: "Roastery", description: "기준이 되는 로스터리 기반", href: "https://cnctechlab.co.kr/", hoverLabel: "바라쿠다 커피 더 자세히 알아보기 →" },
           { src: "/images/roasting.png", alt: "바라쿠다 로스팅 이미지", title: "Roasting", description: "과하지 않고 오래 남는 균형" },
           { src: "/images/brew.png", alt: "바라쿠다 브루잉 이미지", title: "Brewing", description: "질감과 온도를 세심하게 맞춘 한 잔" },
         ],
       },
-      {
-        eyebrow: "Menu Mood",
-        title: "한 잔도 가볍게\n내지 않습니다",
-        description: "공간이 조용하면 커피도 조용합니다. 튀는 것보다 오래 남는 쪽으로 만들었습니다.",
-        columns: 3,
-        surface: "tint",
-        images: [
-          { src: "/images/ame.png", alt: "바라쿠다 아메리카노 — 기본이 가장 또렷하게 드러나는 한 잔", title: "Americano", description: "기본이 가장 또렷하게 드러나는 한 잔" },
-          { src: "/images/latte.webp", alt: "바라쿠다 라떼 — 부드러운 질감과 균형이 중심이 되는 메뉴", title: "Latte", description: "부드러운 질감과 균형이 중심이 되는 메뉴" },
-          { src: "/images/ade.png", alt: "바라쿠다 시즌 음료 — 공간의 톤과 이어지는 음료 셀렉션", title: "Seasonal Drink", description: "커피 외 음료도 같은 톤으로 이어집니다" },
-        ],
-      },
     ],
-    menuShowcase: {
-      eyebrow: "Full Menu",
-      title: "바라쿠다의 전체 메뉴를 한 번에",
-      description: "원두 베이스부터 시즌 음료까지, 바라쿠다 전체 메뉴를 한 번에 확인할 수 있습니다.",
-      featureImage: {
-        src: "/images/ba_menu.jpg",
-        alt: "바라쿠다 메뉴 보드 이미지",
-        title: "Menu Board",
-        description: "커피의 무드 아래에서 메뉴 선택까지 한 흐름으로 이어지도록 구성한 보드 이미지",
-      },
-      fullMenuImage: {
-        src: "/images/menu.png",
-        alt: "바라쿠다 전체 메뉴 이미지",
-      },
+    coffeeMenuSection: {
+      eyebrow: "Menu Mood",
+      title: "한 잔도 가볍게\n내지 않습니다",
+      description: "공간이 조용하면 커피도 조용합니다. 튀는 것보다 오래 남는 쪽으로 만들었습니다.",
+      surface: "tint",
+      categories: [
+        { label: "COFFEE", items: ["아메리카노", "카파라떼", "바닐라 라떼"] },
+        { label: "TEA", items: ["페퍼민트", "캐모마일", "루이보스티", "히비스커스"] },
+        {
+          label: "SWEET TEA",
+          items: [
+            "레몬 얼그레이",
+            "애플 피치 우롱티",
+            "애플 피치 시나몬 루이보스",
+            "딸기 피치 루이보스",
+            "베리썸 히비스커스",
+            "아이스티",
+          ],
+        },
+        { label: "BOTTLE & ADE", items: ["레몬에이드", "청포도에이드", "자몽에이드", "분다버그"] },
+        { label: "JUICE", items: ["오렌지 착즙 주스"] },
+        { label: "DESSERT", items: ["소금빵"] },
+      ],
     },
     actionLinks: [
       { href: "/menu", label: "메뉴 보기" },

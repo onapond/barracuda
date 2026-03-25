@@ -11,6 +11,21 @@ export type CompanyGalleryItem = {
   title?: string;
   description?: string;
   heightClassName?: string;
+  href?: string;
+  hoverLabel?: string;
+};
+
+export type CoffeeMenuCategory = {
+  label: string;
+  items: readonly string[];
+};
+
+export type CompanyCoffeeMenuSectionData = {
+  eyebrow: string;
+  title: string;
+  description?: string;
+  surface?: "white" | "tint";
+  categories: readonly CoffeeMenuCategory[];
 };
 
 export type CompanyMediaItem = {
@@ -164,6 +179,7 @@ export type CompanySiteConfig = {
   };
   coffee: CompanyStandardPageData & {
     menuShowcase?: CompanyMenuShowcaseData;
+    coffeeMenuSection?: CompanyCoffeeMenuSectionData;
     actionLinks?: readonly CompanyActionLink[];
   };
   space: CompanyStandardPageData & {
