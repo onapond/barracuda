@@ -163,12 +163,44 @@ brewing.png   — 600×500px  ← 현재 적용 중 (coffee/process/brewing.png)
 ---
 
 ## 공간 페이지 (`space/`)
-> 경로 미정비 — 현재 임시 경로 사용 중. 추후 `space/` 폴더로 이전 권장.
+> ⚠️ 현재 임시 경로 사용 중. 아래 경로로 교체 필요.
 
+### 히어로
 ```
-hero: /images/cafe.jpg (임시)
-gallery: /images/cafe.jpg, event.jpg, experience.jpg, book.jpg, fation.jpg, showcase.jpg, 1~6.jpg (임시)
+space/hero.jpg — 1920×700px
+  공간 전체 전경. 대관 가능성이 느껴지는 넓은 구도.
+  사람 없이 공간 자체 분위기 중심. 어두운 감성 조명.
+  현재: /images/cafe.jpg (임시)
 ```
+
+### Main Space (`space/main/`) — 3-col 갤러리
+```
+cafe.jpg       — 600×500px  카페 일상 장면. 자연광, 테이블 세팅.
+event.jpg      — 600×500px  이벤트 세팅 장면. 꽃·장식 포함.
+experience.jpg — 600×500px  브랜드 경험/프로그램 분위기. 사람 1-2명.
+```
+
+### Use Cases (`space/use-cases/`) — 3-col 갤러리 (tint)
+```
+book-club.jpg    — 600×500px  책과 커피가 함께하는 북클럽 장면.
+brand-meeting.jpg — 600×500px  정제된 무드의 소규모 브랜드 모임.
+showcase.jpg     — 600×500px  제품이 조용히 진열된 쇼케이스 자리.
+```
+
+### Full Gallery (`space/gallery/`) — 3-col 갤러리
+```
+01.jpg — 600×500px  정면 전경 (입구 또는 카운터 방향)
+02.jpg — 600×500px  테이블 디테일 (소품, 질감, 조명 클로즈업)
+03.jpg — 600×500px  창문 또는 자연광이 들어오는 장면
+04.jpg — 600×500px  바 카운터 또는 커피 준비 장면
+05.jpg — 600×500px  저녁 분위기 (조명 아래 공간)
+06.jpg — 600×500px  공간 여백 강조 (광각, 사람 없음)
+```
+
+**촬영 가이드:**
+- 갤러리 6장은 다양한 각도·조명 조건 필수
+- 낮 자연광 3장 + 저녁 인공조명 2장 + 디테일 클로즈업 1장 구성 권장
+- 공통 톤: 채도 낮고 차분한 무드. 과도한 보정 금지.
 
 ---
 
@@ -179,17 +211,56 @@ gallery: /images/cafe.jpg, event.jpg, experience.jpg, book.jpg, fation.jpg, show
 ---
 
 ## 스토어 페이지 (`store/`)
-> 경로 미정비 — 현재 임시 경로 사용 중.
+> ⚠️ 현재 임시 경로 사용 중. 아래 경로로 교체 필요.
 
+### 히어로
 ```
-hero: /images/goods.png (임시)
-gallery: /images/apollo.png, goods.png, Parcera.png 등 (임시)
+store/hero.jpg — 1920×700px
+  원두 패키지 또는 굿즈 연출샷. 바라쿠다 브랜딩이 보이는 구도.
+  현재: /images/apollo.png (임시)
 ```
+
+### Collections (`store/collections/`) — 3-col 갤러리
+```
+beans.jpg     — 600×500px  원두 패키지 클로즈업. 바라쿠다 브랜딩 강조.
+goods.jpg     — 600×500px  머그·텀블러 등 굿즈. 공간 배경 활용.
+lifestyle.jpg — 600×500px  라이프스타일 소품 배치. 책상 또는 테이블 위.
+```
+
+### Mood (`store/mood/`) — 2-col 갤러리 (tint)
+```
+drink-1.jpg — 800×640px  음료와 제품(머그/텀블러)이 함께 있는 연출샷.
+drink-2.jpg — 800×640px  데일리 무드 (집·책상 배경, 원두 or 굿즈 포함).
+```
+
+**촬영 가이드:**
+- 배경: 바라쿠다 공간 내부 또는 중립 다크 톤 테이블
+- 원두는 패키지 봉투·크래프트지 함께 연출
+- 굿즈는 실제 사용 중인 장면으로 촬영 (손 포함 가능)
 
 ---
 
 ## 방문 페이지 (`visit/`)
-> 경로 미정비 — 현재 임시 경로 사용 중.
+> ⚠️ 현재 임시 경로 사용 중. 아래 경로로 교체 필요.
+
+### 히어로
+```
+visit/hero.jpg — 1920×700px
+  이태원 로얄파크컨벤션 건물 외관 또는 입구. 오기 전 첫인상 전달.
+  현재: /images/brend-hero.jpg.jpg (임시)
+```
+
+### Visit Mood (`visit/mood/`) — 3-col 갤러리
+```
+arrival.jpg  — 600×500px  첫 방문 분위기. 입구·로비·간판. "여기가 맞구나" 느낌.
+interior.jpg — 600×500px  문 열고 들어섰을 때 가장 먼저 보이는 내부 시선.
+view.jpg     — 600×500px  창가 또는 앉은 자리에서 보이는 공간 뷰.
+```
+
+**촬영 가이드:**
+- 외관은 낮 시간대 (건물 파사드·간판이 잘 보이도록)
+- 내부 2장은 방문자 시선 높이 (서 있거나 막 들어선 구도)
+- 사람이 살짝 포함되어도 무방 (실루엣 또는 뒷모습)
 
 ---
 
