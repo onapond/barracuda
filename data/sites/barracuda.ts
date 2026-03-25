@@ -44,7 +44,7 @@ export const barracudaSiteConfig: CompanySiteConfig = {
       label: "브랜드 보기",
     },
     primaryImage: {
-      src: "/images/cafe.jpg",
+      src: "/images/landing/intro/main.jpg",
       alt: "바라쿠다 내부 공간 사진",
       title: "Roastery & Space",
       description: "커피의 결이 공간으로 이어지는 곳",
@@ -52,13 +52,13 @@ export const barracudaSiteConfig: CompanySiteConfig = {
     },
     secondaryImages: [
       {
-        src: "/images/event.jpg",
+        src: "/images/landing/intro/sub-1.png",
         alt: "바라쿠다 이벤트 세팅 이미지",
         title: "커피",
         description: "방향이 분명한 원두 선택",
       },
       {
-        src: "/images/experience.jpg",
+        src: "/images/landing/intro/sub-2.jpg",
         alt: "바라쿠다 경험 장면 이미지",
         title: "공간",
         description: "머무는 시간이 인상을 만듭니다",
@@ -73,19 +73,19 @@ export const barracudaSiteConfig: CompanySiteConfig = {
       description: "규모가 작을수록 공간의 결은 더 선명합니다.",
       cta: { href: "/space", label: "공간 보기" },
       featuredMedia: {
-        src: "/images/book.jpg",
+        src: "/images/landing/tabs/private-scene/main.jpg",
         alt: "작은 모임이 열리는 테이블 장면",
         type: "image",
       },
       gallery: [
         {
-          src: "/images/1.jpg",
+          src: "/images/landing/tabs/private-scene/sub-1.jpg",
           alt: "바라쿠다 프라이빗 공간 이미지 1",
           title: "Quiet Gathering",
           description: "소수가 모일수록 공간의 여백과 결이 더 선명하게 드러납니다.",
         },
         {
-          src: "/images/2.jpg",
+          src: "/images/landing/tabs/private-scene/sub-2.jpg",
           alt: "바라쿠다 프라이빗 공간 이미지 2",
           title: "Intimate Table",
           description: "가까운 사람들과의 시간이 편안하게 이어지는 테이블 장면",
@@ -99,19 +99,19 @@ export const barracudaSiteConfig: CompanySiteConfig = {
       description: "기념과 파티도 소란 없이 차분하게 남습니다.",
       cta: { href: "/space", label: "공간 보기" },
       featuredMedia: {
-        src: "/images/showcase.jpg",
+        src: "/images/landing/tabs/celebration/main.jpg",
         alt: "파티 세팅이 된 바라쿠다 공간",
         type: "image",
       },
       gallery: [
         {
-          src: "/images/fation.jpg",
+          src: "/images/landing/tabs/celebration/sub-1.jpg",
           alt: "바라쿠다 셀러브레이션 이미지 1",
           title: "After Hours",
           description: "시간대에 따라 전혀 다른 표정을 보여주는 공간의 결",
         },
         {
-          src: "/images/3.jpg",
+          src: "/images/landing/tabs/celebration/sub-2.jpg",
           alt: "바라쿠다 셀러브레이션 이미지 2",
           title: "Soft Statement",
           description: "과하게 드러내지 않아도 선명하게 기억되는 장면",
@@ -125,19 +125,19 @@ export const barracudaSiteConfig: CompanySiteConfig = {
       description: "로스터리 기반의 커피가 공간의 인상과 함께 나옵니다.",
       cta: { href: "/coffee", label: "커피 보기" },
       featuredMedia: {
-        src: "/images/brend.jpg",
+        src: "/images/landing/tabs/cafe-lounge/main.jpg",
         alt: "라운지처럼 머무는 카페 공간",
         type: "image",
       },
       gallery: [
         {
-          src: "/images/experience.jpg",
+          src: "/images/landing/tabs/cafe-lounge/sub-1.jpg",
           alt: "카페 라운지 이미지 1",
           title: "Calm Rhythm",
           description: "커피 한 잔이 공간의 분위기와 같은 온도로 이어지는 리듬",
         },
         {
-          src: "/images/cafe.jpg",
+          src: "/images/landing/tabs/cafe-lounge/sub-2.jpg",
           alt: "카페 라운지 이미지 2",
           title: "Lounge Mood",
           description: "일상의 방문도 바라쿠다만의 결로 기억됩니다",
@@ -151,19 +151,19 @@ export const barracudaSiteConfig: CompanySiteConfig = {
       description: "공간에서 시작한 감도를 일상으로 이어가는 라이프스타일 굿즈.",
       cta: { href: "/store", label: "스토어 보기" },
       featuredMedia: {
-        src: "/images/brend-1.png",
+        src: "/images/landing/tabs/brand-goods/main.png",
         alt: "바라쿠다 라이프스타일 굿즈 대표 이미지",
         type: "image",
       },
       gallery: [
         {
-          src: "/images/brend-2.png",
+          src: "/images/landing/tabs/brand-goods/sub-1.png",
           alt: "바라쿠다 굿즈 이미지 1",
           title: "Collection",
           description: "브랜드의 무드를 손에 담는 오브제",
         },
         {
-          src: "/images/brend-3.png",
+          src: "/images/landing/tabs/brand-goods/sub-2.png",
           alt: "바라쿠다 굿즈 이미지 2",
           title: "Daily Object",
           description: "일상 안에 자연스럽게 놓이는 바라쿠다의 결",
