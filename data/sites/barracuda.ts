@@ -21,7 +21,7 @@ const homepage = {
     caption: "B A R A C U D A",
   },
   hero: {
-    image: "/images/hero.jpg",
+    image: "/images/landing/intro/hero.jpg",
     imageAlt: "바라쿠다 메인 공간 전경",
     title: "커피와 공간의 결이 만나는 곳",
     description: "로스터리의 밀도와 차분한 공간의 감도를 한곳에 담았습니다.",
