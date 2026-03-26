@@ -71,10 +71,10 @@ export function CompanySignatureTabs({ eyebrow, title, description, tabs }: Comp
               )}
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,10,10,0.03),rgba(10,10,10,0.24))]" />
               <div className="absolute inset-x-0 bottom-0 p-6 text-white sm:p-8 lg:p-10">
-                <h3 className="type-wrap-balance max-w-[11rem] whitespace-pre-line pb-[0.14em] font-heading text-[1.75rem] font-semibold leading-[1.14] tracking-[-0.04em] sm:max-w-[13rem] sm:text-[2.5rem] lg:max-w-[15rem] lg:text-[3rem]">
+                <h3 className="break-keep max-w-[16rem] whitespace-pre-line pb-[0.14em] font-heading text-[1.75rem] font-semibold leading-[1.14] tracking-[-0.04em] sm:max-w-[24rem] sm:text-[2.5rem] lg:max-w-[28rem] lg:text-[3rem]">
                   {activeTab.title}
                 </h3>
-                <p className="type-wrap-balance mt-3 max-w-[14rem] text-[0.9375rem] leading-[1.7] text-white/86 sm:max-w-[16rem] sm:text-[0.96rem] sm:leading-7 lg:max-w-[17rem]">
+                <p className="break-keep mt-3 max-w-[14rem] text-[0.9375rem] leading-[1.7] text-white/86 sm:max-w-[16rem] sm:text-[0.96rem] sm:leading-7 lg:max-w-[17rem]">
                   {activeTab.description}
                 </p>
                 <Button href={activeTab.cta.href} className="mt-6">
