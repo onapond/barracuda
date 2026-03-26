@@ -10,7 +10,7 @@ export function CompanyCoffeeMenuSection({ data }: Props) {
       <Container>
         <div className="border-b border-[var(--color-line)] pb-8">
           <p className="text-xs uppercase tracking-[0.34em] text-[var(--color-muted)]">{data.eyebrow}</p>
-          <h2 className="mt-4 max-w-[13ch] font-heading text-[2.1rem] font-semibold leading-[1.08] tracking-[-0.04em] whitespace-pre-line sm:text-[3rem]">
+          <h2 className="mt-4 font-heading text-[2.1rem] font-semibold leading-[1.08] tracking-[-0.04em] whitespace-pre-line sm:text-[3rem]">
             {data.title}
           </h2>
           {data.description ? (
