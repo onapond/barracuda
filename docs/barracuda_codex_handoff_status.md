@@ -1,5 +1,5 @@
 # Barracuda Codex Handoff Status
-Version: 2026-03-25 (세션 3)
+Version: 2026-03-26 (세션 4)
 Status: Active
 
 Purpose
@@ -17,7 +17,7 @@ Project basics
 - Active branch: `v2-renewal`
 - Vercel project: `onaponds-projects/barracuda_web`
 - Production URL: `https://barracudaweb.vercel.app`
-- Latest production deployment: `https://barracuda-lk06qw4j1-onaponds-projects.vercel.app`
+- Latest production deployment: `https://barracuda-4fmsjsaku-onaponds-projects.vercel.app`
 
 ---
 
@@ -47,33 +47,39 @@ Current design direction:
 
 ---
 
-## 2. 이번 세션 완료 내용 (2026-03-25 세션 3)
+## 2. 이번 세션 완료 내용 (2026-03-26 세션 4)
 
-### 이미지 alt 텍스트 정리 (Brand, Coffee)
+### 이미지 최적화 완료
 
-**Brand:**
-- hero `imageAlt`: `Baracuda 브랜드 대표 이미지` → `바라쿠다 브랜드 대표 공간 이미지`
-- Gallery 1 (brend-1~3.jpg): 번호 기반 generic alt → title/description 기반 묘사형 alt
-  - `바라쿠다 브랜드 이미지 1` → `바라쿠다 브랜드의 첫인상이 담긴 실내 장면`
-  - `바라쿠다 브랜드 이미지 2` → `차분하게 머물게 하는 바라쿠다 실내 인테리어`
-  - `바라쿠다 브랜드 이미지 3` → `커피와 대화가 자연스럽게 이어지는 바라쿠다 공간`
-- Gallery 2 (brend-hero, brend-4): 모호한 alt → 장면 묘사형
-  - `바라쿠다 브랜드 배경 이미지` → `도심 속 차분한 흐름이 담긴 바라쿠다 브랜드 전경`
-  - `바라쿠다 브랜드 이미지 4` → `브랜드 무드가 드러나는 바라쿠다 공간 디테일`
+모든 `fill` 이미지 컴포넌트에 `sizes` + `placeholder="blur"` + `blurDataURL` 추가:
+- 이전 세션: company-page-hero, company-homepage-template, company-homepage-intro, company-homepage-preview, company-gallery-section, company-signature-tabs, company-menu-showcase
+- 이번 세션: hero-section, home-reference-hero, page-hero, coffee-section, brand-section, store-section, space-section
+- next.config.ts: AVIF/WebP 포맷 활성화 (이전 세션)
+- 이미지 압축: PNG→JPG 변환 + 1920px max + quality 85 (이전 세션, sharp 사용)
+- OG / Twitter 메타태그: app/layout.tsx에 openGraph + twitter + metadataBase 추가
+  - OG 이미지 파일(`public/images/og-image.jpg`) 은 사용자가 별도 준비 필요
 
-**Coffee:**
-- hero `imageAlt`: `Baracuda 로스터리 대표 이미지` → `바라쿠다 로스터리 대표 이미지`
-- 메뉴 이미지 3종: 브랜드명 없음 → 브랜드명 + 메뉴 특성 반영
-  - `아메리카노 이미지` → `바라쿠다 아메리카노 — 기본이 가장 또렷하게 드러나는 한 잔`
-  - `라떼 이미지` → `바라쿠다 라떼 — 부드러운 질감과 균형이 중심이 되는 메뉴`
-  - `에이드 이미지` → `바라쿠다 시즌 음료 — 공간의 톤과 이어지는 음료 셀렉션`
+### 줄바꿈 전체 수정
+
+**근본 원인 3가지 제거:**
+
+1. `sm:whitespace-normal` — 640px+ 에서 `\n` 무시 → 모든 company 컴포넌트에서 제거
+2. `max-w-[ch]` 단위 — `ch`는 Latin 기준, 한국어 글자의 절반 너비 → `max-w-[12ch]`, `max-w-[13ch]` 제거
+3. `text-wrap: balance` (`type-wrap-balance` 내) — 한국어 어구 경계 무시하고 수학적 균등화 → `break-keep`으로 교체
+
+**수정 파일:**
+- `company-page-hero.tsx`: `sm:whitespace-normal` + `max-w` 제거, description에 `break-keep`
+- `section-heading.tsx`: `sm:whitespace-normal` 제거
+- `company-info-section.tsx`: `sm:whitespace-normal` + `max-w-[12ch]` 제거, item value에 `break-keep`
+- `company-gallery-section.tsx`, `company-coffee-menu-section.tsx`, `company-menu-showcase.tsx`: `sm:whitespace-normal` + `max-w-[13ch]` 제거
+- `company-signature-tabs.tsx`: 이미지 오버레이 h3/p의 `type-wrap-balance` → `break-keep`, h3 max-w 확장
 
 ### 배포
-- 빌드: `npm run lint` + `npm run build` 통과
+- 빌드: `npm run build` 통과 (경고 없음)
 - 배포: `vercel deploy --prod`
-- 배포 URL: `https://barracuda-lk06qw4j1-onaponds-projects.vercel.app`
+- 배포 URL: `https://barracuda-4fmsjsaku-onaponds-projects.vercel.app`
 - 프로덕션: `https://barracudaweb.vercel.app` 반영 완료
-- 커밋: `8c4d533`
+- 최신 커밋: `d991550`
 
 ---
 
@@ -146,21 +152,24 @@ Deployment:
 ## 6. Content / Asset Status
 
 - 전체 7개 라우트 카피 1차 정리 완료 및 배포됨 ✅
-- 이미지 alt/title/description 필드 정리 완료 (Brand, Coffee) ✅
-- 홈 비주얼 전체 sign-off 아직 미진행
+- 이미지 alt/title/description 필드 정리 완료 ✅
+- 전체 이미지 최적화 (sizes, blur, AVIF/WebP, 압축) 완료 ✅
+- 전체 줄바꿈 근본 원인 수정 완료 ✅
+- OG 이미지 파일 준비 필요 (`public/images/og-image.jpg`, 1200×630px) ⏳
+- 홈 비주얼 전체 sign-off 아직 미진행 ⏳
 
 ---
 
 ## 7. Verification Status
 
 Latest confirmed checks:
-- `npm run lint` — pass
-- `npm run build` — pass
-- `vercel deploy --prod` — pass (barracuda-lk06qw4j1)
+- `npm run build` — pass (경고 없음)
+- `vercel deploy --prod` — pass (d991550 / barracuda-4fmsjsaku)
 
 ---
 
 ## 8. Recommended Next Work
 
-1. 홈 비주얼 전체 사용자 sign-off
-2. 필요 시 카피 추가 사이클 (특정 라우트 요청 시)
+1. OG 이미지 파일 준비 (`public/images/og-image.jpg`, 1200×630px JPG)
+2. 홈 비주얼 전체 사용자 sign-off
+3. 필요 시 카피 추가 사이클 (특정 라우트 요청 시)
