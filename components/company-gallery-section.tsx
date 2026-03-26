@@ -1,4 +1,5 @@
 ﻿import Image from "next/image";
+import { BLUR_DATA_URL } from "@/lib/image-blur";
 import { Container } from "@/components/ui/container";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
 
@@ -47,7 +48,7 @@ export function CompanyGallerySection({
             const inner = (
               <>
                 <div className={`relative ${image.heightClassName ?? "min-h-[320px] sm:min-h-[360px]"}`}>
-                  <Image src={image.src} alt={image.alt} fill className="object-cover" />
+                  <Image src={image.src} alt={image.alt} fill sizes="(max-width: 768px) 100vw, (max-width: 1280px) calc(50vw - 2.5rem), 380px" placeholder="blur" blurDataURL={BLUR_DATA_URL} className="object-cover" />
                   {image.href ? (
                     <div className="absolute inset-0 flex items-end bg-black/0 p-6 transition duration-300 group-hover:bg-black/40">
                       <span className="translate-y-1 text-[0.8rem] font-medium tracking-[0.06em] text-white opacity-0 transition duration-300 group-hover:translate-y-0 group-hover:opacity-100">

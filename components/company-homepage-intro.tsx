@@ -1,4 +1,5 @@
 ﻿import Image from "next/image";
+import { BLUR_DATA_URL } from "@/lib/image-blur";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
@@ -28,7 +29,7 @@ export function CompanyHomepageIntro({ data }: CompanyHomepageIntroProps) {
         <div className="mt-8 grid gap-5">
           <article className="overflow-hidden rounded-[2.5rem] border border-[var(--color-line)] bg-[var(--color-surface)]">
             <div className="relative min-h-[32rem] sm:min-h-[42rem] lg:min-h-[52rem]">
-              <Image src={data.primaryImage.src} alt={data.primaryImage.alt} fill className="object-cover" />
+              <Image src={data.primaryImage.src} alt={data.primaryImage.alt} fill sizes="(max-width: 1280px) 100vw, 1200px" placeholder="blur" blurDataURL={BLUR_DATA_URL} className="object-cover" />
             </div>
           </article>
 
@@ -36,7 +37,7 @@ export function CompanyHomepageIntro({ data }: CompanyHomepageIntroProps) {
             {data.secondaryImages.map((image) => (
               <article key={image.src} className="overflow-hidden rounded-[2rem] border border-[var(--color-line)] bg-white">
                 <div className={`relative ${image.heightClassName ?? "min-h-[24rem] sm:min-h-[28rem] lg:min-h-[32rem]"}`}>
-                  <Image src={image.src} alt={image.alt} fill className="object-cover" />
+                  <Image src={image.src} alt={image.alt} fill sizes="(max-width: 768px) 100vw, (max-width: 1280px) calc(50vw - 2.5rem), 580px" placeholder="blur" blurDataURL={BLUR_DATA_URL} className="object-cover" />
                 </div>
               </article>
             ))}

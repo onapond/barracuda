@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { BLUR_DATA_URL } from "@/lib/image-blur";
 import { Container } from "@/components/ui/container";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
 
@@ -41,7 +42,7 @@ export function CompanyMenuShowcase({
         <div className="mt-10 grid gap-5 xl:grid-cols-[minmax(0,0.92fr)_minmax(0,1.08fr)]">
           <article className="overflow-hidden rounded-[2rem] border border-[var(--color-line)] bg-white">
             <div className="relative min-h-[320px] sm:min-h-[420px]">
-              <Image src={featureImage.src} alt={featureImage.alt} fill className="object-cover" />
+              <Image src={featureImage.src} alt={featureImage.alt} fill sizes="(max-width: 1280px) 100vw, 50vw" placeholder="blur" blurDataURL={BLUR_DATA_URL} className="object-cover" />
             </div>
             {featureImage.title || featureImage.description ? (
               <div className="p-6 sm:p-7">

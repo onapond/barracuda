@@ -52,7 +52,7 @@ export const barracudaSiteConfig: CompanySiteConfig = {
     },
     secondaryImages: [
       {
-        src: "/images/landing/intro/sub-1.png",
+        src: "/images/landing/intro/sub-1.jpg",
         alt: "바라쿠다 이벤트 세팅 이미지",
         title: "커피",
         description: "방향이 분명한 원두 선택",
@@ -151,19 +151,19 @@ export const barracudaSiteConfig: CompanySiteConfig = {
       description: "공간에서 시작한 감도를 일상으로 이어가는 라이프스타일 굿즈.",
       cta: { href: "/store", label: "스토어 보기" },
       featuredMedia: {
-        src: "/images/landing/tabs/brand-goods/main.png",
+        src: "/images/landing/tabs/brand-goods/main.jpg",
         alt: "바라쿠다 라이프스타일 굿즈 대표 이미지",
         type: "image",
       },
       gallery: [
         {
-          src: "/images/landing/tabs/brand-goods/sub-1.png",
+          src: "/images/landing/tabs/brand-goods/sub-1.jpg",
           alt: "바라쿠다 굿즈 이미지 1",
           title: "Collection",
           description: "브랜드의 무드를 손에 담는 오브제",
         },
         {
-          src: "/images/landing/tabs/brand-goods/sub-2.png",
+          src: "/images/landing/tabs/brand-goods/sub-2.jpg",
           alt: "바라쿠다 굿즈 이미지 2",
           title: "Daily Object",
           description: "일상 안에 자연스럽게 놓이는 바라쿠다의 결",
@@ -207,7 +207,7 @@ export const barracudaSiteConfig: CompanySiteConfig = {
       cta: { href: "/brand", label: "브랜드 보기" },
       images: [
         {
-          src: "/images/landing/previews/brand-featured.png",
+          src: "/images/landing/previews/brand-featured.jpg",
           alt: "브랜드 프리뷰 대표 이미지",
           title: "Spatial Identity",
           description: "설명보다 먼저 기억되는 공간의 인상과 디테일",
@@ -220,7 +220,7 @@ export const barracudaSiteConfig: CompanySiteConfig = {
           description: "브랜드의 첫 장면을 만드는 차분한 결",
         },
         {
-          src: "/images/landing/previews/brand-sub-2.png",
+          src: "/images/landing/previews/brand-sub-2.jpg",
           alt: "브랜드 프리뷰 이미지 2",
           title: "Quiet Tone",
           description: "오래 머무는 시선 안에서 또렷해지는 태도",
@@ -235,20 +235,20 @@ export const barracudaSiteConfig: CompanySiteConfig = {
       surface: "tint",
       images: [
         {
-          src: "/images/landing/previews/coffee-featured.png",
+          src: "/images/landing/previews/coffee-featured.jpg",
           alt: "커피 프리뷰 대표 이미지",
           title: "Roastery Base",
           description: "공간의 결을 흐트러뜨리지 않는 균형감 있는 커피의 출발점",
           heightClassName: "min-h-[22rem] sm:min-h-[30rem]",
         },
         {
-          src: "/images/landing/previews/coffee-sub-1.png",
+          src: "/images/landing/previews/coffee-sub-1.jpg",
           alt: "커피 프리뷰 이미지 1",
           title: "Roasting",
           description: "과하지 않고 오래 남는 균형의 감도",
         },
         {
-          src: "/images/landing/previews/coffee-sub-2.png",
+          src: "/images/landing/previews/coffee-sub-2.jpg",
           alt: "커피 프리뷰 이미지 2",
           title: "Brewing",
           description: "한 잔의 리듬까지 세심하게 이어지는 마무리",
@@ -262,20 +262,20 @@ export const barracudaSiteConfig: CompanySiteConfig = {
       cta: { href: "/coffee", label: "커피 보기" },
       images: [
         {
-          src: "/images/landing/previews/menu-featured.png",
+          src: "/images/landing/previews/menu-featured.jpg",
           alt: "메뉴 프리뷰 대표 이미지",
           title: "Menu Board",
           description: "이름보다 인상으로 먼저 읽히는 메뉴의 구성",
           heightClassName: "min-h-[22rem] sm:min-h-[30rem]",
         },
         {
-          src: "/images/landing/previews/menu-sub-1.png",
+          src: "/images/landing/previews/menu-sub-1.jpg",
           alt: "메뉴 프리뷰 이미지 1",
           title: "Milk Texture",
           description: "부드러운 결이 오래 남는 시그니처 메뉴 장면",
         },
         {
-          src: "/images/landing/previews/menu-sub-2.png",
+          src: "/images/landing/previews/menu-sub-2.jpg",
           alt: "메뉴 프리뷰 이미지 2",
           title: "Seasonal Mood",
           description: "공간의 인상과 자연스럽게 어울리는 음료 셀렉션",
@@ -297,7 +297,7 @@ export const barracudaSiteConfig: CompanySiteConfig = {
           heightClassName: "min-h-[20rem] sm:min-h-[28rem]",
         },
         {
-          src: "/images/landing/previews/visit-sub-1.png",
+          src: "/images/landing/previews/visit-sub-1.jpg",
           alt: "방문 프리뷰 이미지 1",
           title: "View",
           description: "방문 경험과 연결되는 시선의 흐름",
@@ -382,7 +382,7 @@ export const barracudaSiteConfig: CompanySiteConfig = {
     hero: {
       title: "머무는 시간에 맞춘 커피",
       description: "로스터리 베이스로 직접 준비하는 커피입니다. 천천히 머무는 시간에 맞춰 차분하게 냅니다.",
-      image: "/images/coffee/hero.png",
+      image: "/images/coffee/hero.jpg",
       imageAlt: "바라쿠다 로스터리 대표 이미지",
     },
     gallerySections: [
@@ -392,9 +392,9 @@ export const barracudaSiteConfig: CompanySiteConfig = {
         description: "바라쿠다 커피는 빨리 마시고 잊히는 쪽보다, 천천히 머물게 하는 쪽에 가깝습니다.",
         columns: 3,
         images: [
-          { src: "/images/coffee/process/roastery.png", alt: "바라쿠다 로스터리 이미지", title: "Roastery", description: "기준이 되는 로스터리 기반", href: "https://cnctechlab.co.kr/", hoverLabel: "바라쿠다 커피 더 자세히 알아보기 →" },
-          { src: "/images/coffee/process/roasting.png", alt: "바라쿠다 로스팅 이미지", title: "Roasting", description: "과하지 않고 오래 남는 균형" },
-          { src: "/images/coffee/process/brewing.png", alt: "바라쿠다 브루잉 이미지", title: "Brewing", description: "질감과 온도를 세심하게 맞춘 한 잔" },
+          { src: "/images/coffee/process/roastery.jpg", alt: "바라쿠다 로스터리 이미지", title: "Roastery", description: "기준이 되는 로스터리 기반", href: "https://cnctechlab.co.kr/", hoverLabel: "바라쿠다 커피 더 자세히 알아보기 →" },
+          { src: "/images/coffee/process/roasting.jpg", alt: "바라쿠다 로스팅 이미지", title: "Roasting", description: "과하지 않고 오래 남는 균형" },
+          { src: "/images/coffee/process/brewing.jpg", alt: "바라쿠다 브루잉 이미지", title: "Brewing", description: "질감과 온도를 세심하게 맞춘 한 잔" },
         ],
       },
       {
@@ -404,25 +404,25 @@ export const barracudaSiteConfig: CompanySiteConfig = {
         columns: 3,
         surface: "tint",
         images: [
-          { src: "/images/coffee/menu/americano.png", alt: "아메리카노 이미지", title: "아메리카노" },
-          { src: "/images/coffee/menu/caffe-latte.png", alt: "카파라떼 이미지", title: "카파라떼" },
-          { src: "/images/coffee/menu/vanilla-latte.png", alt: "바닐라 라떼 이미지", title: "바닐라 라떼" },
-          { src: "/images/coffee/menu/peppermint.png", alt: "페퍼민트 이미지", title: "페퍼민트" },
-          { src: "/images/coffee/menu/chamomile.png", alt: "캐모마일 이미지", title: "캐모마일" },
-          { src: "/images/coffee/menu/rooibos.png", alt: "루이보스티 이미지", title: "루이보스티" },
-          { src: "/images/coffee/menu/hibiscus.png", alt: "히비스커스 이미지", title: "히비스커스" },
-          { src: "/images/coffee/menu/lemon-earl-grey.png", alt: "레몬 얼그레이 이미지", title: "레몬 얼그레이" },
-          { src: "/images/coffee/menu/apple-peach-oolong.png", alt: "애플 피치 우롱티 이미지", title: "애플 피치 우롱티" },
-          { src: "/images/coffee/menu/apple-peach-cinnamon.png", alt: "애플 피치 시나몬 루이보스 이미지", title: "애플 피치 시나몬 루이보스" },
-          { src: "/images/coffee/menu/strawberry-peach.png", alt: "딸기 피치 루이보스 이미지", title: "딸기 피치 루이보스" },
-          { src: "/images/coffee/menu/berry-hibiscus.png", alt: "베리썸 히비스커스 이미지", title: "베리썸 히비스커스" },
-          { src: "/images/coffee/menu/iced-tea.png", alt: "아이스티 이미지", title: "아이스티" },
-          { src: "/images/coffee/menu/lemon-ade.png", alt: "레몬에이드 이미지", title: "레몬에이드" },
-          { src: "/images/coffee/menu/green-grape-ade.png", alt: "청포도에이드 이미지", title: "청포도에이드" },
-          { src: "/images/coffee/menu/grapefruit-ade.png", alt: "자몽에이드 이미지", title: "자몽에이드" },
-          { src: "/images/coffee/menu/bundaberg.png", alt: "분다버그 이미지", title: "분다버그" },
-          { src: "/images/coffee/menu/orange-juice.png", alt: "오렌지 착즙 주스 이미지", title: "오렌지 착즙 주스" },
-          { src: "/images/coffee/menu/salt-bread.png", alt: "소금빵 이미지", title: "소금빵" },
+          { src: "/images/coffee/menu/americano.jpg", alt: "아메리카노 이미지", title: "아메리카노" },
+          { src: "/images/coffee/menu/caffe-latte.jpg", alt: "카파라떼 이미지", title: "카파라떼" },
+          { src: "/images/coffee/menu/vanilla-latte.jpg", alt: "바닐라 라떼 이미지", title: "바닐라 라떼" },
+          { src: "/images/coffee/menu/peppermint.jpg", alt: "페퍼민트 이미지", title: "페퍼민트" },
+          { src: "/images/coffee/menu/chamomile.jpg", alt: "캐모마일 이미지", title: "캐모마일" },
+          { src: "/images/coffee/menu/rooibos.jpg", alt: "루이보스티 이미지", title: "루이보스티" },
+          { src: "/images/coffee/menu/hibiscus.jpg", alt: "히비스커스 이미지", title: "히비스커스" },
+          { src: "/images/coffee/menu/lemon-earl-grey.jpg", alt: "레몬 얼그레이 이미지", title: "레몬 얼그레이" },
+          { src: "/images/coffee/menu/apple-peach-oolong.jpg", alt: "애플 피치 우롱티 이미지", title: "애플 피치 우롱티" },
+          { src: "/images/coffee/menu/apple-peach-cinnamon.jpg", alt: "애플 피치 시나몬 루이보스 이미지", title: "애플 피치 시나몬 루이보스" },
+          { src: "/images/coffee/menu/strawberry-peach.jpg", alt: "딸기 피치 루이보스 이미지", title: "딸기 피치 루이보스" },
+          { src: "/images/coffee/menu/berry-hibiscus.jpg", alt: "베리썸 히비스커스 이미지", title: "베리썸 히비스커스" },
+          { src: "/images/coffee/menu/iced-tea.jpg", alt: "아이스티 이미지", title: "아이스티" },
+          { src: "/images/coffee/menu/lemon-ade.jpg", alt: "레몬에이드 이미지", title: "레몬에이드" },
+          { src: "/images/coffee/menu/green-grape-ade.jpg", alt: "청포도에이드 이미지", title: "청포도에이드" },
+          { src: "/images/coffee/menu/grapefruit-ade.jpg", alt: "자몽에이드 이미지", title: "자몽에이드" },
+          { src: "/images/coffee/menu/bundaberg.jpg", alt: "분다버그 이미지", title: "분다버그" },
+          { src: "/images/coffee/menu/orange-juice.jpg", alt: "오렌지 착즙 주스 이미지", title: "오렌지 착즙 주스" },
+          { src: "/images/coffee/menu/salt-bread.jpg", alt: "소금빵 이미지", title: "소금빵" },
         ],
       },
     ],
@@ -450,7 +450,7 @@ export const barracudaSiteConfig: CompanySiteConfig = {
         description: "테이블 간격과 조명이 프라이빗한 분위기를 만듭니다. 카페인데 우리끼리 있는 것 같은 장소입니다.",
         columns: 3,
         images: [
-          { src: "/images/space/main/cafe.png", alt: "바라쿠다 카페 공간 이미지", title: "Cafe", description: "일상의 방문이 자연스럽게 이어지는 메인 공간" },
+          { src: "/images/space/main/cafe.jpg", alt: "바라쿠다 카페 공간 이미지", title: "Cafe", description: "일상의 방문이 자연스럽게 이어지는 메인 공간" },
           { src: "/images/space/main/event.jpg", alt: "바라쿠다 이벤트 이미지", title: "Event", description: "작은 행사와 기념이 어울리는 장면" },
           { src: "/images/space/main/experience.jpg", alt: "바라쿠다 경험 이미지", title: "Experience", description: "브랜드 경험과 프로그램이 가능한 분위기" },
         ],
@@ -473,11 +473,11 @@ export const barracudaSiteConfig: CompanySiteConfig = {
         columns: 3,
         images: [
           { src: "/images/space/gallery/01.jpg", alt: "바라쿠다 내부 갤러리 1" },
-          { src: "/images/space/gallery/02.png", alt: "바라쿠다 내부 갤러리 2" },
+          { src: "/images/space/gallery/02.jpg", alt: "바라쿠다 내부 갤러리 2" },
           { src: "/images/space/gallery/03.jpg", alt: "바라쿠다 내부 갤러리 3" },
-          { src: "/images/space/gallery/04.png", alt: "바라쿠다 내부 갤러리 4" },
+          { src: "/images/space/gallery/04.jpg", alt: "바라쿠다 내부 갤러리 4" },
           { src: "/images/space/gallery/05.jpg", alt: "바라쿠다 내부 갤러리 5" },
-          { src: "/images/space/gallery/06.png", alt: "바라쿠다 내부 갤러리 6" },
+          { src: "/images/space/gallery/06.jpg", alt: "바라쿠다 내부 갤러리 6" },
         ],
       },
     ],
@@ -511,7 +511,7 @@ export const barracudaSiteConfig: CompanySiteConfig = {
     hero: {
       title: "메뉴도\n바라쿠다답게",
       description: "커피, 음료, 디저트까지. 바라쿠다 전체 메뉴를 확인하세요.",
-      image: "/images/menu.png",
+      image: "/images/menu.jpg",
       imageAlt: "Baracuda 메뉴 대표 이미지",
       ctaHref: "#menu-order",
       ctaLabel: "주문 문의",
@@ -524,8 +524,8 @@ export const barracudaSiteConfig: CompanySiteConfig = {
         columns: 3,
         images: [
           { src: "/images/ba_menu.jpg", alt: "바라쿠다 메뉴 이미지", title: "Menu Board", description: "브랜드 톤 안에서 정리된 실제 메뉴 구성" },
-          { src: "/images/ame.png", alt: "아메리카노 이미지", title: "Coffee", description: "기본 메뉴의 균형과 톤" },
-          { src: "/images/latte.png", alt: "라떼 이미지", title: "Milk Menu", description: "질감과 분위기가 함께 전해지는 메뉴" },
+          { src: "/images/ame.jpg", alt: "아메리카노 이미지", title: "Coffee", description: "기본 메뉴의 균형과 톤" },
+          { src: "/images/latte.jpg", alt: "라떼 이미지", title: "Milk Menu", description: "질감과 분위기가 함께 전해지는 메뉴" },
         ],
       },
       {
@@ -535,7 +535,7 @@ export const barracudaSiteConfig: CompanySiteConfig = {
         columns: 2,
         surface: "tint",
         images: [
-          { src: "/images/ade.png", alt: "에이드 이미지", title: "Seasonal Drink", description: "커피 외 메뉴도 같은 인상으로 이어집니다" },
+          { src: "/images/ade.jpg", alt: "에이드 이미지", title: "Seasonal Drink", description: "커피 외 메뉴도 같은 인상으로 이어집니다" },
           { src: "/images/book.jpg", alt: "디저트와 분위기 이미지", title: "Dessert Mood", description: "공간의 무드와 함께 즐기는 디저트 셀렉션" },
         ],
       },
@@ -570,7 +570,7 @@ export const barracudaSiteConfig: CompanySiteConfig = {
     hero: {
       title: "바라쿠다\n스토어",
       description: "원두, 굿즈, 라이프스타일 제품을 소개합니다. 바라쿠다의 무드를 일상에서도 이어갈 수 있습니다.",
-      image: "/images/store/hero.png",
+      image: "/images/store/hero.jpg",
       imageAlt: "Baracuda 스토어 대표 이미지",
       ctaHref: "/coffee",
       ctaLabel: "커피 보기",
@@ -582,9 +582,9 @@ export const barracudaSiteConfig: CompanySiteConfig = {
         description: "원두 셀렉션부터 브랜드 굿즈까지, 바라쿠다 무드를 담은 제품들입니다.",
         columns: 3,
         images: [
-          { src: "/images/store/collections/beans.png", alt: "원두 이미지", title: "Coffee Beans", description: "스토어의 중심이 되는 원두 셀렉션" },
-          { src: "/images/store/collections/goods.png", alt: "굿즈 이미지", title: "Goods", description: "브랜드의 무드를 이어가는 오브젝트" },
-          { src: "/images/store/collections/lifestyle.png", alt: "라이프스타일 이미지", title: "Lifestyle", description: "일상 속으로 확장되는 제품 방향" },
+          { src: "/images/store/collections/beans.jpg", alt: "원두 이미지", title: "Coffee Beans", description: "스토어의 중심이 되는 원두 셀렉션" },
+          { src: "/images/store/collections/goods.jpg", alt: "굿즈 이미지", title: "Goods", description: "브랜드의 무드를 이어가는 오브젝트" },
+          { src: "/images/store/collections/lifestyle.jpg", alt: "라이프스타일 이미지", title: "Lifestyle", description: "일상 속으로 확장되는 제품 방향" },
         ],
       },
       {
@@ -594,8 +594,8 @@ export const barracudaSiteConfig: CompanySiteConfig = {
         columns: 2,
         surface: "tint",
         images: [
-          { src: "/images/store/mood/drink-1.png", alt: "음료와 제품 연출 이미지", title: "Drink Objects", description: "음료와 제품 이미지의 연결감" },
-          { src: "/images/store/mood/drink-2.png", alt: "데일리 무드 이미지", title: "Brand Daily", description: "데일리 무드로 이어지는 상품 감도" },
+          { src: "/images/store/mood/drink-1.jpg", alt: "음료와 제품 연출 이미지", title: "Drink Objects", description: "음료와 제품 이미지의 연결감" },
+          { src: "/images/store/mood/drink-2.jpg", alt: "데일리 무드 이미지", title: "Brand Daily", description: "데일리 무드로 이어지는 상품 감도" },
         ],
       },
     ],
@@ -627,7 +627,7 @@ export const barracudaSiteConfig: CompanySiteConfig = {
         images: [
           { src: "/images/visit/mood/arrival.jpg", alt: "방문 이미지 1", title: "Arrival", description: "첫 방문의 분위기를 미리 느끼게 하는 장면" },
           { src: "/images/visit/mood/interior.jpg", alt: "방문 이미지 2", title: "Interior", description: "문을 열고 들어섰을 때 가장 먼저 만나는 실내 분위기" },
-          { src: "/images/visit/mood/view.png", alt: "방문 이미지 3", title: "View", description: "방문 경험과 자연스럽게 이어지는 시선" },
+          { src: "/images/visit/mood/view.jpg", alt: "방문 이미지 3", title: "View", description: "방문 경험과 자연스럽게 이어지는 시선" },
         ],
       },
     ],

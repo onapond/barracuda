@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { CompanyHeader } from "@/components/company-header";
+import { BLUR_DATA_URL } from "@/lib/image-blur";
 import { Container } from "@/components/ui/container";
 
 export type CompanyHomepageTemplateData = {
@@ -36,7 +37,7 @@ export function CompanyHomepageTemplate({ data, children }: CompanyHomepageTempl
 
       <section className="relative overflow-hidden bg-white">
         <div className="relative h-[34rem] sm:h-[46rem] lg:h-[56rem]">
-          <Image src={data.hero.image} alt={data.hero.imageAlt} fill priority className="object-cover" />
+          <Image src={data.hero.image} alt={data.hero.imageAlt} fill priority sizes="100vw" placeholder="blur" blurDataURL={BLUR_DATA_URL} className="object-cover" />
           <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,10,10,0.08),rgba(10,10,10,0.38))]" />
           <Container className="relative flex h-full items-end justify-center pb-10 text-center sm:pb-16 lg:pb-24">
             <div className="mx-auto flex max-w-[19rem] flex-col items-center text-white sm:max-w-[26rem] lg:max-w-[34rem]">

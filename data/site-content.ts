@@ -39,7 +39,7 @@ export const siteContent = {
     eyebrow: "Coffee",
     title: "로스터리 기반의 신뢰를\n과장 없이 전합니다",
     description: "원두 셀렉션과 로스팅, 브루잉의 흐름을 바라쿠다의 감도로 정리했습니다.",
-    image: { src: "/images/roastery.png", alt: "바라쿠다 로스터리 무드를 보여주는 이미지" },
+    image: { src: "/images/roastery.jpg", alt: "바라쿠다 로스터리 무드를 보여주는 이미지" },
     features: [
       { title: "Beans", description: "계절의 결에 맞춰 선명하게 고른 원두 셀렉션" },
       { title: "Roasting", description: "과시하지 않고 오래 남는 균형의 로스팅" },
@@ -81,9 +81,9 @@ export const siteContent = {
     description: "원두와 굿즈, 라이프스타일 제품으로 이어질 확장 가능성을 미리보기 형식으로 담았습니다.",
     note: "Preview",
     items: [
-      { title: "Coffee Beans", src: "/images/apollo.png", alt: "바라쿠다 원두 제품 이미지", fit: "contain" },
-      { title: "Goods", src: "/images/goods.png", alt: "바라쿠다 굿즈 이미지", fit: "cover" },
-      { title: "Lifestyle", src: "/images/Parcera.png", alt: "바라쿠다 라이프스타일 제품 이미지", fit: "contain" },
+      { title: "Coffee Beans", src: "/images/apollo.jpg", alt: "바라쿠다 원두 제품 이미지", fit: "contain" },
+      { title: "Goods", src: "/images/goods.jpg", alt: "바라쿠다 굿즈 이미지", fit: "cover" },
+      { title: "Lifestyle", src: "/images/Parcera.jpg", alt: "바라쿠다 라이프스타일 제품 이미지", fit: "contain" },
     ],
   },
   visit: {

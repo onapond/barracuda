@@ -1,6 +1,7 @@
 ﻿import Image from "next/image";
 import Link from "next/link";
 import { Container } from "@/components/ui/container";
+import { BLUR_DATA_URL } from "@/lib/image-blur";
 
 type CompanyPageHeroProps = {
   image: string;
@@ -15,7 +16,7 @@ export function CompanyPageHero({ image, imageAlt, title, description, ctaHref, 
   return (
     <section className="relative overflow-hidden bg-white">
       <div className="relative h-[24rem] sm:h-[30rem] lg:h-[38rem]">
-        <Image src={image} alt={imageAlt} fill priority className="object-cover" />
+        <Image src={image} alt={imageAlt} fill priority sizes="100vw" placeholder="blur" blurDataURL={BLUR_DATA_URL} className="object-cover" />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,10,10,0.12),rgba(10,10,10,0.36))]" />
         <Container className="relative flex h-full items-end justify-center pb-10 text-center sm:pb-14 lg:pb-18">
           <div className="max-w-[46rem] text-white">

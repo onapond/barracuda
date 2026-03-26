@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
+import { BLUR_DATA_URL } from "@/lib/image-blur";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
@@ -66,7 +67,7 @@ export function CompanySignatureTabs({ eyebrow, title, description, tabs }: Comp
                   playsInline
                 />
               ) : (
-                <Image src={activeTab.featuredMedia.src} alt={activeTab.featuredMedia.alt} fill className="object-cover" />
+                <Image src={activeTab.featuredMedia.src} alt={activeTab.featuredMedia.alt} fill sizes="(max-width: 1280px) 100vw, 1200px" placeholder="blur" blurDataURL={BLUR_DATA_URL} className="object-cover" />
               )}
               <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,10,10,0.03),rgba(10,10,10,0.24))]" />
               <div className="absolute inset-x-0 bottom-0 p-6 text-white sm:p-8 lg:p-10">
@@ -87,7 +88,7 @@ export function CompanySignatureTabs({ eyebrow, title, description, tabs }: Comp
             {activeTab.gallery.map((image) => (
               <article key={image.src} className="overflow-hidden rounded-[2rem] border border-[var(--color-line)] bg-white">
                 <div className={`relative ${image.heightClassName ?? "min-h-[24rem] sm:min-h-[28rem] lg:min-h-[32rem]"}`}>
-                  <Image src={image.src} alt={image.alt} fill className="object-cover" />
+                  <Image src={image.src} alt={image.alt} fill sizes="(max-width: 768px) 100vw, (max-width: 1280px) calc(50vw - 2.5rem), 580px" placeholder="blur" blurDataURL={BLUR_DATA_URL} className="object-cover" />
                 </div>
               </article>
             ))}

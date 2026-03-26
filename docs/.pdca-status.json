@@ -1,12 +1,20 @@
 {
   "version": "2.0",
-  "lastUpdated": "2026-03-24T07:47:27.569Z",
+  "lastUpdated": "2026-03-26T05:23:32.717Z",
   "activeFeatures": [
-    "sites"
+    "barracuda_web"
   ],
-  "primaryFeature": "sites",
+  "primaryFeature": "barracuda_web",
   "features": {
     "sites": {
+      "phase": "archived",
+      "matchRate": 100,
+      "iterationCount": 0,
+      "startedAt": "2026-03-24T07:39:09.170Z",
+      "archivedAt": "2026-03-26T05:00:00.000Z",
+      "archivedTo": "docs/archive/2026-03/sites/"
+    },
+    "barracuda_web": {
       "phase": "do",
       "phaseNumber": 3,
       "matchRate": null,
@@ -14,10 +22,10 @@
       "requirements": [],
       "documents": {},
       "timestamps": {
-        "started": "2026-03-24T07:39:09.170Z",
-        "lastUpdated": "2026-03-24T07:47:27.569Z"
+        "started": "2026-03-26T04:07:10.067Z",
+        "lastUpdated": "2026-03-26T05:23:32.717Z"
       },
-      "lastFile": "C:\\dev\\barracuda_web\\data\\sites\\barracuda.ts"
+      "lastFile": "C:\\dev\\barracuda_web\\components\\company-menu-showcase.tsx"
     }
   },
   "pipeline": {
@@ -28,7 +36,7 @@
   "session": {
     "startedAt": "2026-03-24T07:23:02.565Z",
     "onboardingCompleted": false,
-    "lastActivity": "2026-03-24T07:47:27.569Z"
+    "lastActivity": "2026-03-26T05:23:32.717Z"
   },
   "history": [
     {
@@ -202,6 +210,198 @@
     {
       "timestamp": "2026-03-24T07:47:27.569Z",
       "feature": "sites",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-24T23:46:40.971Z",
+      "feature": "sites",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-24T23:46:47.229Z",
+      "feature": "sites",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-24T23:46:54.549Z",
+      "feature": "sites",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-26T04:07:10.067Z",
+      "feature": "barracuda_web",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-26T04:07:14.607Z",
+      "feature": "barracuda_web",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-26T04:07:19.167Z",
+      "feature": "barracuda_web",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-26T04:07:23.631Z",
+      "feature": "barracuda_web",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-26T04:07:28.681Z",
+      "feature": "barracuda_web",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-26T04:07:33.254Z",
+      "feature": "barracuda_web",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-26T04:07:37.449Z",
+      "feature": "barracuda_web",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-26T04:07:41.722Z",
+      "feature": "barracuda_web",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-26T04:07:46.378Z",
+      "feature": "barracuda_web",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-26T04:07:51.139Z",
+      "feature": "barracuda_web",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-26T04:07:55.622Z",
+      "feature": "barracuda_web",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-26T05:22:08.433Z",
+      "feature": "barracuda_web",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-26T05:22:15.214Z",
+      "feature": "barracuda_web",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-26T05:22:20.147Z",
+      "feature": "barracuda_web",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-26T05:22:24.323Z",
+      "feature": "barracuda_web",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-26T05:22:28.429Z",
+      "feature": "barracuda_web",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-26T05:22:32.660Z",
+      "feature": "barracuda_web",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-26T05:22:37.945Z",
+      "feature": "barracuda_web",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-26T05:22:42.689Z",
+      "feature": "barracuda_web",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-26T05:22:46.448Z",
+      "feature": "barracuda_web",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-26T05:22:51.727Z",
+      "feature": "barracuda_web",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-26T05:22:57.232Z",
+      "feature": "barracuda_web",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-26T05:23:01.529Z",
+      "feature": "barracuda_web",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-26T05:23:07.012Z",
+      "feature": "barracuda_web",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-26T05:23:12.874Z",
+      "feature": "barracuda_web",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-26T05:23:17.429Z",
+      "feature": "barracuda_web",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-26T05:23:23.206Z",
+      "feature": "barracuda_web",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-26T05:23:27.711Z",
+      "feature": "barracuda_web",
+      "phase": "do",
+      "action": "updated"
+    },
+    {
+      "timestamp": "2026-03-26T05:23:32.717Z",
+      "feature": "barracuda_web",
       "phase": "do",
       "action": "updated"
     }
