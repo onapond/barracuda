@@ -43,7 +43,7 @@ export function SectionHeading({
       <p className="type-eyebrow mb-4 text-[var(--color-muted)]">{eyebrow}</p>
       <h2
         className={cn(
-          "type-section-title type-wrap-balance whitespace-pre-line sm:whitespace-normal",
+          "type-section-title type-wrap-balance whitespace-pre-line",
           titleWidthClasses[titleWidth],
           align === "center" && "mx-auto",
           titleClassName,
