@@ -13,7 +13,7 @@ export function CompanyInfoSection({ data }: CompanyInfoSectionProps) {
       <Container>
         <div className="border-b border-[var(--color-line)] pb-8">
           <p className="text-xs uppercase tracking-[0.34em] text-[var(--color-muted)]">{data.eyebrow}</p>
-          <h2 className="mt-4 max-w-[12ch] font-heading text-[2.1rem] font-semibold leading-[1.08] tracking-[-0.04em] whitespace-pre-line sm:whitespace-normal sm:text-[3rem]">
+          <h2 className="mt-4 max-w-[12ch] font-heading text-[2.1rem] font-semibold leading-[1.08] tracking-[-0.04em] whitespace-pre-line sm:text-[3rem]">
             {data.title}
           </h2>
         </div>
@@ -21,7 +21,7 @@ export function CompanyInfoSection({ data }: CompanyInfoSectionProps) {
           {data.items.map((item) => (
             <article key={item.label} className="rounded-[2rem] border border-[var(--color-line)] bg-white p-6">
               <p className="text-xs uppercase tracking-[0.28em] text-[var(--color-muted)]">{item.label}</p>
-              <p className="mt-4 text-sm leading-7">{item.value}</p>
+              <p className="mt-4 text-sm leading-7 break-keep">{item.value}</p>
             </article>
           ))}
         </div>
