@@ -1,4 +1,5 @@
 ﻿import Image from "next/image";
+import { BLUR_DATA_URL } from "@/lib/image-blur";
 import { SectionHeading } from "@/components/section-heading";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
@@ -13,7 +14,7 @@ export function CoffeeSection() {
       <Container>
         <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,0.9fr)] lg:items-center">
           <div className="relative min-h-[420px] overflow-hidden rounded-[2rem]">
-            <Image src={coffee.image.src} alt={coffee.image.alt} fill className="object-cover transition-transform duration-500 hover:scale-105" />
+            <Image src={coffee.image.src} alt={coffee.image.alt} fill sizes="(max-width: 1024px) 100vw, (max-width: 1280px) 53vw, 620px" placeholder="blur" blurDataURL={BLUR_DATA_URL} className="object-cover transition-transform duration-500 hover:scale-105" />
           </div>
           <div>
             <SectionHeading

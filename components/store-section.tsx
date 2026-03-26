@@ -1,4 +1,5 @@
 ﻿import Image from "next/image";
+import { BLUR_DATA_URL } from "@/lib/image-blur";
 import { SectionHeading } from "@/components/section-heading";
 import { Container } from "@/components/ui/container";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
@@ -31,6 +32,9 @@ export function StoreSection() {
                   src={item.src}
                   alt={item.alt}
                   fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) calc(33vw - 1.5rem), 380px"
+                  placeholder="blur"
+                  blurDataURL={BLUR_DATA_URL}
                   className={item.fit === "contain" ? "object-contain p-5 transition-transform duration-500 hover:scale-[1.03]" : "object-cover transition-transform duration-500 hover:scale-105"}
                 />
               </div>

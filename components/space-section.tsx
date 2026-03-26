@@ -1,4 +1,5 @@
 ﻿import Image from "next/image";
+import { BLUR_DATA_URL } from "@/lib/image-blur";
 import { SectionHeading } from "@/components/section-heading";
 import { Container } from "@/components/ui/container";
 import { SectionWrapper } from "@/components/ui/section-wrapper";
@@ -34,6 +35,9 @@ export function SpaceSection() {
                 src={items[0].src}
                 alt={items[0].alt}
                 fill
+                sizes="(max-width: 1024px) 100vw, (max-width: 1280px) 60vw, 720px"
+                placeholder="blur"
+                blurDataURL={BLUR_DATA_URL}
                 className="object-cover transition-transform duration-500 hover:scale-105"
               />
             </div>
@@ -55,6 +59,9 @@ export function SpaceSection() {
                     src={item.src}
                     alt={item.alt}
                     fill
+                    sizes="(max-width: 1024px) 100vw, (max-width: 1280px) 40vw, 480px"
+                    placeholder="blur"
+                    blurDataURL={BLUR_DATA_URL}
                     className="object-cover transition-transform duration-500 hover:scale-105"
                   />
                 </div>

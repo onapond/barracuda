@@ -1,4 +1,5 @@
 ﻿import Image from "next/image";
+import { BLUR_DATA_URL } from "@/lib/image-blur";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
 import { companyHomepageTemplate } from "@/data/site-content";
@@ -9,7 +10,7 @@ export function HomeReferenceHero() {
   return (
     <section className="relative overflow-hidden bg-white">
       <div className="relative h-[25rem] sm:h-[32rem] lg:h-[41rem]">
-        <Image src={hero.image} alt={hero.imageAlt} fill priority className="object-cover" />
+        <Image src={hero.image} alt={hero.imageAlt} fill priority sizes="100vw" placeholder="blur" blurDataURL={BLUR_DATA_URL} className="object-cover" />
         <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(10,10,10,0.1),rgba(10,10,10,0.32))]" />
         <Container className="relative flex h-full items-end justify-center pb-10 text-center sm:pb-14 lg:pb-20">
           <div className="max-w-[48rem] text-white">

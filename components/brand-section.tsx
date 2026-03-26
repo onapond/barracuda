@@ -1,4 +1,5 @@
 ﻿import Image from "next/image";
+import { BLUR_DATA_URL } from "@/lib/image-blur";
 import { SectionHeading } from "@/components/section-heading";
 import { Button } from "@/components/ui/button";
 import { Container } from "@/components/ui/container";
@@ -30,6 +31,9 @@ export function BrandSection() {
               src={brand.image.src}
               alt={brand.image.alt}
               fill
+              sizes="(max-width: 1024px) 100vw, (max-width: 1280px) 54vw, 640px"
+              placeholder="blur"
+              blurDataURL={BLUR_DATA_URL}
               className="object-cover transition-transform duration-500 hover:scale-105"
             />
           </div>
