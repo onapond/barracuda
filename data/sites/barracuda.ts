@@ -1,4 +1,4 @@
-import type { CompanySiteConfig } from "@/lib/company-site";
+﻿import type { CompanyCoffeeMenuSectionData, CompanySiteConfig } from "@/lib/company-site";
 
 const navLinks = [
   { href: "/brand", label: "Brand" },
@@ -400,29 +400,82 @@ export const barracudaSiteConfig: CompanySiteConfig = {
       {
         eyebrow: "Menu Mood",
         title: "한 잔도 가볍게\n내지 않습니다",
-        description: "공간이 조용하면 커피도 조용합니다. 튀는 것보다 오래 남는 쪽으로 만들었습니다.",
+        description: "BARACUDA MENU.jpg 기준으로 카테고리 순서를 정리했습니다. 기존 메뉴 이미지를 카테고리별로 묶고, 이미지가 없는 신규 메뉴만 파일명 규칙과 권장 크기를 함께 표시합니다.",
         columns: 3,
         surface: "tint",
-        images: [
-          { src: "/images/coffee/menu/americano.jpg", alt: "아메리카노 이미지", title: "아메리카노" },
-          { src: "/images/coffee/menu/caffe-latte.jpg", alt: "카파라떼 이미지", title: "카파라떼" },
-          { src: "/images/coffee/menu/vanilla-latte.jpg", alt: "바닐라 라떼 이미지", title: "바닐라 라떼" },
-          { src: "/images/coffee/menu/peppermint.jpg", alt: "페퍼민트 이미지", title: "페퍼민트" },
-          { src: "/images/coffee/menu/chamomile.jpg", alt: "캐모마일 이미지", title: "캐모마일" },
-          { src: "/images/coffee/menu/rooibos.jpg", alt: "루이보스티 이미지", title: "루이보스티" },
-          { src: "/images/coffee/menu/hibiscus.jpg", alt: "히비스커스 이미지", title: "히비스커스" },
-          { src: "/images/coffee/menu/lemon-earl-grey.jpg", alt: "레몬 얼그레이 이미지", title: "레몬 얼그레이" },
-          { src: "/images/coffee/menu/apple-peach-oolong.jpg", alt: "애플 피치 우롱티 이미지", title: "애플 피치 우롱티" },
-          { src: "/images/coffee/menu/apple-peach-cinnamon.jpg", alt: "애플 피치 시나몬 루이보스 이미지", title: "애플 피치 시나몬 루이보스" },
-          { src: "/images/coffee/menu/strawberry-peach.jpg", alt: "딸기 피치 루이보스 이미지", title: "딸기 피치 루이보스" },
-          { src: "/images/coffee/menu/berry-hibiscus.jpg", alt: "베리썸 히비스커스 이미지", title: "베리썸 히비스커스" },
-          { src: "/images/coffee/menu/iced-tea.jpg", alt: "아이스티 이미지", title: "아이스티" },
-          { src: "/images/coffee/menu/lemon-ade.jpg", alt: "레몬에이드 이미지", title: "레몬에이드" },
-          { src: "/images/coffee/menu/green-grape-ade.jpg", alt: "청포도에이드 이미지", title: "청포도에이드" },
-          { src: "/images/coffee/menu/grapefruit-ade.jpg", alt: "자몽에이드 이미지", title: "자몽에이드" },
-          { src: "/images/coffee/menu/bundaberg.jpg", alt: "분다버그 이미지", title: "분다버그" },
-          { src: "/images/coffee/menu/orange-juice.jpg", alt: "오렌지 착즙 주스 이미지", title: "오렌지 착즙 주스" },
-          { src: "/images/coffee/menu/salt-bread.jpg", alt: "소금빵 이미지", title: "소금빵" },
+        images: [],
+        imageGroups: [
+          {
+            label: "COFFEE ALL ESPRESSO BASED",
+            images: [
+              { src: "/images/coffee/menu/americano.jpg", alt: "아메리카노 이미지", title: "아메리카노", description: "5,500" },
+              { src: "/images/coffee/menu/caffe-latte.jpg", alt: "카페라떼 이미지", title: "카페라떼", description: "7,000" },
+              { src: "/images/coffee/menu/vanilla-latte.jpg", alt: "바닐라 라떼 이미지", title: "바닐라 라떼", description: "7,500" },
+            ],
+          },
+          {
+            label: "TRADITIONAL TEA",
+            images: [
+              { alt: "레몬차 이미지 준비 예정", title: "레몬차", description: "8,000`n파일명: lemon-tea.jpg`n권장 크기: 600 × 500px", assetFileName: "lemon-tea.jpg", recommendedSize: "600 × 500px" },
+              { alt: "자몽차 이미지 준비 예정", title: "자몽차", description: "8,000`n파일명: grapefruit-tea.jpg`n권장 크기: 600 × 500px", assetFileName: "grapefruit-tea.jpg", recommendedSize: "600 × 500px" },
+              { alt: "생강차 이미지 준비 예정", title: "생강차", description: "8,000`n파일명: ginger-tea.jpg`n권장 크기: 600 × 500px", assetFileName: "ginger-tea.jpg", recommendedSize: "600 × 500px" },
+              { alt: "매실차 이미지 준비 예정", title: "매실차", description: "8,000`n파일명: green-plum-tea.jpg`n권장 크기: 600 × 500px", assetFileName: "green-plum-tea.jpg", recommendedSize: "600 × 500px" },
+              { alt: "쌍화차 이미지 준비 예정", title: "쌍화차", description: "8,500`nHot only`n파일명: ssanghwa-cha.jpg`n권장 크기: 600 × 500px", assetFileName: "ssanghwa-cha.jpg", recommendedSize: "600 × 500px" },
+            ],
+          },
+          {
+            label: "TEA",
+            images: [
+              { src: "/images/coffee/menu/peppermint.jpg", alt: "페퍼민트 이미지", title: "페퍼민트", description: "7,000" },
+              { src: "/images/coffee/menu/chamomile.jpg", alt: "캐모마일 이미지", title: "캐모마일", description: "7,000" },
+              { src: "/images/coffee/menu/rooibos.jpg", alt: "루이보스티 이미지", title: "루이보스티", description: "7,000" },
+              { src: "/images/coffee/menu/hibiscus.jpg", alt: "히비스커스 이미지", title: "히비스커스", description: "7,000" },
+            ],
+          },
+          {
+            label: "SWEET TEA",
+            images: [
+              { src: "/images/coffee/menu/lemon-earl-grey.jpg", alt: "레몬 얼그레이 이미지", title: "레몬 얼그레이", description: "7,000" },
+              { src: "/images/coffee/menu/apple-peach-oolong.jpg", alt: "애플 피치 우롱티 이미지", title: "애플 피치 우롱티", description: "7,000" },
+              { src: "/images/coffee/menu/apple-peach-cinnamon.jpg", alt: "애플 피치 시나몬 루이보스 이미지", title: "Apple Cinnamon Rooibos", description: "7,000" },
+              { src: "/images/coffee/menu/strawberry-peach.jpg", alt: "딸기 피치 루이보스 이미지", title: "딸기 피치 루이보스", description: "7,000" },
+              { src: "/images/coffee/menu/berry-hibiscus.jpg", alt: "베리썸 히비스커스 이미지", title: "베리썸 히비스커스", description: "7,000" },
+              { src: "/images/coffee/menu/iced-tea.jpg", alt: "복숭아 아이스티 이미지", title: "복숭아 아이스티", description: "7,000`nIce only" },
+            ],
+          },
+          {
+            label: "JUICE",
+            images: [
+              { src: "/images/coffee/menu/orange-juice.jpg", alt: "오렌지 착즙 주스 이미지", title: "오렌지 착즙 주스", description: "8,500" },
+              { alt: "어린이용 주스 이미지 준비 예정", title: "어린이용 주스", description: "4,500`nOrange / Pineapple & White Grape`n파일명: kids-juice.jpg`n권장 크기: 600 × 500px", assetFileName: "kids-juice.jpg", recommendedSize: "600 × 500px" },
+            ],
+          },
+          {
+            label: "CHOCO",
+            images: [
+              { alt: "핫초코 이미지 준비 예정", title: "핫초코", description: "8,500`n파일명: hot-chocolate.jpg`n권장 크기: 600 × 500px", assetFileName: "hot-chocolate.jpg", recommendedSize: "600 × 500px" },
+              { alt: "아이스초코 이미지 준비 예정", title: "아이스초코", description: "8,500`n파일명: iced-chocolate.jpg`n권장 크기: 600 × 500px", assetFileName: "iced-chocolate.jpg", recommendedSize: "600 × 500px" },
+            ],
+          },
+          {
+            label: "ADE",
+            images: [
+              { src: "/images/coffee/menu/lemon-ade.jpg", alt: "레몬에이드 이미지", title: "레몬에이드", description: "8,000" },
+              { src: "/images/coffee/menu/green-grape-ade.jpg", alt: "청포도에이드 이미지", title: "청포도에이드", description: "8,000" },
+            ],
+          },
+          {
+            label: "DESSERT",
+            images: [
+              { src: "/images/coffee/menu/salt-bread.jpg", alt: "소금빵 이미지", title: "소금빵", description: "2,000" },
+            ],
+          },
+          {
+            label: "BOTTLE (BUNDABERG)",
+            images: [
+              { src: "/images/coffee/menu/bundaberg.jpg", alt: "분다버그 이미지", title: "분다버그", description: "핑크자몽에이드 / 레몬에이드 / 진저에이드`n각 8,000" },
+            ],
+          },
         ],
       },
     ],
@@ -503,7 +556,7 @@ export const barracudaSiteConfig: CompanySiteConfig = {
       },
     },
   },
-  menu: {
+  menu: ({
     metadata: {
       title: "Menu | Baracuda",
       description: "바라쿠다의 메뉴와 음료를 분위기 중심으로 소개합니다.",
@@ -540,6 +593,90 @@ export const barracudaSiteConfig: CompanySiteConfig = {
         ],
       },
     ],
+    menuBoardSection: {
+      eyebrow: "Full Menu",
+      title: "현재 메뉴를\n한눈에 확인하세요",
+      description: "BARACUDA MENU.jpg 기준으로 카테고리와 항목을 정리했습니다.",
+      surface: "tint",
+      categories: [
+        {
+          label: "Coffee All Espresso Based",
+          items: [
+            "아메리카노 (Hot / Cold) / Americano · 5,500",
+            "카페라떼 / Cafe Latte · 7,000",
+            "바닐라 라떼 / Vanilla Latte · 7,500",
+            "디카페인 / Decaf +700",
+          ],
+        },
+        {
+          label: "Traditional Tea",
+          items: [
+            "레몬차 / Lemon Tea · 8,000",
+            "자몽차 / Grapefruit Tea · 8,000",
+            "생강차 / Ginger Tea · 8,000",
+            "매실차 / Green Plum Tea · 8,000",
+            "쌍화차 (Hot only) / Ssanghwa-cha · 8,500",
+          ],
+        },
+        {
+          label: "Tea",
+          items: [
+            "페퍼민트 / Peppermint · 7,000",
+            "캐모마일 / Chamomile · 7,000",
+            "루이보스티 / Rooibos Tea · 7,000",
+            "히비스커스 / Hibiscus · 7,000",
+          ],
+        },
+        {
+          label: "Sweet Tea",
+          items: [
+            "레몬 얼그레이 / Lemon Earl Grey · 7,000",
+            "애플 피치 우롱티 / Apple Peach Oolong Tea · 7,000",
+            "애플 시나몬 루이보스 / Apple Cinnamon Rooibos · 7,000",
+            "딸기 피치 루이보스 / Strawberry Peach Rooibos · 7,000",
+            "베리썸 히비스커스 / Berrysome Hibiscus · 7,000",
+            "복숭아 아이스티 (Ice only) / Peach Iced Tea · 7,000",
+          ],
+        },
+        {
+          label: "Juice",
+          items: [
+            "오렌지착즙 주스 / Fresh Squeezed Orange Juice · 8,500",
+            "어린이용 주스 / Kids Juice · 4,500",
+            "오렌지 / 파인애플 & 백포도",
+            "Orange / Pineapple & White Grape",
+          ],
+        },
+        {
+          label: "Choco",
+          items: [
+            "핫초코 / Hot Chocolate · 8,500",
+            "아이스초코 / Iced Chocolate · 8,500",
+          ],
+        },
+        {
+          label: "Ade",
+          items: [
+            "레몬에이드 / Lemonade · 8,000",
+            "청포도에이드 / Green Grape Ade · 8,000",
+          ],
+        },
+        {
+          label: "Dessert",
+          items: [
+            "소금빵 / Salted Bread · 2,000",
+          ],
+        },
+        {
+          label: "Bottle (Bundaberg)",
+          items: [
+            "핑크자몽에이드 / Pink Grapefruitaide · 8,000",
+            "레몬에이드 / Lemonade · 8,000",
+            "진저에이드 / Gingerade · 8,000",
+          ],
+        },
+      ],
+    },
     orderSectionId: "menu-order",
     orderForm: {
       title: "주문 문의",
@@ -561,7 +698,7 @@ export const barracudaSiteConfig: CompanySiteConfig = {
         placeholder: "원하시는 메뉴와 수량, 일정 등을 남겨 주세요.",
       },
     },
-  },
+  } as CompanySiteConfig["menu"] & { menuBoardSection: CompanyCoffeeMenuSectionData }),
   store: {
     metadata: {
       title: "Store | Baracuda",
@@ -655,3 +792,6 @@ export const barracudaSiteConfig: CompanySiteConfig = {
     formRecipientEmail: "4everlll@naver.com",
   },
 };
+
+
+

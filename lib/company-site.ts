@@ -1,4 +1,4 @@
-import type { CompanyHomepageTemplateData } from "@/components/company-homepage-template";
+﻿import type { CompanyHomepageTemplateData } from "@/components/company-homepage-template";
 
 export type SiteMetadata = {
   title: string;
@@ -13,6 +13,17 @@ export type CompanyGalleryItem = {
   heightClassName?: string;
   href?: string;
   hoverLabel?: string;
+  assetFileName?: string;
+  recommendedSize?: string;
+};
+
+export type CompanyGalleryCardItem = Omit<CompanyGalleryItem, "src"> & {
+  src?: string;
+};
+
+export type CompanyGalleryImageGroup = {
+  label: string;
+  images: readonly CompanyGalleryCardItem[];
 };
 
 export type CoffeeMenuCategory = {
@@ -39,7 +50,8 @@ export type CompanyGallerySectionData = {
   eyebrow: string;
   title: string;
   description?: string;
-  images: readonly CompanyGalleryItem[];
+  images: readonly CompanyGalleryCardItem[];
+  imageGroups?: readonly CompanyGalleryImageGroup[];
   columns?: 2 | 3;
   surface?: "white" | "tint";
 };
@@ -200,3 +212,6 @@ export type CompanySiteConfig = {
     formRecipientEmail: string;
   };
 };
+
+
+

@@ -34,6 +34,20 @@ vercel build --prod
 vercel deploy --prebuilt --prod --yes --archive=tgz
 ```
 
+## Local Dev Server
+Use the managed scripts on Windows when you want the dev server to stay up independently from the current terminal session.
+
+```powershell
+npm run dev:managed
+npm run dev:status
+npm run dev:stop
+```
+
+The managed server writes PID and logs to:
+- `.devserver-3000.pid`
+- `.devserver-3000.out.log`
+- `.devserver-3000.err.log`
+
 ## Source Of Truth
 - Content: `data/site-content.ts`
 - Images: `public/images/`

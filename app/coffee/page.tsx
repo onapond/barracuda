@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import { CompanyActionPanel } from "@/components/company-action-panel";
 import { CompanyGallerySection } from "@/components/company-gallery-section";
 import { CompanyPageHero } from "@/components/company-page-hero";
@@ -21,4 +21,3 @@ export default function CoffeePage() {
     </CompanySiteShell>
   );
 }
-
