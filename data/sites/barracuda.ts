@@ -400,7 +400,8 @@ export const barracudaSiteConfig: CompanySiteConfig = {
       {
         eyebrow: "Menu Mood",
         title: "한 잔도 가볍게\n내지 않습니다",
-        description: "BARACUDA MENU.jpg 기준으로 카테고리 순서를 정리했습니다. 기존 메뉴 이미지를 카테고리별로 묶고, 이미지가 없는 신규 메뉴만 파일명 규칙과 권장 크기를 함께 표시합니다.",
+        description: "BARACUDA MENU_2.jpg 기준으로 카테고리 순서를 정리했습니다. 기존 메뉴 이미지를 카테고리별로 묶고, 이미지가 없는 신규 메뉴만 파일명 규칙과 권장 크기를 함께 표시합니다.",
+        footerNote: "메뉴 이미지는 연출된 사진으로, 실제 제공 형태와 다를 수 있습니다.",
         columns: 3,
         surface: "tint",
         images: [],
@@ -416,11 +417,12 @@ export const barracudaSiteConfig: CompanySiteConfig = {
           {
             label: "TRADITIONAL TEA",
             images: [
-              { alt: "레몬차 이미지 준비 예정", title: "레몬차", description: "8,000`n파일명: lemon-tea.jpg`n권장 크기: 600 × 500px", assetFileName: "lemon-tea.jpg", recommendedSize: "600 × 500px" },
-              { alt: "자몽차 이미지 준비 예정", title: "자몽차", description: "8,000`n파일명: grapefruit-tea.jpg`n권장 크기: 600 × 500px", assetFileName: "grapefruit-tea.jpg", recommendedSize: "600 × 500px" },
-              { alt: "생강차 이미지 준비 예정", title: "생강차", description: "8,000`n파일명: ginger-tea.jpg`n권장 크기: 600 × 500px", assetFileName: "ginger-tea.jpg", recommendedSize: "600 × 500px" },
-              { alt: "매실차 이미지 준비 예정", title: "매실차", description: "8,000`n파일명: green-plum-tea.jpg`n권장 크기: 600 × 500px", assetFileName: "green-plum-tea.jpg", recommendedSize: "600 × 500px" },
-              { alt: "쌍화차 이미지 준비 예정", title: "쌍화차", description: "8,500`nHot only`n파일명: ssanghwa-cha.jpg`n권장 크기: 600 × 500px", assetFileName: "ssanghwa-cha.jpg", recommendedSize: "600 × 500px" },
+              { src: "/images/coffee/menu/lemon-tea.png", alt: "레몬차 이미지", title: "레몬차", description: "8,000" },
+              { src: "/images/coffee/menu/grapefruit-tea.png", alt: "자몽차 이미지", title: "자몽차", description: "8,000" },
+              { src: "/images/coffee/menu/citron-tea.png", alt: "유자차 이미지", title: "유자차", description: "8,000" },
+              { src: "/images/coffee/menu/green-plum-tea.png", alt: "매실차 이미지", title: "매실차", description: "8,000" },
+              { src: "/images/coffee/menu/ginger-tea.png", alt: "생강차 이미지", title: "생강차", description: "8,000" },
+              { src: "/images/coffee/menu/sanghwa-cha.png", alt: "쌍화차 이미지", title: "쌍화차", description: "8,500`nHot only" },
             ],
           },
           {
@@ -437,7 +439,7 @@ export const barracudaSiteConfig: CompanySiteConfig = {
             images: [
               { src: "/images/coffee/menu/lemon-earl-grey.jpg", alt: "레몬 얼그레이 이미지", title: "레몬 얼그레이", description: "7,000" },
               { src: "/images/coffee/menu/apple-peach-oolong.jpg", alt: "애플 피치 우롱티 이미지", title: "애플 피치 우롱티", description: "7,000" },
-              { src: "/images/coffee/menu/apple-peach-cinnamon.jpg", alt: "애플 피치 시나몬 루이보스 이미지", title: "Apple Cinnamon Rooibos", description: "7,000" },
+              { src: "/images/coffee/menu/apple-peach-cinnamon.jpg", alt: "애플 피치 시나몬 루이보스 이미지", title: "애플 시나몬 루이보스", description: "7,000" },
               { src: "/images/coffee/menu/strawberry-peach.jpg", alt: "딸기 피치 루이보스 이미지", title: "딸기 피치 루이보스", description: "7,000" },
               { src: "/images/coffee/menu/berry-hibiscus.jpg", alt: "베리썸 히비스커스 이미지", title: "베리썸 히비스커스", description: "7,000" },
               { src: "/images/coffee/menu/iced-tea.jpg", alt: "복숭아 아이스티 이미지", title: "복숭아 아이스티", description: "7,000`nIce only" },
@@ -447,21 +449,32 @@ export const barracudaSiteConfig: CompanySiteConfig = {
             label: "JUICE",
             images: [
               { src: "/images/coffee/menu/orange-juice.jpg", alt: "오렌지 착즙 주스 이미지", title: "오렌지 착즙 주스", description: "8,500" },
-              { alt: "어린이용 주스 이미지 준비 예정", title: "어린이용 주스", description: "4,500`nOrange / Pineapple & White Grape`n파일명: kids-juice.jpg`n권장 크기: 600 × 500px", assetFileName: "kids-juice.jpg", recommendedSize: "600 × 500px" },
+              { src: "/images/coffee/menu/kids-juice.png", alt: "어린이용 주스 이미지", title: "어린이용 주스", description: "4,500" },
             ],
           },
           {
             label: "CHOCO",
             images: [
-              { alt: "핫초코 이미지 준비 예정", title: "핫초코", description: "8,500`n파일명: hot-chocolate.jpg`n권장 크기: 600 × 500px", assetFileName: "hot-chocolate.jpg", recommendedSize: "600 × 500px" },
-              { alt: "아이스초코 이미지 준비 예정", title: "아이스초코", description: "8,500`n파일명: iced-chocolate.jpg`n권장 크기: 600 × 500px", assetFileName: "iced-chocolate.jpg", recommendedSize: "600 × 500px" },
+              { src: "/images/coffee/menu/hot-chocolate.png", alt: "핫초코 이미지", title: "핫초코", description: "8,500" },
+              { src: "/images/coffee/menu/iced-chocolate.png", alt: "아이스초코 이미지", title: "아이스초코", description: "8,500" },
             ],
           },
           {
             label: "ADE",
             images: [
-              { src: "/images/coffee/menu/lemon-ade.jpg", alt: "레몬에이드 이미지", title: "레몬에이드", description: "8,000" },
+              { src: "/images/coffee/menu/lemon-ade.png", alt: "레몬에이드 이미지", title: "레몬에이드", description: "8,000" },
               { src: "/images/coffee/menu/green-grape-ade.jpg", alt: "청포도에이드 이미지", title: "청포도에이드", description: "8,000" },
+              { src: "/images/coffee/menu/grapefruit-ade.jpg", alt: "자몽에이드 이미지", title: "자몽에이드", description: "8,000" },
+            ],
+          },
+          {
+            label: "SMOOTHIE",
+            images: [
+              { src: "/images/coffee/menu/strawberry-smoothie.png", alt: "딸기스무디 이미지", title: "딸기스무디", description: "8,000" },
+              { src: "/images/coffee/menu/mango-smoothie.png", alt: "망고스무디 이미지", title: "망고스무디", description: "8,000" },
+              { src: "/images/coffee/menu/citron-smoothie.png", alt: "유자스무디 이미지", title: "유자스무디", description: "8,000" },
+              { src: "/images/coffee/menu/plain-yogurt-smoothie.png", alt: "플레인 요거트 스무디 이미지", title: "플레인 요거트 스무디", description: "8,500" },
+              { src: "/images/coffee/menu/mango-yogurt-smoothie.png", alt: "망고 요거트 스무디 이미지", title: "망고 요거트 스무디", description: "9,500" },
             ],
           },
           {
@@ -471,9 +484,10 @@ export const barracudaSiteConfig: CompanySiteConfig = {
             ],
           },
           {
-            label: "BOTTLE (BUNDABERG)",
+            label: "BOTTLE & SIDE",
             images: [
-              { src: "/images/coffee/menu/bundaberg.jpg", alt: "분다버그 이미지", title: "분다버그", description: "핑크자몽에이드 / 레몬에이드 / 진저에이드`n각 8,000" },
+              { src: "/images/coffee/menu/bundaberg.jpg", alt: "분다버그 이미지", title: "분다버그", description: "각 8,000" },
+              { src: "/images/coffee/menu/salt-bread.jpg", alt: "소금빵 이미지", title: "소금빵", description: "2,000`n주말 판매" },
             ],
           },
         ],
@@ -707,7 +721,7 @@ export const barracudaSiteConfig: CompanySiteConfig = {
     hero: {
       title: "바라쿠다\n스토어",
       description: "원두, 굿즈, 라이프스타일 제품을 소개합니다. 바라쿠다의 무드를 일상에서도 이어갈 수 있습니다.",
-      image: "/images/store/hero.jpg",
+      image: "/images/store/hero.png",
       imageAlt: "Baracuda 스토어 대표 이미지",
       ctaHref: "/coffee",
       ctaLabel: "커피 보기",

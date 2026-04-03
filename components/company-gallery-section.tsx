@@ -86,6 +86,7 @@ export function CompanyGallerySection({
   eyebrow,
   title,
   description,
+  footerNote,
   images,
   imageGroups,
   columns = 3,
@@ -105,6 +106,7 @@ export function CompanyGallerySection({
         <div className={hasGroups ? "mt-10 space-y-10" : "mt-10"}>
           {hasGroups ? imageGroups!.map((group) => renderImageGroup(group, columns)) : renderImageGrid(images, columns)}
         </div>
+        {footerNote ? <p className="mt-8 text-sm leading-7 text-[var(--color-muted)]">{footerNote}</p> : null}
       </Container>
     </SectionWrapper>
   );

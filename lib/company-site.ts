@@ -1,4 +1,4 @@
-﻿import type { CompanyHomepageTemplateData } from "@/components/company-homepage-template";
+import type { CompanyHomepageTemplateData } from "@/components/company-homepage-template";
 
 export type SiteMetadata = {
   title: string;
@@ -50,6 +50,7 @@ export type CompanyGallerySectionData = {
   eyebrow: string;
   title: string;
   description?: string;
+  footerNote?: string;
   images: readonly CompanyGalleryCardItem[];
   imageGroups?: readonly CompanyGalleryImageGroup[];
   columns?: 2 | 3;
