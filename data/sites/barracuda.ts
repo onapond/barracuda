@@ -740,8 +740,8 @@ export const barracudaSiteConfig: CompanySiteConfig = {
         description: "원두 셀렉션부터 브랜드 굿즈까지, 바라쿠다 무드를 담은 제품들입니다.",
         columns: 3,
         images: [
-          { src: "/images/store/collections/beans.jpg", alt: "원두 이미지", title: "Coffee Beans", description: "스토어의 중심이 되는 원두 셀렉션" },
-          { src: "/images/store/collections/goods.jpg", alt: "굿즈 이미지", title: "Goods", description: "브랜드의 무드를 이어가는 오브젝트" },
+          { src: "/images/store/collections/beans.png", alt: "원두 이미지", title: "Coffee Beans", description: "스토어의 중심이 되는 원두 셀렉션" },
+          { src: "/images/store/collections/goods.png", alt: "굿즈 이미지", title: "Goods", description: "브랜드의 무드를 이어가는 오브젝트" },
           { src: "/images/store/collections/lifestyle.jpg", alt: "라이프스타일 이미지", title: "Lifestyle", description: "일상 속으로 확장되는 제품 방향" },
         ],
       },
