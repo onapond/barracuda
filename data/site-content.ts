@@ -108,7 +108,7 @@ export const siteContent = {
 
 export const subpageContent = {
   space: {
-    inquiryForm: siteConfig.space.inquiryForm,
+    contactSection: siteConfig.space.contactSection,
   },
   menu: {
     orderForm: siteConfig.menu.orderForm,
@@ -128,4 +128,3 @@ export const businessInfo = {
 } as const;
 
 export const companySiteConfig = siteConfig;
-

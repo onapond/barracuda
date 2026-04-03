@@ -507,7 +507,7 @@ export const barracudaSiteConfig: CompanySiteConfig = {
       description: "카페로 와도 되고, 우리끼리 빌려서 써도 됩니다. 소규모 모임부터 브랜드 행사까지 대관 가능합니다.",
       image: "/images/space/hero.jpg",
       imageAlt: "Baracuda 공간 대표 이미지",
-      ctaHref: "#space-inquiry",
+      ctaHref: "#space-contact",
       ctaLabel: "공간 문의",
     },
     gallerySections: [
@@ -548,26 +548,33 @@ export const barracudaSiteConfig: CompanySiteConfig = {
         ],
       },
     ],
-    inquirySectionId: "space-inquiry",
-    inquiryForm: {
-      title: "공간 대관 문의",
-      description: "모임 날짜와 규모를 남겨 주시면 가능 여부를 확인해 드립니다.",
-      submitLabel: "문의 보내기",
-      successMessage: "문의가 접수되었습니다. 확인 후 연락드리겠습니다.",
-      subject: "[Baracuda] 공간 문의",
-      fields: [
-        { name: "name", label: "이름", type: "text", placeholder: "이름을 입력해 주세요." },
-        { name: "phone", label: "연락처", type: "tel", placeholder: "010-0000-0000" },
-        { name: "email", label: "이메일", type: "email", placeholder: "name@example.com" },
-        { name: "eventType", label: "행사 유형", type: "text", placeholder: "예: 브랜드 모임" },
-        { name: "eventDate", label: "행사 날짜", type: "date" },
-        { name: "expectedGuests", label: "예상 인원", type: "number", placeholder: "20" },
+    contactSectionId: "space-contact",
+    contactSection: {
+      eyebrow: "Space Contact",
+      title: "편하게 문의해 주세요",
+      description: "희망 일정과 인원, 모임 성격을 알려주시면 가능한 구성과 이용 방법을 안내해 드립니다.",
+      checklistTitle: "문의 전 확인사항",
+      checklist: [
+        { label: "희망 일정", value: "원하시는 날짜와 시간을 먼저 정리해 주세요." },
+        { label: "예상 인원", value: "소규모 모임인지, 브랜드 행사인지 규모를 알려주세요." },
+        { label: "행사 성격", value: "모임, 촬영, 쇼케이스 등 사용 목적을 함께 남겨 주세요." },
       ],
-      messageField: {
-        name: "message",
-        label: "문의 내용",
-        placeholder: "행사 내용과 일정, 필요한 사항을 남겨 주세요.",
-      },
+      methodsTitle: "연락 방법",
+      methods: [
+        {
+          href: "tel:02-501-4527",
+          label: "전화 문의하기",
+          detail: "02-501-4527 · 운영 시간 안에 바로 확인이 필요한 문의에 적합합니다.",
+        },
+        {
+          href: "https://www.instagram.com/baracuda.cafe",
+          label: "인스타그램 문의",
+          detail: "레퍼런스 이미지나 행사 분위기를 함께 전달하기 좋습니다.",
+          variant: "ghost",
+        },
+      ],
+      note: "일정 확인 후 가능 여부와 대관 방향을 순차적으로 안내합니다.",
+      surface: "tint",
     },
   },
   menu: ({

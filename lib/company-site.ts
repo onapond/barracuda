@@ -109,14 +109,25 @@ export type CompanyMessageField = {
   placeholder: string;
 };
 
-export type SpaceInquiryFormConfig = {
+export type CompanyContactDetail = {
+  label: string;
+  value: string;
+};
+
+export type CompanyContactMethod = CompanyActionLink & {
+  detail: string;
+};
+
+export type CompanyContactSectionData = {
+  eyebrow: string;
   title: string;
   description: string;
-  submitLabel: string;
-  successMessage: string;
-  subject: string;
-  fields: readonly CompanyFormField[];
-  messageField: CompanyMessageField;
+  checklistTitle: string;
+  checklist: readonly CompanyContactDetail[];
+  methodsTitle: string;
+  methods: readonly CompanyContactMethod[];
+  note?: string;
+  surface?: "white" | "tint";
 };
 
 export type MenuOrderFormConfig = {
@@ -196,8 +207,8 @@ export type CompanySiteConfig = {
     actionLinks?: readonly CompanyActionLink[];
   };
   space: CompanyStandardPageData & {
-    inquirySectionId: string;
-    inquiryForm: SpaceInquiryFormConfig;
+    contactSectionId: string;
+    contactSection: CompanyContactSectionData;
   };
   menu: CompanyStandardPageData & {
     orderSectionId: string;
